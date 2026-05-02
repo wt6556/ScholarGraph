@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -c ' *)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli parse ./papers/2404.13628v1.pdf)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli init)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli parse ./papers/96f0cfd7-79c7-4110-88e5-4ea80a7fbc8d.pdf)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli download-model)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli parse ./papers/2023.emnlp-main.252.pdf)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli ingest ./papers/)",
+      "Bash(pip show *)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli topology)",
+      "Bash(C:/Users/13521/.conda/envs/agent/python.exe -m pip install matplotlib --quiet)",
+      "Bash(conda activate *)",
+      "Bash(python -c ' *)",
+      "Bash(timeout 60 python -c ' *)",
+      "Bash(timeout 10 python -c ' *)",
+      "Bash(/c/Users/13521/.conda/envs/agent/python.exe -m pip install -e .)",
+      "Bash(/c/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli repl)",
+      "Bash(/c/Users/13521/.conda/envs/agent/python.exe -m ScholarGraph.cli init)"
+    ]
+  }
+}

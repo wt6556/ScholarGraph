@@ -1,0 +1,46 @@
+fields:
+- name: Computer Science
+  subfields:
+  - Artificial Intelligence
+  - Computer Vision
+  - Natural Language Processing
+  - Machine Learning
+  - Large Language Model Fine-tuning
+  - Parameter-Efficient Fine-Tuning
+  - Robotics
+  - Knowledge Graph
+  - Speech Processing
+  - Affective Computing
+- name: Systems & Security
+  subfields:
+  - Computer Architecture
+  - Operating Systems
+  - Networks
+  - Distributed Systems
+  - Database Systems
+  - Security & Privacy
+  - Software Engineering
+- name: Media & Interaction
+  subfields:
+  - Computer Graphics
+  - Human-Computer Interaction
+  - Multimedia
+  - Virtual Reality
+  - Augmented Reality
+  - Visualization
+- name: Theory & Algorithms
+  subfields:
+  - Algorithms
+  - Complexity Theory
+  - Cryptography
+  - Formal Methods
+  - Optimization
+- name: Interdisciplinary
+  subfields:
+  - Computational Biology
+  - Computational Chemistry
+  - Computer Education
+  - Economics & Computation
+  - Quantum Computing
+source: ccf
+updated_at: '2026-04-30T16:12:08.864745'

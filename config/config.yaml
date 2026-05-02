@@ -1,0 +1,226 @@
+# PaperAgent 配置文件
+# 完整配置说明文档
+
+# ============================================================================
+# 应用配置
+# ============================================================================
+
+app:
+  name: "PaperAgent"           # 应用名称
+  version: "0.1.0"            # 版本号
+  debug: false                # 调试模式开关，true 时输出详细日志
+
+# ============================================================================
+# LLM 配置（必需）
+# ============================================================================
+
+llm:
+  # LLM 提供者类型：openai | anthropic | ollama
+  # - openai: OpenAI GPT 系列
+  # - anthropic: Anthropic Claude 系列 / MiniMax (兼容模式)
+  # - ollama: 本地 Ollama 服务
+  provider: "anthropic"
+
+  # 模型名称
+  # 推荐 MiniMax: MiniMax-M2.7-highspeed (极速版) / MiniMax-M2.7
+  # 其他: gpt-4o-mini, claude-3-sonnet 等
+  model: "MiniMax-M2.7-highspeed"
+
+  # API 密钥
+  # MiniMax: 从 platform.minimaxi.com 获取
+  # OpenAI: 从 platform.openai.com 获取
+  api_key: "your_api_key_here"
+
+  # API 基础 URL
+  # MiniMax Anthropic 兼容模式: https://api.minimaxi.com/anthropic
+  # MiniMax OpenAI 兼容模式: https://api.minimaxi.com/v1
+  # OpenAI: https://api.openai.com/v1
+  # Ollama 本地: http://localhost:11434/v1
+  base_url: "https://api.minimaxi.com/anthropic"
+
+  timeout: 60                  # API 请求超时时间（秒）
+  max_retries: 3              # API 调用失败最大重试次数
+
+# ============================================================================
+# Embedding 配置
+# ============================================================================
+
+embedding:
+  # Embedding 提供者：transformers | openai
+  # - transformers: 本地计算，免费，支持多种模型
+  # - openai: OpenAI API，需要付费
+  provider: "transformers"
+
+  # Embedding 模型名称（本地路径或 HuggingFace 模型名）
+  # 本地路径示例：./models/sentence-transformers_all-MiniLM-L6-v2
+  # HuggingFace 模型名：sentence-transformers/all-MiniLM-L6-v2
+  model: "./models/sentence-transformers_all-MiniLM-L6-v2"
+
+  # 向量维度，必须与 embedding 模型输出维度一致
+  # all-MiniLM-L6-v2: 384
+  # all-mpnet-base-v2: 768
+  dimension: 384
+
+  # 计算设备：cpu | cuda
+  # cuda 需要安装 CUDA 驱动和 torch，推荐使用 GPU 加速
+  device: "cpu"
+
+# ============================================================================
+# PDF 解析配置
+# ============================================================================
+
+pdf_parser:
+  # 主要解析器：grobid | pdfplumber
+  # - grobid: 更准确，需要启动 Grobid 服务（见下方配置）
+  # - pdfplumber: 纯 Python，无需额外服务，但提取效果稍弱
+  primary: "pdfplumber"
+
+  # Grobid 服务配置（可选，需要 primary: "grobid" 时使用）
+  grobid:
+    host: "http://localhost:8070"  # Grobid 服务地址
+    timeout: 30                    # 请求超时（秒）
+
+  # pdfplumber 配置
+  pdfplumber:
+    extract_tables: true          # 是否提取表格
+    extract_images: false          # 是否提取图片
+
+# ============================================================================
+# 向量存储配置
+# ============================================================================
+
+vector_store:
+  # 向量数据库类型：faiss | chromadb
+  # - faiss: Facebook 高性能向量检索库，推荐生产使用
+  # - chromadb: 轻量级向量数据库，功能更丰富
+  type: "faiss"
+
+  # FAISS 索引类型
+  # - Flat: 暴力精确搜索，适合小数据集（<10000条）
+  # - IVF: 倒排索引，加速搜索，适合大数据集
+  # - HNSW: 图索引，高精度高速度，内存占用大
+  index_type: "Flat"
+
+  # 向量索引保存路径
+  save_path: "./data/vector_store"
+
+# ============================================================================
+# SQLite 数据库配置
+# ============================================================================
+
+sqlite:
+  # 数据库文件路径
+  path: "./data/ScholarGraph.db"
+
+  # 事务超时时间（秒）
+  timeout: 30
+
+  # 日志模式：WAL | DELETE | TRUNCATE
+  # WAL 模式支持并发读写，推荐使用
+  journal_mode: "WAL"
+
+# ============================================================================
+# 论文分类体系配置
+# ============================================================================
+
+taxonomy:
+  # 分类体系文件路径（YAML 格式）
+  path: "./config/taxonomy.yaml"
+
+  # 默认分类（当无法确定时使用）
+  default_field: "Computer Science"
+  default_subfield: "Artificial Intelligence"
+
+# ============================================================================
+# CCF 评级配置
+# ============================================================================
+
+ccf:
+  # CCF 评级映射文件路径
+  mappings_path: "./config/ccf_mappings.yaml"
+
+  # 默认 CCF 版本年份
+  default_version: "2022"
+
+# ============================================================================
+# 信息补全 API 配置（可选）
+# ============================================================================
+
+enrichment:
+  # 外部学术 API 列表
+  apis:
+    # Semantic Scholar API
+    - name: "semantic_scholar"
+      enabled: true
+      api_key: "${SEMANTIC_SCHOLAR_API_KEY}"  # 支持环境变量
+      rate_limit: 100                        # 每分钟请求上限
+
+    # Crossref API
+    - name: "crossref"
+      enabled: true
+      email: "$1704096895@qq.com"            # Crossref 需要邮箱标识
+      rate_limit: 50
+
+    # DBLP API
+    - name: "dblp"
+      enabled: true
+      rate_limit: 20
+
+  # 备用方案配置
+  fallback:
+    # 是否在 API 失败时爬取 Google Scholar
+    crawl_google_scholar: false
+
+    # 是否验证补全信息正确性
+    require_verification: true
+
+# ============================================================================
+# RAG 检索配置
+# ============================================================================
+
+rag:
+  retrieval:
+    # 向量检索权重（与 bm25_weight 合起来为 1.0）
+    # 权重越高，该检索方式影响越大
+    vector_weight: 0.7
+    bm25_weight: 0.3
+
+    # 初步检索返回数量
+    top_k: 20
+
+    # 重排后返回数量
+    rerank_top_k: 5
+
+  # BM25 检索参数
+  bm25:
+    k1: 1.5    # 词频饱和度，越大越重视词频
+    b: 0.75    # 文档长度归一化，0 表示不归一化，1 表示完全归一化
+
+  # 重排模型配置
+  reranker:
+    enabled: true
+    # Cross-Encoder 模型，用于对初筛结果重排
+    model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+# ============================================================================
+# 日志配置
+# ============================================================================
+
+logging:
+  # 日志级别：DEBUG | INFO | WARNING | ERROR | CRITICAL
+  level: "INFO"
+
+  # 日志格式
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+  # 审计日志路径（记录重要操作）
+  audit_log: "./data/audit.log"
+
+# ============================================================================
+# CLI 配置
+# ============================================================================
+
+cli:
+  interactive: true     # 交互模式开关
+  color: true           # 输出彩色文字
+  show_progress: true   # 显示进度条

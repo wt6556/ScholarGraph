@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Data & outputs (local only)
+# data/
+# output/
+models/
+papers/
+method.md
+output.log
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Config with secrets (keep template)
+# config/config.yaml  # 如果里面有 api_key，忽略这一行；如果没有，可以提交
+
+# Virtual environments
+venv/
+env/
+.venv/

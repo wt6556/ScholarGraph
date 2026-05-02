@@ -1,0 +1,36 @@
+# Core
+pydantic>=2.0.0
+pyyaml>=6.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+numpy>=1.24.0
+
+# Optional: Vector search
+faiss-cpu>=1.7.0
+# chromadb>=0.4.0
+
+# Optional: PDF processing
+# python-grobid-client>=0.0.8
+pdfplumber>=0.10.0
+
+# Optional: Embedding
+sentence-transformers>=2.2.0
+
+# Optional: LLM
+openai>=1.0.0
+anthropic>=0.7.0
+# ollama>=0.1.0
+
+# Optional: CLI
+typer>=0.9.0
+rich>=13.0.0
+
+# Optional: NetworkX for topology
+networkx>=3.0
+
+# Dev
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+ruff>=0.1.0
+mypy>=1.0.0

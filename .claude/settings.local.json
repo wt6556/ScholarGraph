@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(C:/Users/13521/anaconda3/Scripts/activate.bat agent *)",
+      "Bash(python -c ' *)",
+      "Bash(cmd.exe /c \"activate agent && python -c \\\\\"from ScholarGraph.shared_env import SharedEnvironment; from ScholarGraph.config import get_config; from ScholarGraph.utils.topology_visualizer import generate_topology_graph; import os; config = get_config\\(\\); env = SharedEnvironment\\(db_path=config.storage.sqlite_path, vector_index_path=config.storage.vector_index_path, embedding_dimension=config.embedding.dimension\\); os.makedirs\\('./output', exist_ok=True\\); success = generate_topology_graph\\(env, './output/topology.png'\\); print\\('Success:', success\\)\\\\\"\")",
+      "Bash(timeout 30 python -c ' *)",
+      "Bash(timeout 60 python -c ' *)"
+    ]
+  }
+}

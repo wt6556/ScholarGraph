@@ -1,0 +1,4978 @@
+version: v2022
+source_file: 中国计算机学会推荐国际学术会议和期刊目录-2022更名版.pdf
+fields:
+  计算机体系结构/并行与分布计算/存储系统:
+  - name: TOCS
+    rating: CCF-A
+  - name: ACM Transactions on Computer Systems
+    rating: CCF-A
+  - name: TOS
+    rating: CCF-A
+  - name: ACM Transactions on Storage
+    rating: CCF-A
+  - name: TCAD
+    rating: CCF-A
+  - name: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+    rating: CCF-A
+  - name: TC
+    rating: CCF-A
+  - name: IEEE Transactions on Computers
+    rating: CCF-A
+  - name: TPDS
+    rating: CCF-A
+  - name: IEEE Transactions on Parallel and Distributed Systems
+    rating: CCF-A
+  - name: TACO
+    rating: CCF-A
+  - name: ACM Transactions on Architecture and Code Optimization
+    rating: CCF-A
+  - name: TAAS
+    rating: CCF-B
+  - name: ACM Transactions on Autonomous and Adaptive Systems
+    rating: CCF-B
+  - name: TODAES
+    rating: CCF-B
+  - name: ACM Transactions on Design Automation of Electronic Systems
+    rating: CCF-B
+  - name: TECS
+    rating: CCF-B
+  - name: ACM Transactions on Embedded Computing Systems
+    rating: CCF-B
+  - name: TRETS
+    rating: CCF-B
+  - name: ACM Transactions on Reconfigurable Technology and Systems
+    rating: CCF-B
+  - name: TVLSI
+    rating: CCF-B
+  - name: IEEE Transactions on Very Large Scale Integration (VLSI) Systems
+    rating: CCF-B
+  - name: JPDC
+    rating: CCF-B
+  - name: Journal of Parallel and Distributed Computing
+    rating: CCF-B
+  - name: JSA
+    rating: CCF-B
+  - name: 'Journal of Systems Architecture: Embedded Software Design'
+    rating: CCF-B
+  - name: 'Performance Evaluation: An International Journal'
+    rating: CCF-B
+  - name: JETC
+    rating: CCF-C
+  - name: ACM Journal on Emerging Technologies in Computing Systems
+    rating: CCF-C
+  - name: DC
+    rating: CCF-C
+  - name: FGCS
+    rating: CCF-C
+  - name: Future Generation Computer Systems
+    rating: CCF-C
+  - name: TCC
+    rating: CCF-C
+  - name: IEEE Transactions on Cloud Computing
+    rating: CCF-C
+  - name: Integration
+    rating: CCF-C
+  - name: Integration, the VLSI Journal
+    rating: CCF-C
+  - name: JETTA
+    rating: CCF-C
+  - name: Journal of Electronic Testing-Theory and Applications
+    rating: CCF-C
+  - name: JGC
+    rating: CCF-C
+  - name: Journal of Grid computing
+    rating: CCF-C
+  - name: MICPRO
+    rating: CCF-C
+  - name: RTS
+    rating: CCF-C
+  - name: Real-Time Systems
+    rating: CCF-C
+  - name: TJSC
+    rating: CCF-C
+  - name: The Journal of Supercomputing
+    rating: CCF-C
+  - name: TCASI
+    rating: CCF-C
+  - name: 'IEEE Transactions on Circuits and Systems I: Regular Papers'
+    rating: CCF-C
+  - name: CCF Transactions on High Performance Computing
+    rating: CCF-C
+  - name: TSUSC
+    rating: CCF-C
+  - name: IEEE Transactions on Sustainable Computing
+    rating: CCF-C
+  - name: PPoPP
+    rating: CCF-A
+  - name: FAST
+    rating: CCF-A
+  - name: USENIX Conference on File and Storage Technologies
+    rating: CCF-A
+  - name: DAC
+    rating: CCF-A
+  - name: Design Automation Conference
+    rating: CCF-A
+  - name: HPCA
+    rating: CCF-A
+  - name: MICRO
+    rating: CCF-A
+  - name: SC
+    rating: CCF-A
+  - name: International Conference for High Performance Computing, Networking, Storage,
+      and Analysis
+    rating: CCF-A
+  - name: ASPLOS
+    rating: CCF-A
+  - name: International Conference on Architectural Support for Programming Languages
+      and Operating Systems
+    rating: CCF-A
+  - name: ISCA
+    rating: CCF-A
+  - name: USENIX Annual Technical Conference
+    rating: CCF-A
+  - name: EuroSys
+    rating: CCF-A
+  - name: European Conference on Computer Systems
+    rating: CCF-A
+  - name: SoCC
+    rating: CCF-B
+  - name: SPAA
+    rating: CCF-B
+  - name: PODC
+    rating: CCF-B
+  - name: FPGA
+    rating: CCF-B
+  - name: CGO
+    rating: CCF-B
+  - name: DATE
+    rating: CCF-B
+  - name: CLUSTER
+    rating: CCF-B
+  - name: IEEE International Conference on Cluster Computing
+    rating: CCF-B
+  - name: ICCD
+    rating: CCF-B
+  - name: International Conference on Computer Design
+    rating: CCF-B
+  - name: ICCAD
+    rating: CCF-B
+  - name: International Conference on Computer-Aided Design
+    rating: CCF-B
+  - name: ICDCS
+    rating: CCF-B
+  - name: IEEE International Conference on Distributed Computing Systems
+    rating: CCF-B
+  - name: International Conference on Hardware/Software Co-design and System Synthesis
+    rating: CCF-B
+  - name: HiPEAC
+    rating: CCF-B
+  - name: International Conference on High Performance and Embedded Architectures
+      and Compilers
+    rating: CCF-B
+  - name: SIGMETRICS
+    rating: CCF-B
+  - name: International Conference on Measurement and Modeling of Computer Systems
+    rating: CCF-B
+  - name: PACT
+    rating: CCF-B
+  - name: International Conference on Parallel Architectures and Compilation Techniques
+    rating: CCF-B
+  - name: ICPP
+    rating: CCF-B
+  - name: International Conference on Parallel Processing
+    rating: CCF-B
+  - name: ICS
+    rating: CCF-B
+  - name: International Conference on Supercomputing
+    rating: CCF-B
+  - name: VEE
+    rating: CCF-B
+  - name: International Conference on Virtual Execution Environments
+    rating: CCF-B
+  - name: IPDPS
+    rating: CCF-B
+  - name: Performance
+    rating: CCF-B
+  - name: HPDC
+    rating: CCF-B
+  - name: ITC
+    rating: CCF-B
+  - name: International Test Conference
+    rating: CCF-B
+  - name: LISA
+    rating: CCF-B
+  - name: Large Installation System Administration Conference
+    rating: CCF-B
+  - name: MSST
+    rating: CCF-B
+  - name: Mass Storage Systems and Technologies
+    rating: CCF-B
+  - name: RTAS
+    rating: CCF-B
+  - name: Euro-Par
+    rating: CCF-B
+  - name: European Conference on Parallel and Distributed Computing
+    rating: CCF-B
+  - name: CF
+    rating: CCF-C
+  - name: ACM International Conference on Computing Frontiers
+    rating: CCF-C
+  - name: SYSTOR
+    rating: CCF-C
+  - name: ACM International Systems and Storage Conference
+    rating: CCF-C
+  - name: NOCS
+    rating: CCF-C
+  - name: ASAP
+    rating: CCF-C
+  - name: IEEE International Conference on Application-Specific Systems, Architectures,
+      and Processors
+    rating: CCF-C
+  - name: ASP-DAC
+    rating: CCF-C
+  - name: Asia and South Pacific Design Automation Conference
+    rating: CCF-C
+  - name: ETS
+    rating: CCF-C
+  - name: FPL
+    rating: CCF-C
+  - name: International Conference on Field-Programmable Logic and Applications
+    rating: CCF-C
+  - name: FCCM
+    rating: CCF-C
+  - name: GLSVLSI
+    rating: CCF-C
+  - name: ATS
+    rating: CCF-C
+  - name: HPCC
+    rating: CCF-C
+  - name: IEEE International Conference on High Performance Computing and Communications
+    rating: CCF-C
+  - name: HiPC
+    rating: CCF-C
+  - name: IEEE International Conference on High Performance Computing, Data and Analytics
+    rating: CCF-C
+  - name: MASCOTS
+    rating: CCF-C
+  - name: International Symposium on Modeling, Analysis, and Simulation of Computer
+      and Telecommunication Systems
+    rating: CCF-C
+  - name: ISPA
+    rating: CCF-C
+  - name: CCGRID
+    rating: CCF-C
+  - name: NPC
+    rating: CCF-C
+  - name: IFIP International Conference on Network and Parallel Computing
+    rating: CCF-C
+  - name: ICA3PP
+    rating: CCF-C
+  - name: International Conference on Algorithms and Architectures for Parallel Processing
+    rating: CCF-C
+  - name: CASES
+    rating: CCF-C
+  - name: International Conference on Compilers, Architectures, and Synthesis for
+      Embedded Systems
+    rating: CCF-C
+  - name: FPT
+    rating: CCF-C
+  - name: International Conference on Field-Programmable Technology
+    rating: CCF-C
+  - name: ICPADS
+    rating: CCF-C
+  - name: International Conference on Parallel and Distributed Systems
+    rating: CCF-C
+  - name: ISCAS
+    rating: CCF-C
+  - name: IEEE International Symposium on Circuits and Systems
+    rating: CCF-C
+  - name: ISLPED
+    rating: CCF-C
+  - name: ISPD
+    rating: CCF-C
+  - name: HOTI
+    rating: CCF-C
+  - name: VTS
+    rating: CCF-C
+  - name: ITC-Asia
+    rating: CCF-C
+  - name: International Test Conference in Asia
+    rating: CCF-C
+  计算机网络:
+  - name: JSAC
+    rating: CCF-A
+  - name: IEEE Journal on Selected Areas in Communications
+    rating: CCF-A
+  - name: TMC
+    rating: CCF-A
+  - name: IEEE Transactions on Mobile Computing
+    rating: CCF-A
+  - name: TON
+    rating: CCF-A
+  - name: IEEE/ACM Transactions on Networking
+    rating: CCF-A
+  - name: TOIT
+    rating: CCF-B
+  - name: ACM Transactions on Internet Technology
+    rating: CCF-B
+  - name: TOMM
+    rating: CCF-B
+  - name: ACM Transactions on Multimedia Computing, Communications and Applications
+    rating: CCF-B
+  - name: TOSN
+    rating: CCF-B
+  - name: ACM Transactions on Sensor Networks
+    rating: CCF-B
+  - name: CN
+    rating: CCF-B
+  - name: TCOM
+    rating: CCF-B
+  - name: IEEE Transactions on Communications
+    rating: CCF-B
+  - name: TWC
+    rating: CCF-B
+  - name: IEEE Transactions on Wireless Communications
+    rating: CCF-B
+  - name: CC
+    rating: CCF-C
+  - name: TNSM
+    rating: CCF-C
+  - name: IEEE Transactions on Network and Service Management
+    rating: CCF-C
+  - name: JNCA
+    rating: CCF-C
+  - name: Journal of Network and Computer Applications
+    rating: CCF-C
+  - name: MONET
+    rating: CCF-C
+  - name: PPNA
+    rating: CCF-C
+  - name: WCMC
+    rating: CCF-C
+  - name: IOT
+    rating: CCF-C
+  - name: IEEE Internet of Things Journal
+    rating: CCF-C
+  - name: SIGCOMM
+    rating: CCF-A
+  - name: ACM International Conference on Applications, Technologies, Architectures,
+      and Protocols for Computer Communication
+    rating: CCF-A
+  - name: MobiCom
+    rating: CCF-A
+  - name: ACM International Conference on Mobile Computing and Networking
+    rating: CCF-A
+  - name: INFOCOM
+    rating: CCF-A
+  - name: IEEE International Conference on Computer Communications
+    rating: CCF-A
+  - name: NSDI
+    rating: CCF-A
+  - name: SenSys
+    rating: CCF-B
+  - name: ACM Conference on Embedded Networked Sensor Systems
+    rating: CCF-B
+  - name: CoNEXT
+    rating: CCF-B
+  - name: ACM International Conference on Emerging Networking Experiments and Technologies
+    rating: CCF-B
+  - name: SECON
+    rating: CCF-B
+  - name: IEEE International Conference on Sensing, Communication, and Networking
+    rating: CCF-B
+  - name: IPSN
+    rating: CCF-B
+  - name: International Conference on Information Processing in Sensor Networks
+    rating: CCF-B
+  - name: MobiSys
+    rating: CCF-B
+  - name: ACM International Conference on Mobile Systems, Applications, and Services
+    rating: CCF-B
+  - name: ICNP
+    rating: CCF-B
+  - name: IEEE International Conference on Network Protocols
+    rating: CCF-B
+  - name: MobiHoc
+    rating: CCF-B
+  - name: NOSSDAV
+    rating: CCF-B
+  - name: IWQoS
+    rating: CCF-B
+  - name: IMC
+    rating: CCF-B
+  - name: ACM Internet Measurement Conference
+    rating: CCF-B
+  - name: ANCS
+    rating: CCF-C
+  - name: ACM/IEEE Symposium on Architectures for Networking and Communication Systems
+    rating: CCF-C
+  - name: APNOMS
+    rating: CCF-C
+  - name: FORTE
+    rating: CCF-C
+  - name: International Conference on Formal Techniques for Distributed Objects, Components,
+      and Systems
+    rating: CCF-C
+  - name: LCN
+    rating: CCF-C
+  - name: IEEE Conference on Local Computer Networks
+    rating: CCF-C
+  - name: IEEE Global Communications Conference
+    rating: CCF-C
+  - name: ICC
+    rating: CCF-C
+  - name: IEEE International Conference on Communications
+    rating: CCF-C
+  - name: ICCCN
+    rating: CCF-C
+  - name: IEEE International Conference on Computer Communications and Networks
+    rating: CCF-C
+  - name: MASS
+    rating: CCF-C
+  - name: IEEE International Conference on Mobile Adhoc and Sensor Systems
+    rating: CCF-C
+  - name: P2P
+    rating: CCF-C
+  - name: IEEE International Conference on Peer-to-Peer Computing
+    rating: CCF-C
+  - name: IPCCC
+    rating: CCF-C
+  - name: IEEE International Performance Computing and Communications Conference
+    rating: CCF-C
+  - name: WoWMoM
+    rating: CCF-C
+  - name: ISCC
+    rating: CCF-C
+  - name: WCNC
+    rating: CCF-C
+  - name: IEEE Wireless Communications and Networking Conference
+    rating: CCF-C
+  - name: Networking
+    rating: CCF-C
+  - name: IFIP International Conferences on Networking
+    rating: CCF-C
+  - name: IM
+    rating: CCF-C
+  - name: MSN
+    rating: CCF-C
+  - name: International Conference on Mobility, Sensing and Networking
+    rating: CCF-C
+  - name: MSWiM
+    rating: CCF-C
+  - name: International Conference on Modeling, Analysis and Simulation of Wireless
+      and Mobile Systems
+    rating: CCF-C
+  - name: The International Conference on Wireless Artificial Intelligent Computing
+      Systems and Applications
+    rating: CCF-C
+  - name: HotNets
+    rating: CCF-C
+  - name: APNet
+    rating: CCF-C
+  网络与信息安全:
+  - name: TDSC
+    rating: CCF-A
+  - name: IEEE Transactions on Dependable and Secure Computing
+    rating: CCF-A
+  - name: TIFS
+    rating: CCF-A
+  - name: IEEE Transactions on Information Forensics and Security
+    rating: CCF-A
+  - name: Journal of Cryptology
+    rating: CCF-A
+  - name: TOPS
+    rating: CCF-B
+  - name: ACM Transactions on Privacy and Security
+    rating: CCF-B
+  - name: JCS
+    rating: CCF-B
+  - name: Journal of Computer Security
+    rating: CCF-B
+  - name: CLSR
+    rating: CCF-C
+  - name: EURASIP Journal on Information Security
+    rating: CCF-C
+  - name: IMCS
+    rating: CCF-C
+  - name: IJICS
+    rating: CCF-C
+  - name: International Journal of Information and Computer Security
+    rating: CCF-C
+  - name: IJISP
+    rating: CCF-C
+  - name: International Journal of Information Security and Privacy
+    rating: CCF-C
+  - name: JISA
+    rating: CCF-C
+  - name: Journal of Information Security and Applications
+    rating: CCF-C
+  - name: SCN
+    rating: CCF-C
+  - name: CCS
+    rating: CCF-A
+  - name: ACM Conference on Computer and Communications Security
+    rating: CCF-A
+  - name: EUROCRYPT
+    rating: CCF-A
+  - name: International Conference on the Theory and Applications of Cryptographic
+      Techniques
+    rating: CCF-A
+  - name: CRYPTO
+    rating: CCF-A
+  - name: International Cryptology Conference
+    rating: CCF-A
+  - name: NDSS
+    rating: CCF-A
+  - name: ACSAC
+    rating: CCF-B
+  - name: Annual Computer Security Applications Conference
+    rating: CCF-B
+  - name: ASIACRYPT
+    rating: CCF-B
+  - name: Annual International Conference on the Theory and Application of Cryptology
+      and Information Security
+    rating: CCF-B
+  - name: ESORICS
+    rating: CCF-B
+  - name: FSE
+    rating: CCF-B
+  - name: CSFW
+    rating: CCF-B
+  - name: SRDS
+    rating: CCF-B
+  - name: IEEE International Symposium on Reliable Distributed Systems
+    rating: CCF-B
+  - name: CHES
+    rating: CCF-B
+  - name: International Conference on Cryptographic Hardware and Embedded Systems
+    rating: CCF-B
+  - name: DSN
+    rating: CCF-B
+  - name: International Conference on Dependable Systems and Networks
+    rating: CCF-B
+  - name: RAID
+    rating: CCF-B
+  - name: PKC
+    rating: CCF-B
+  - name: TCC
+    rating: CCF-B
+  - name: Theory of Cryptography Conference
+    rating: CCF-B
+  - name: WiSec
+    rating: CCF-C
+  - name: ACM Conference on Security and Privacy in Wireless and Mobile Networks
+    rating: CCF-C
+  - name: SACMAT
+    rating: CCF-C
+  - name: DRM
+    rating: CCF-C
+  - name: ACNS
+    rating: CCF-C
+  - name: International Conference on Applied Cryptography and Network Security
+    rating: CCF-C
+  - name: AsiaCCS
+    rating: CCF-C
+  - name: ACM Asia Conference on Computer and Communications Security
+    rating: CCF-C
+  - name: ACISP
+    rating: CCF-C
+  - name: Australasia Conference on Information Security and Privacy
+    rating: CCF-C
+  - name: CT-RSA
+    rating: CCF-C
+  - name: The Cryptographer's Track at RSA Conference
+    rating: CCF-C
+  - name: DIMVA
+    rating: CCF-C
+  - name: Conference on Detection of Intrusions and Malware & Vulnerability Assessment
+    rating: CCF-C
+  - name: DFRWS
+    rating: CCF-C
+  - name: FC
+    rating: CCF-C
+  - name: TrustCom
+    rating: CCF-C
+  - name: IEEE International Conference on Trust, Security and Privacy in Computing
+      and Communications
+    rating: CCF-C
+  - name: SEC
+    rating: CCF-C
+  - name: IFIP International Information Security Conference
+    rating: CCF-C
+  - name: IFIP Working Group 11.9 International Conference on Digital Forensics
+    rating: CCF-C
+  - name: ISC
+    rating: CCF-C
+  - name: Information Security Conference
+    rating: CCF-C
+  - name: ICDF2C
+    rating: CCF-C
+  - name: International Conference on Digital Forensics & Cyber Crime
+    rating: CCF-C
+  - name: ICICS
+    rating: CCF-C
+  - name: International Conference on Information and Communications Security
+    rating: CCF-C
+  - name: SecureComm
+    rating: CCF-C
+  - name: International Conference on Security and Privacy in Communication Networks
+    rating: CCF-C
+  - name: NSPW
+    rating: CCF-C
+  - name: PAM
+    rating: CCF-C
+  - name: Passive and Active Measurement Conference
+    rating: CCF-C
+  - name: PETS
+    rating: CCF-C
+  - name: SAC
+    rating: CCF-C
+  - name: SOUPS
+    rating: CCF-C
+  - name: HotSec
+    rating: CCF-C
+  - name: Inscrypt
+    rating: CCF-C
+  - name: International Conference on Information Security and Cryptology
+    rating: CCF-C
+  软件工程/系统软件/程序设计语言:
+  - name: TOPLAS
+    rating: CCF-A
+  - name: ACM Transactions on Programming Languages and Systems
+    rating: CCF-A
+  - name: TOSEM
+    rating: CCF-A
+  - name: ACM Transactions on Software Engineering and Methodology
+    rating: CCF-A
+  - name: TSE
+    rating: CCF-A
+  - name: IEEE Transactions on Software Engineering
+    rating: CCF-A
+  - name: TSC
+    rating: CCF-A
+  - name: IEEE Transactions on Services Computing
+    rating: CCF-A
+  - name: ASE
+    rating: CCF-B
+  - name: ESE
+    rating: CCF-B
+  - name: IETS
+    rating: CCF-B
+  - name: IST
+    rating: CCF-B
+  - name: JFP
+    rating: CCF-B
+  - name: Journal of Functional Programming
+    rating: CCF-B
+  - name: 'Journal of Software: Evolution and Process'
+    rating: CCF-B
+  - name: JSS
+    rating: CCF-B
+  - name: Journal of Systems and Software
+    rating: CCF-B
+  - name: RE
+    rating: CCF-B
+  - name: SCP
+    rating: CCF-B
+  - name: SoSyM
+    rating: CCF-B
+  - name: Software and Systems Modeling
+    rating: CCF-B
+  - name: STVR
+    rating: CCF-B
+  - name: SPE
+    rating: CCF-B
+  - name: CL
+    rating: CCF-C
+  - name: Computer Languages, Systems and Structures
+    rating: CCF-C
+  - name: IJSEKE
+    rating: CCF-C
+  - name: International Journal of Software Engineering and Knowledge Engineering
+    rating: CCF-C
+  - name: STTT
+    rating: CCF-C
+  - name: International Journal of Software Tools for Technology Transfer
+    rating: CCF-C
+  - name: JLAMP
+    rating: CCF-C
+  - name: Journal of Logical and Algebraic Methods in Programming
+    rating: CCF-C
+  - name: JWE
+    rating: CCF-C
+  - name: Journal of Web Engineering
+    rating: CCF-C
+  - name: SOCA
+    rating: CCF-C
+  - name: SQJ
+    rating: CCF-C
+  - name: Software Quality Journal
+    rating: CCF-C
+  - name: TPLP
+    rating: CCF-C
+  - name: Proceedings of the ACM on Programming Languages
+    rating: CCF-C
+  - name: PLDI
+    rating: CCF-A
+  - name: ACM SIGPLAN Conference on Programming Language Design and Implementation
+    rating: CCF-A
+  - name: POPL
+    rating: CCF-A
+  - name: ACM International Conference on the Foundations of Software Engineering
+    rating: CCF-A
+  - name: SOSP
+    rating: CCF-A
+  - name: ACM Symposium on Operating Systems Principles
+    rating: CCF-A
+  - name: OOPSLA
+    rating: CCF-A
+  - name: Conference on Object-Oriented Programming Systems, Languages, and Applications
+    rating: CCF-A
+  - name: ASE
+    rating: CCF-A
+  - name: International Conference on Automated Software Engineering
+    rating: CCF-A
+  - name: ICSE
+    rating: CCF-A
+  - name: International Conference on Software Engineering
+    rating: CCF-A
+  - name: ISSTA
+    rating: CCF-A
+  - name: OSDI
+    rating: CCF-A
+  - name: USENIX Symposium on Operating Systems Design and Implementation
+    rating: CCF-A
+  - name: FM
+    rating: CCF-A
+  - name: ECOOP
+    rating: CCF-B
+  - name: European Conference on Object-Oriented Programming
+    rating: CCF-B
+  - name: ETAPS
+    rating: CCF-B
+  - name: European Joint Conferences on Theory and Practice of Software
+    rating: CCF-B
+  - name: ICPC
+    rating: CCF-B
+  - name: IEEE International Conference on Program Comprehension
+    rating: CCF-B
+  - name: RE
+    rating: CCF-B
+  - name: IEEE International Requirements Engineering Conference
+    rating: CCF-B
+  - name: CAiSE
+    rating: CCF-B
+  - name: International Conference on Advanced Information Systems Engineering
+    rating: CCF-B
+  - name: ICFP
+    rating: CCF-B
+  - name: ACM SIGPLAN International Conference on Function Programming
+    rating: CCF-B
+  - name: LCTES
+    rating: CCF-B
+  - name: ACM SIGPLAN/SIGBED International Conference on Languages, Compilers and
+      Tools for Embedded Systems
+    rating: CCF-B
+  - name: MoDELS
+    rating: CCF-B
+  - name: ACM/IEEE International Conference on Model Driven EngineeringLanguages and
+      Systems
+    rating: CCF-B
+  - name: CP
+    rating: CCF-B
+  - name: International Conference on Principles and Practice of Constraint Programming
+    rating: CCF-B
+  - name: ICSOC
+    rating: CCF-B
+  - name: International Conference on Service Oriented Computing
+    rating: CCF-B
+  - name: SANER
+    rating: CCF-B
+  - name: IEEE International Conference on Software Analysis, Evolution, and Reengineering
+    rating: CCF-B
+  - name: ICSME
+    rating: CCF-B
+  - name: International Conference on Software Maintenance and Evolution
+    rating: CCF-B
+  - name: VMCAI
+    rating: CCF-B
+  - name: International Conference on Verification, Model Checking and Abstract Interpretation
+    rating: CCF-B
+  - name: ICWS
+    rating: CCF-B
+  - name: IEEE International Conference on Web Services
+    rating: CCF-B
+  - name: Middleware
+    rating: CCF-B
+  - name: International Middleware Conference
+    rating: CCF-B
+  - name: SAS
+    rating: CCF-B
+  - name: ESEM
+    rating: CCF-B
+  - name: ISSRE
+    rating: CCF-B
+  - name: HotOS
+    rating: CCF-B
+  - name: USENIX Workshop on Hot Topics in Operating Systems
+    rating: CCF-B
+  - name: PEPM
+    rating: CCF-C
+  - name: PASTE
+    rating: CCF-C
+  - name: APLAS
+    rating: CCF-C
+  - name: Asian Symposium on Programming Languages and Systems
+    rating: CCF-C
+  - name: APSEC
+    rating: CCF-C
+  - name: Asia-Pacific Software Engineering Conference
+    rating: CCF-C
+  - name: EASE
+    rating: CCF-C
+  - name: International Conference on Evaluation and Assessment in Software Engineering
+    rating: CCF-C
+  - name: ICECCS
+    rating: CCF-C
+  - name: International Conference on Engineering of Complex Computer Systems
+    rating: CCF-C
+  - name: ICST
+    rating: CCF-C
+  - name: IEEE International Conference on Software Testing, Verification and Validation
+    rating: CCF-C
+  - name: ISPASS
+    rating: CCF-C
+  - name: IEEE International Symposium on Performance Analysis of Systems and Software
+    rating: CCF-C
+  - name: SCAM
+    rating: CCF-C
+  - name: IEEE International Working Conference on Source Code Analysis and Manipulation
+    rating: CCF-C
+  - name: COMPSAC
+    rating: CCF-C
+  - name: International Computer Software and Applications Conference
+    rating: CCF-C
+  2019年停办:
+  - name: ICFEM
+    rating: CCF-C
+  - name: International Conference on Formal Engineering Methods
+    rating: CCF-C
+  - name: TOOLS
+    rating: CCF-C
+  - name: International Conference on Objects, Models, Components, Patterns（2019年停办）
+    rating: CCF-C
+  - name: IEEE International Conference on Software Services Engineering
+    rating: CCF-C
+  - name: ICSSP
+    rating: CCF-C
+  - name: International Conference on Software and System Process
+    rating: CCF-C
+  - name: SEKE
+    rating: CCF-C
+  - name: International Conference on Software Engineering and Knowledge Engineering
+    rating: CCF-C
+  - name: QRS
+    rating: CCF-C
+  - name: International Conference on Software Quality, Reliability and Security
+    rating: CCF-C
+  - name: ICSR
+    rating: CCF-C
+  - name: International Conference on Software Reuse
+    rating: CCF-C
+  - name: ICWE
+    rating: CCF-C
+  - name: International Conference on Web Engineering
+    rating: CCF-C
+  - name: SPIN
+    rating: CCF-C
+  - name: ATVA
+    rating: CCF-C
+  - name: LOPSTR
+    rating: CCF-C
+  - name: TASE
+    rating: CCF-C
+  - name: Theoretical Aspects of Software Engineering Conference
+    rating: CCF-C
+  - name: MSR
+    rating: CCF-C
+  - name: REFSQ
+    rating: CCF-C
+  - name: WICSA
+    rating: CCF-C
+  - name: Working IEEE/IFIP Conference on Software Architecture
+    rating: CCF-C
+  - name: Internetware
+    rating: CCF-C
+  - name: RV
+    rating: CCF-C
+  - name: International Conference on Runtime Verification
+    rating: CCF-C
+  - name: TODS
+    rating: CCF-A
+  - name: ACM Transactions on Database Systems
+    rating: CCF-A
+  - name: TOIS
+    rating: CCF-A
+  - name: ACM Transactions on Information Systems
+    rating: CCF-A
+  - name: TKDE
+    rating: CCF-A
+  - name: IEEE Transactions on Knowledge and Data Engineering
+    rating: CCF-A
+  - name: VLDBJ
+    rating: CCF-A
+  - name: The VLDB Journal
+    rating: CCF-A
+  - name: TKDD
+    rating: CCF-B
+  - name: ACM Transactions on Knowledge Discovery from Data
+    rating: CCF-B
+  - name: TWEB
+    rating: CCF-B
+  - name: ACM Transactions on the Web
+    rating: CCF-B
+  - name: AEI
+    rating: CCF-B
+  - name: DKE
+    rating: CCF-B
+  - name: DMKD
+    rating: CCF-B
+  - name: EJIS
+    rating: CCF-B
+  - name: European Journal of Information Systems
+    rating: CCF-B
+  - name: IPM
+    rating: CCF-B
+  - name: IS
+    rating: CCF-B
+  - name: Information Systems
+    rating: CCF-B
+  - name: JASIST
+    rating: CCF-B
+  - name: Journal of the Association for Information Science and Technology
+    rating: CCF-B
+  - name: JWS
+    rating: CCF-B
+  - name: Journal of Web Semantics
+    rating: CCF-B
+  - name: KAIS
+    rating: CCF-B
+  - name: Knowledge and Information Systems
+    rating: CCF-B
+  - name: DPD
+    rating: CCF-C
+  - name: IPL
+    rating: CCF-C
+  - name: IR
+    rating: CCF-C
+  - name: Information Retrieval Journal
+    rating: CCF-C
+  - name: IJCIS
+    rating: CCF-C
+  - name: International Journal of Cooperative Information Systems
+    rating: CCF-C
+  - name: IJGIS
+    rating: CCF-C
+  - name: International Journal of Geographical Information Science
+    rating: CCF-C
+  - name: IJIS
+    rating: CCF-C
+  - name: International Journal of Intelligent Systems
+    rating: CCF-C
+  - name: IJKM
+    rating: CCF-C
+  - name: International Journal of Knowledge Management
+    rating: CCF-C
+  - name: IJSWIS
+    rating: CCF-C
+  - name: International Journal on Semantic Web and Information Systems
+    rating: CCF-C
+  - name: JCIS
+    rating: CCF-C
+  - name: Journal of Computer Information Systems
+    rating: CCF-C
+  - name: JDM
+    rating: CCF-C
+  - name: Journal of Database Management
+    rating: CCF-C
+  - name: JGITM
+    rating: CCF-C
+  - name: Journal of Global Information Technology Management
+    rating: CCF-C
+  - name: JIIS
+    rating: CCF-C
+  - name: Journal of Intelligent Information Systems
+    rating: CCF-C
+  - name: JSIS
+    rating: CCF-C
+  - name: The Journal of Strategic Information Systems
+    rating: CCF-C
+  - name: DSE
+    rating: CCF-C
+  - name: SIGMOD
+    rating: CCF-A
+  - name: ACM SIGMOD Conference
+    rating: CCF-A
+  - name: SIGKDD
+    rating: CCF-A
+  - name: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+    rating: CCF-A
+  - name: ICDE
+    rating: CCF-A
+  - name: IEEE International Conference on Data Engineering
+    rating: CCF-A
+  - name: SIGIR
+    rating: CCF-A
+  - name: International ACM SIGIR Conference on Research and Development in Information
+      Retrieval
+    rating: CCF-A
+  - name: VLDB
+    rating: CCF-A
+  - name: International Conference on Very Large Data Bases
+    rating: CCF-A
+  - name: CIKM
+    rating: CCF-B
+  - name: ACM International Conference on Information and Knowledge Management
+    rating: CCF-B
+  - name: WSDM
+    rating: CCF-B
+  - name: ACM International Conference on Web Search and Data Mining
+    rating: CCF-B
+  - name: PODS
+    rating: CCF-B
+  - name: ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of DatabaseSystems
+    rating: CCF-B
+  - name: DASFAA
+    rating: CCF-B
+  - name: International Conference on Database Systems for Advanced Applications
+    rating: CCF-B
+  - name: ECML-PKDD
+    rating: CCF-B
+  - name: European Conference on Machine Learning and Principles and Practice of Knowledge
+      Discovery in Databases
+    rating: CCF-B
+  - name: ISWC
+    rating: CCF-B
+  - name: IEEE International Semantic Web Conference
+    rating: CCF-B
+  - name: ICDM
+    rating: CCF-B
+  - name: IEEE International Conference on Data Mining
+    rating: CCF-B
+  - name: ICDT
+    rating: CCF-B
+  - name: International Conference on Database Theory
+    rating: CCF-B
+  - name: EDBT
+    rating: CCF-B
+  - name: International Conference on Extending Database Technology
+    rating: CCF-B
+  - name: CIDR
+    rating: CCF-B
+  - name: Conference on Innovative Data Systems Research
+    rating: CCF-B
+  - name: SDM
+    rating: CCF-B
+  - name: SIAM International Conference on Data Mining
+    rating: CCF-B
+  - name: RecSys
+    rating: CCF-B
+  - name: ACM Conference on Recommender Systems
+    rating: CCF-B
+  - name: APWeb
+    rating: CCF-C
+  - name: Asia Pacific Web Conference
+    rating: CCF-C
+  - name: DEXA
+    rating: CCF-C
+  - name: International Conference on Database and Expert System Applications
+    rating: CCF-C
+  - name: ECIR
+    rating: CCF-C
+  - name: European Conference on Information Retrieval
+    rating: CCF-C
+  - name: ESWC
+    rating: CCF-C
+  - name: Extended Semantic Web Conference
+    rating: CCF-C
+  - name: WebDB
+    rating: CCF-C
+  - name: ER
+    rating: CCF-C
+  - name: International Conference on Conceptual Modeling
+    rating: CCF-C
+  - name: MDM
+    rating: CCF-C
+  - name: International Conference on Mobile Data Management
+    rating: CCF-C
+  - name: SSDBM
+    rating: CCF-C
+  - name: International Conference on Scientific and Statistical Database Management
+    rating: CCF-C
+  - name: WAIM
+    rating: CCF-C
+  - name: International Conference on Web Age Information Management
+    rating: CCF-C
+  - name: SSTD
+    rating: CCF-C
+  - name: PAKDD
+    rating: CCF-C
+  - name: Pacific-Asia Conference on Knowledge Discovery and Data Mining
+    rating: CCF-C
+  - name: WISE
+    rating: CCF-C
+  - name: Web Information Systems Engineering
+    rating: CCF-C
+  - name: ADMA
+    rating: CCF-C
+  - name: International Conference on Advanced Data Mining and Applications
+    rating: CCF-C
+  计算机科学理论:
+  - name: TIT
+    rating: CCF-A
+  - name: IEEE Transactions on Information Theory
+    rating: CCF-A
+  - name: IANDC
+    rating: CCF-A
+  - name: SICOMP
+    rating: CCF-A
+  - name: SIAM Journal on Computing
+    rating: CCF-A
+  - name: TALG
+    rating: CCF-B
+  - name: ACM Transactions on Algorithms
+    rating: CCF-B
+  - name: TOCL
+    rating: CCF-B
+  - name: ACM Transactions on Computational Logic
+    rating: CCF-B
+  - name: TOMS
+    rating: CCF-B
+  - name: ACM Transactions on Mathematical Software
+    rating: CCF-B
+  - name: Algorithmica
+    rating: CCF-B
+  - name: CC
+    rating: CCF-B
+  - name: FAC
+    rating: CCF-B
+  - name: FMSD
+    rating: CCF-B
+  - name: INFORMS
+    rating: CCF-B
+  - name: INFORMS Journal on Computing
+    rating: CCF-B
+  - name: JCSS
+    rating: CCF-B
+  - name: Journal of Computer and System Sciences
+    rating: CCF-B
+  - name: JGO
+    rating: CCF-B
+  - name: Journal of Global Optimization
+    rating: CCF-B
+  - name: JSC
+    rating: CCF-B
+  - name: Journal of Symbolic Computation
+    rating: CCF-B
+  - name: MSCS
+    rating: CCF-B
+  - name: TCS
+    rating: CCF-B
+  - name: STOC
+    rating: CCF-A
+  - name: SODA
+    rating: CCF-A
+  - name: CAV
+    rating: CCF-A
+  - name: International Conference on Computer Aided Verification
+    rating: CCF-A
+  - name: FOCS
+    rating: CCF-A
+  - name: LICS
+    rating: CCF-A
+  - name: SoCG
+    rating: CCF-B
+  - name: ESA
+    rating: CCF-B
+  - name: CCC
+    rating: CCF-B
+  - name: Conference on Computational Complexity
+    rating: CCF-B
+  - name: ICALP
+    rating: CCF-B
+  - name: International Conference on Automated Deduction/International Joint Conference
+      on Automated Reasoning
+    rating: CCF-B
+  - name: CONCUR
+    rating: CCF-B
+  - name: International Conference on Concurrency Theory
+    rating: CCF-B
+  - name: HSCC
+    rating: CCF-B
+  - name: 'International Conference on Hybrid Systems: Computation and Control'
+    rating: CCF-B
+  - name: SAT
+    rating: CCF-B
+  - name: International Conference on Theory and Applications of Satisfiability Testing
+    rating: CCF-B
+  - name: COCOON
+    rating: CCF-B
+  - name: International Computing and Combinatorics Conference
+    rating: CCF-B
+  - name: CSL
+    rating: CCF-C
+  - name: FMCAD
+    rating: CCF-C
+  - name: FSTTCS
+    rating: CCF-C
+  - name: DSAA
+    rating: CCF-C
+  - name: IEEE International Conference on Data Science and Advanced Analytics
+    rating: CCF-C
+  - name: ICTAC
+    rating: CCF-C
+  - name: IPCO
+    rating: CCF-C
+  - name: International Conference on Integer Programming and Combinatorial Optimization
+    rating: CCF-C
+  - name: RTA
+    rating: CCF-C
+  - name: International Conference on Rewriting Techniques and Applications
+    rating: CCF-C
+  - name: ISAAC
+    rating: CCF-C
+  - name: MFCS
+    rating: CCF-C
+  - name: International Conference on Mathematical Foundations of Computer Science
+    rating: CCF-C
+  - name: STACS
+    rating: CCF-C
+  - name: SETTA
+    rating: CCF-C
+  2013年已停刊:
+  - name: ACTA
+    rating: CCF-C
+  - name: APAL
+    rating: CCF-C
+  - name: DAM
+    rating: CCF-C
+  - name: FUIN
+    rating: CCF-C
+  - name: LISP
+    rating: CCF-C
+  - name: IPL
+    rating: CCF-C
+  - name: JCOMPLEXITY
+    rating: CCF-C
+  - name: Journal of Complexity
+    rating: CCF-C
+  - name: LOGCOM
+    rating: CCF-C
+  - name: Journal of Logic and Computation
+    rating: CCF-C
+  - name: JSL
+    rating: CCF-C
+  - name: The Journal of Symbolic Logic
+    rating: CCF-C
+  - name: LMCS
+    rating: CCF-C
+  - name: SIDMA
+    rating: CCF-C
+  - name: SIAM Journal on Discrete Mathematics
+    rating: CCF-C
+  - name: Theory of Computing Systems
+    rating: CCF-C
+  计算机图形学与多媒体:
+  - name: TOG
+    rating: CCF-A
+  - name: ACM Transactions on Graphics
+    rating: CCF-A
+  - name: TIP
+    rating: CCF-A
+  - name: IEEE Transactions on Image Processing
+    rating: CCF-A
+  - name: TVCG
+    rating: CCF-A
+  - name: IEEE Transactions on Visualization and Computer Graphics
+    rating: CCF-A
+  - name: TOMM
+    rating: CCF-B
+  - name: ACM Transactions on Multimedia Computing, Communications and Applications
+    rating: CCF-B
+  - name: CAGD
+    rating: CCF-B
+  - name: CGF
+    rating: CCF-B
+  - name: CAD
+    rating: CCF-B
+  - name: GM
+    rating: CCF-B
+  - name: TCSVT
+    rating: CCF-B
+  - name: IEEE Transactions on Circuits and Systems for Video Technology
+    rating: CCF-B
+  - name: TMM
+    rating: CCF-B
+  - name: IEEE Transactions on Multimedia
+    rating: CCF-B
+  - name: JASA
+    rating: CCF-B
+  - name: The Journal of the Acoustical Society of America
+    rating: CCF-B
+  - name: SIIMS
+    rating: CCF-B
+  - name: SIAM Journal on Imaging Sciences
+    rating: CCF-B
+  - name: SPECOM
+    rating: CCF-B
+  - name: CGTA
+    rating: CCF-C
+  - name: CAVW
+    rating: CCF-C
+  - name: DCG
+    rating: CCF-C
+  - name: SPL
+    rating: CCF-C
+  - name: IET-IPR
+    rating: CCF-C
+  - name: JVCIR
+    rating: CCF-C
+  - name: Journal of Visual Communication and Image Representation
+    rating: CCF-C
+  - name: MS
+    rating: CCF-C
+  - name: Multimedia Systems
+    rating: CCF-C
+  - name: MTA
+    rating: CCF-C
+  - name: SIGPRO
+    rating: CCF-C
+  - name: IMAGE
+    rating: CCF-C
+  - name: TVC
+    rating: CCF-C
+  - name: CVMJ
+    rating: CCF-C
+  - name: ACM International Conference on Multimedia
+    rating: CCF-A
+  - name: SIGGRAPH
+    rating: CCF-A
+  - name: VR
+    rating: CCF-A
+  - name: IEEE Visualization Conference
+    rating: CCF-A
+  - name: ICMR
+    rating: CCF-B
+  - name: ACM SIGMM International Conference on Multimedia Retrieval
+    rating: CCF-B
+  - name: I3D
+    rating: CCF-B
+  - name: SCA
+    rating: CCF-B
+  - name: DCC
+    rating: CCF-B
+  - name: Data Compression Conference
+    rating: CCF-B
+  - name: Annual Conference of the European Association for Computer Graphics
+    rating: CCF-B
+  - name: EuroVis
+    rating: CCF-B
+  - name: Eurographics Conference on Visualization
+    rating: CCF-B
+  - name: SGP
+    rating: CCF-B
+  - name: EGSR
+    rating: CCF-B
+  - name: ICASSP
+    rating: CCF-B
+  - name: IEEE International Conference on Acoustics, Speech and Signal Processing
+    rating: CCF-B
+  - name: ICME
+    rating: CCF-B
+  - name: IEEE International Conference on Multimedia & Expo
+    rating: CCF-B
+  - name: ISMAR
+    rating: CCF-B
+  - name: PG
+    rating: CCF-B
+  - name: Pacific Conference onComputer Graphics and Applications
+    rating: CCF-B
+  - name: SPM
+    rating: CCF-B
+  - name: VRST
+    rating: CCF-C
+  - name: CASA
+    rating: CCF-C
+  - name: International Conference on Computer Animation and Social Agents
+    rating: CCF-C
+  - name: CGI
+    rating: CCF-C
+  - name: INTERSPEECH
+    rating: CCF-C
+  - name: Conference of the International Speech Communication Association
+    rating: CCF-C
+  - name: GMP
+    rating: CCF-C
+  - name: PacificVis
+    rating: CCF-C
+  - name: 3DV
+    rating: CCF-C
+  - name: International Conference on 3D Vision
+    rating: CCF-C
+  - name: International Conference on Computer-Aided Design and Computer Graphics
+    rating: CCF-C
+  - name: ICIP
+    rating: CCF-C
+  - name: IEEE International Conference on Image Processing
+    rating: CCF-C
+  - name: MMM
+    rating: CCF-C
+  - name: International Conference on Multimedia Modeling
+    rating: CCF-C
+  - name: MMAsia
+    rating: CCF-C
+  - name: SMI
+    rating: CCF-C
+  - name: ICVRV
+    rating: CCF-C
+  - name: International Conference on Virtual Reality and Visualization
+    rating: CCF-C
+  - name: CVM
+    rating: CCF-C
+  - name: PRCV
+    rating: CCF-C
+  - name: Chinese Conference on Pattern Recognition and Computer Vision (中国模式识别与计算机视觉大会)
+    rating: CCF-C
+  人工智能:
+  - name: AI
+    rating: CCF-A
+  - name: TPAMI
+    rating: CCF-A
+  - name: IEEE Transactions on Pattern Analysis and MachineIntelligence
+    rating: CCF-A
+  - name: IJCV
+    rating: CCF-A
+  - name: International Journal of Computer Vision
+    rating: CCF-A
+  - name: JMLR
+    rating: CCF-A
+  - name: Journal of Machine Learning Research
+    rating: CCF-A
+  - name: TAP
+    rating: CCF-B
+  - name: ACM Transactions on Applied Perception
+    rating: CCF-B
+  - name: TSLP
+    rating: CCF-B
+  - name: ACM Transactions on Speech and Language (2013年已停刊)
+    rating: CCF-B
+  - name: AAMAS
+    rating: CCF-B
+  - name: Autonomous Agents and Multi-Agent Systems
+    rating: CCF-B
+  - name: CVIU
+    rating: CCF-B
+  - name: DKE
+    rating: CCF-B
+  - name: TAC
+    rating: CCF-B
+  - name: IEEE Transactions on Affective Computing
+    rating: CCF-B
+  - name: TASLP
+    rating: CCF-B
+  - name: IEEE/ACM Transactions on Audio, Speech and Language Processing
+    rating: CCF-B
+  - name: IEEE Transactions on Cybernetics
+    rating: CCF-B
+  - name: TEC
+    rating: CCF-B
+  - name: IEEE Transactions on Evolutionary Computation
+    rating: CCF-B
+  - name: TFS
+    rating: CCF-B
+  - name: IEEE Transactions on Fuzzy Systems
+    rating: CCF-B
+  - name: TNNLS
+    rating: CCF-B
+  - name: IEEE Transactions on Neural Networks and learning systems
+    rating: CCF-B
+  - name: IJAR
+    rating: CCF-B
+  - name: International Journal of Approximate Reasoning
+    rating: CCF-B
+  - name: JAIR
+    rating: CCF-B
+  - name: Journal of Artificial Intelligence Research
+    rating: CCF-B
+  - name: Journal of Automated Reasoning
+    rating: CCF-B
+  - name: JSLHR
+    rating: CCF-B
+  - name: Journal of Speech, Language, and Hearing Research
+    rating: CCF-B
+  - name: PR
+    rating: CCF-B
+  - name: TACL
+    rating: CCF-B
+  - name: Transactions of the Association for Computational Linguistics
+    rating: CCF-B
+  - name: TALLIP
+    rating: CCF-C
+  - name: ACM Transactions on Asian and Low- Resource Language Information Processing
+    rating: CCF-C
+  - name: AIM
+    rating: CCF-C
+  - name: DSS
+    rating: CCF-C
+  - name: Decision Support Systems
+    rating: CCF-C
+  - name: EAAI
+    rating: CCF-C
+  - name: Expert Systems
+    rating: CCF-C
+  - name: ESWA
+    rating: CCF-C
+  - name: Expert Systems with Applications
+    rating: CCF-C
+  - name: Fuzzy Sets and Systems
+    rating: CCF-C
+  - name: TG
+    rating: CCF-C
+  - name: IEEE Transactions on Games
+    rating: CCF-C
+  - name: IET-CVI
+    rating: CCF-C
+  - name: IVC
+    rating: CCF-C
+  - name: IDA
+    rating: CCF-C
+  - name: IJCIA
+    rating: CCF-C
+  - name: International Journal of Computational Intelligence and Applications
+    rating: CCF-C
+  - name: IJIS
+    rating: CCF-C
+  - name: International Journal of Intelligent Systems
+    rating: CCF-C
+  - name: IJNS
+    rating: CCF-C
+  - name: International Journal of Neural Systems
+    rating: CCF-C
+  - name: IJPRAI
+    rating: CCF-C
+  - name: International Journal of Pattern Recognition and Artificial Intelligence
+    rating: CCF-C
+  - name: IJUFKS
+    rating: CCF-C
+  - name: International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
+    rating: CCF-C
+  - name: IJDAR
+    rating: CCF-C
+  - name: International Journal on Document Analysis and Recognition
+    rating: CCF-C
+  - name: JETAI
+    rating: CCF-C
+  - name: Journal of Experimental and Theoretical Artificial Intelligence
+    rating: CCF-C
+  - name: KBS
+    rating: CCF-C
+  - name: Knowledge-Based Systems
+    rating: CCF-C
+  - name: NLE
+    rating: CCF-C
+  - name: NCA
+    rating: CCF-C
+  - name: NPL
+    rating: CCF-C
+  - name: PAA
+    rating: CCF-C
+  - name: PRL
+    rating: CCF-C
+  - name: WI
+    rating: CCF-C
+  - name: TIIS
+    rating: CCF-C
+  - name: ACM Transactions on Interactive Intelligent Systems
+    rating: CCF-C
+  - name: AAAI
+    rating: CCF-A
+  - name: AAAI Conference on Artificial Intelligence
+    rating: CCF-A
+  - name: NeurIPS
+    rating: CCF-A
+  - name: Conference on Neural Information Processing Systems
+    rating: CCF-A
+  - name: ACL
+    rating: CCF-A
+  - name: CVPR
+    rating: CCF-A
+  - name: IEEE/CVF Computer Vision and Pattern Recognition Conference
+    rating: CCF-A
+  - name: ICCV
+    rating: CCF-A
+  - name: International Conference on Computer Vision
+    rating: CCF-A
+  - name: ICML
+    rating: CCF-A
+  - name: International Conference on Machine Learning
+    rating: CCF-A
+  - name: IJCAI
+    rating: CCF-A
+  - name: International Joint Conference on Artificial Intelligence
+    rating: CCF-A
+  - name: COLT
+    rating: CCF-B
+  - name: Annual Conference on Computational Learning Theory
+    rating: CCF-B
+  - name: EMNLP
+    rating: CCF-B
+  - name: Conference on Empirical Methods in Natural Language Processing
+    rating: CCF-B
+  - name: ECAI
+    rating: CCF-B
+  - name: European Conference on Artificial Intelligence
+    rating: CCF-B
+  - name: ECCV
+    rating: CCF-B
+  - name: European Conference on Computer Vision
+    rating: CCF-B
+  - name: ICRA
+    rating: CCF-B
+  - name: IEEE International Conference on Robotics and Automation
+    rating: CCF-B
+  - name: ICAPS
+    rating: CCF-B
+  - name: International Conference on Automated Planning and Scheduling
+    rating: CCF-B
+  - name: ICCBR
+    rating: CCF-B
+  - name: International Conference on Case-Based Reasoning
+    rating: CCF-B
+  - name: COLING
+    rating: CCF-B
+  - name: International Conference on Computational Linguistics
+    rating: CCF-B
+  - name: KR
+    rating: CCF-B
+  - name: International Conference on Principles of Knowledge Representation and Reasoning
+    rating: CCF-B
+  - name: UAI
+    rating: CCF-B
+  - name: Conference onUncertainty in Artificial Intelligence
+    rating: CCF-B
+  - name: AAMAS
+    rating: CCF-B
+  - name: International Joint Conference on Autonomous Agents and Multi- agent Systems
+    rating: CCF-B
+  - name: PPSN
+    rating: CCF-B
+  - name: NAACL
+    rating: CCF-B
+  - name: AISTATS
+    rating: CCF-C
+  - name: International Conference on Artificial Intelligence and Statistics
+    rating: CCF-C
+  - name: ACCV
+    rating: CCF-C
+  - name: Asian Conference on Computer Vision
+    rating: CCF-C
+  - name: ACML
+    rating: CCF-C
+  - name: Asian Conference on Machine Learning
+    rating: CCF-C
+  - name: BMVC
+    rating: CCF-C
+  - name: British Machine Vision Conference
+    rating: CCF-C
+  - name: NLPCC
+    rating: CCF-C
+  - name: CCF International Conference on Natural Language Processing and Chinese
+      Computing
+    rating: CCF-C
+  - name: CoNLL
+    rating: CCF-C
+  - name: Conference on Computational Natural Language Learning
+    rating: CCF-C
+  - name: GECCO
+    rating: CCF-C
+  - name: Genetic and Evolutionary Computation Conference
+    rating: CCF-C
+  - name: ICTAI
+    rating: CCF-C
+  - name: IEEE International Conference on Tools with Artificial Intelligence
+    rating: CCF-C
+  - name: IROS
+    rating: CCF-C
+  - name: IEEE\RSJ International Conference on Intelligent Robots and Systems
+    rating: CCF-C
+  - name: ALT
+    rating: CCF-C
+  - name: International Conference on Algorithmic Learning Theory
+    rating: CCF-C
+  - name: ICANN
+    rating: CCF-C
+  - name: International Conference on Artificial Neural Networks
+    rating: CCF-C
+  - name: FG
+    rating: CCF-C
+  - name: IEEE International Conference on Automatic Face and Gesture Recognition
+    rating: CCF-C
+  - name: ICDAR
+    rating: CCF-C
+  - name: International Conference on Document Analysis and Recognition
+    rating: CCF-C
+  - name: ILP
+    rating: CCF-C
+  - name: International Conference on Inductive Logic Programming
+    rating: CCF-C
+  - name: KSEM
+    rating: CCF-C
+  - name: ICONIP
+    rating: CCF-C
+  - name: International Conference on Neural Information Processing
+    rating: CCF-C
+  - name: ICPR
+    rating: CCF-C
+  - name: International Conference on Pattern Recognition
+    rating: CCF-C
+  - name: IJCB
+    rating: CCF-C
+  - name: International Joint Conference on Biometrics
+    rating: CCF-C
+  - name: IJCNN
+    rating: CCF-C
+  - name: International Joint Conference on Neural Networks
+    rating: CCF-C
+  - name: PRICAI
+    rating: CCF-C
+  - name: Pacific Rim International Conference on Artificial Intelligence
+    rating: CCF-C
+  人机交互与普适计算:
+  - name: TOCHI
+    rating: CCF-A
+  - name: ACM Transactions on Computer-Human Interaction
+    rating: CCF-A
+  - name: IJHCS
+    rating: CCF-A
+  - name: International Journal of Human-Computer Studies
+    rating: CCF-A
+  - name: CSCW
+    rating: CCF-B
+  - name: HCI
+    rating: CCF-B
+  - name: IEEE Transactions on Human-Machine Systems
+    rating: CCF-B
+  - name: IWC
+    rating: CCF-B
+  - name: IJHCI
+    rating: CCF-B
+  - name: International Journal of Human-Computer Interaction
+    rating: CCF-B
+  - name: UMUAI
+    rating: CCF-B
+  - name: TSMC
+    rating: CCF-B
+  - name: 'IEEE Transactions on Systems, Man, and Cybernetics: Systems'
+    rating: CCF-B
+  - name: BIT
+    rating: CCF-C
+  - name: PUC
+    rating: CCF-C
+  - name: PMC
+    rating: CCF-C
+  - name: PACMHCI
+    rating: CCF-C
+  - name: Proceedings of the ACM on Human- Computer Interaction
+    rating: CCF-C
+  - name: CSCW
+    rating: CCF-A
+  - name: ACM Conference On Computer- SupportedCooperative Work And Social Computing
+    rating: CCF-A
+  - name: CHI
+    rating: CCF-A
+  - name: ACM Conference on Human Factors in Computing Systems
+    rating: CCF-A
+  - name: UbiComp
+    rating: CCF-A
+  - name: UIST
+    rating: CCF-A
+  - name: GROUP
+    rating: CCF-B
+  - name: ACM International Conference on Supporting Group Work
+    rating: CCF-B
+  - name: IUI
+    rating: CCF-B
+  - name: ACM International Conference on Intelligent User Interfaces
+    rating: CCF-B
+  - name: ACM International Conference on Interactive Surfaces and Spaces
+    rating: CCF-B
+  - name: ECSCW
+    rating: CCF-B
+  - name: European Conference on Computer Supported Cooperative Work
+    rating: CCF-B
+  - name: PERCOM
+    rating: CCF-B
+  - name: IEEE International Conference on Pervasive Computing and Communications
+    rating: CCF-B
+  - name: MobileHCI
+    rating: CCF-B
+  - name: ACM International Conference on Mobile Human-ComputerInteraction
+    rating: CCF-B
+  - name: ICWSM
+    rating: CCF-B
+  - name: The International AAAI Conference on Web and Social Media
+    rating: CCF-B
+  - name: DIS
+    rating: CCF-C
+  - name: ACM SIGCHI Conference on Designing Interactive Systems
+    rating: CCF-C
+  - name: ICMI
+    rating: CCF-C
+  - name: ACM International Conference on Multimodal Interaction
+    rating: CCF-C
+  - name: ASSETS
+    rating: CCF-C
+  - name: International ACM SIGACCESS Conference on Computers and Accessibility
+    rating: CCF-C
+  - name: GI
+    rating: CCF-C
+  - name: UIC
+    rating: CCF-C
+  - name: IEEE International Conference on Ubiquitous Intelligence and Computing
+    rating: CCF-C
+  - name: IEEE World Haptics Conference
+    rating: CCF-C
+  - name: INTERACT
+    rating: CCF-C
+  - name: International Conference on Human- Computer Interaction of International
+      Federation for Information Processing
+    rating: CCF-C
+  - name: IDC
+    rating: CCF-C
+  - name: CollaborateCom
+    rating: CCF-C
+  - name: 'International Conference on Collaborative Computing: Networking, Applications
+      and Worksharing'
+    rating: CCF-C
+  - name: CSCWD
+    rating: CCF-C
+  - name: International Conference on Computer Supported Cooperative Work in Design
+    rating: CCF-C
+  - name: CoopIS
+    rating: CCF-C
+  - name: International Conference on Cooperative Information Systems
+    rating: CCF-C
+  - name: MobiQuitous
+    rating: CCF-C
+  - name: 'International Conference on Mobile and Ubiquitous Systems: Computing, Networking
+      and Services'
+    rating: CCF-C
+  - name: AVI
+    rating: CCF-C
+  - name: International Working Conference on Advanced Visual Interfaces
+    rating: CCF-C
+  交叉/综合/新兴:
+  - name: JACM
+    rating: CCF-A
+  - name: Journal of the ACM
+    rating: CCF-A
+  - name: Proceedings of the IEEE
+    rating: CCF-A
+  - name: SCIS
+    rating: CCF-A
+  - name: Cognition
+    rating: CCF-B
+  - name: TASAE
+    rating: CCF-B
+  - name: IEEE Transactions on Automation Science and Engineering
+    rating: CCF-B
+  - name: TGARS
+    rating: CCF-B
+  - name: IEEE Transactions on Geoscience and Remote Sensing
+    rating: CCF-B
+  - name: TITS
+    rating: CCF-B
+  - name: IEEE Transactions on Intelligent Transportation Systems
+    rating: CCF-B
+  - name: TMI
+    rating: CCF-B
+  - name: IEEE Transactions on Medical Imaging
+    rating: CCF-B
+  - name: TR
+    rating: CCF-B
+  - name: IEEE Transactions on Robotics
+    rating: CCF-B
+  - name: TCBB
+    rating: CCF-B
+  - name: IEEE/ACM Transactions on Computational Biology and Bioinformatics
+    rating: CCF-B
+  - name: JCST
+    rating: CCF-B
+  - name: Journal of Computer Science and Technology
+    rating: CCF-B
+  - name: JAMIA
+    rating: CCF-B
+  - name: Journal of the American Medical Informatics Association
+    rating: CCF-B
+  - name: The Computer Journal
+    rating: CCF-B
+  - name: WWW
+    rating: CCF-B
+  - name: FCS
+    rating: CCF-B
+  - name: Cybernetics and Systems
+    rating: CCF-C
+  - name: JBHI
+    rating: CCF-C
+  - name: IEEE Journal of Biomedical and Health Informatics
+    rating: CCF-C
+  - name: TBD
+    rating: CCF-C
+  - name: IEEE Transactions on Big Data
+    rating: CCF-C
+  - name: IET Intelligent Transport Systems
+    rating: CCF-C
+  - name: JBI
+    rating: CCF-C
+  - name: Journal of Biomedical Informatics
+    rating: CCF-C
+  - name: TII
+    rating: CCF-C
+  - name: IEEE Transactions on Industrial Informatics
+    rating: CCF-C
+  - name: TCPS
+    rating: CCF-C
+  - name: ACM Transactions on Cyber- Physical Systems
+    rating: CCF-C
+  - name: TOCE
+    rating: CCF-C
+  - name: ACM Transactions on Computing Education
+    rating: CCF-C
+  - name: FITEE
+    rating: CCF-C
+  - name: TCSS
+    rating: CCF-C
+  - name: IEEE Transactions on Computational Social Systems
+    rating: CCF-C
+  - name: IEEE Transactions on Reliability
+    rating: CCF-C
+  - name: WWW
+    rating: CCF-A
+  - name: International World Wide Web Conference
+    rating: CCF-A
+  - name: RTSS
+    rating: CCF-A
+  - name: IEEE Real-Time Systems Symposium
+    rating: CCF-A
+  - name: WINE
+    rating: CCF-A
+  - name: Conference on Web and Internet Economics
+    rating: CCF-A
+  - name: CogSci
+    rating: CCF-B
+  - name: BIBM
+    rating: CCF-B
+  - name: IEEE International Conference on Bioinformatics and Biomedicine
+    rating: CCF-B
+  - name: EMSOFT
+    rating: CCF-B
+  - name: International Conference on Embedded Software
+    rating: CCF-B
+  - name: ISMB
+    rating: CCF-B
+  - name: International conference on Intelligent Systems for Molecular Biology
+    rating: CCF-B
+  - name: RECOMB
+    rating: CCF-B
+  - name: Annual International Conference on Research in Computational Molecular Biology
+    rating: CCF-B
+  - name: MICCAI
+    rating: CCF-B
+  - name: International Conference on Medical Image Computing and Computer-Assisted
+      Intervention
+    rating: CCF-B
+  简称：ITS:
+  - name: AMIA
+    rating: CCF-C
+  - name: APBC
+    rating: CCF-C
+  - name: Asia Pacific Bioinformatics Conference
+    rating: CCF-C
+  - name: IEEE International Conference on Big Data
+    rating: CCF-C
+  - name: IEEE International Conference on Cloud Computing
+    rating: CCF-C
+  - name: SMC
+    rating: CCF-C
+  - name: IEEE International Conference on Systems, Man, and Cybernetics
+    rating: CCF-C
+  - name: COSIT
+    rating: CCF-C
+  - name: International Conference on Spatial Information Theory
+    rating: CCF-C
+  - name: ISBRA
+    rating: CCF-C
+  - name: SAGT
+    rating: CCF-C
+  - name: ICIC
+    rating: CCF-C
+  - name: International Conference on Intelligent Computing
+    rating: CCF-C
+venue_aliases:
+  TOCS:
+  - TOCS
+  ACM Transactions on Computer Systems:
+  - TOCS
+  - ACM TRANSACTIONS ON COMPUTER SYSTEMS
+  TOS:
+  - TOS
+  ACM Transactions on Storage:
+  - TOS
+  - ACM TRANSACTIONS ON STORAGE
+  TCAD:
+  - TCAD
+  IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems:
+  - IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS
+  TC:
+  - TC
+  IEEE Transactions on Computers:
+  - IEEE TRANSACTIONS ON COMPUTERS
+  - TC
+  TPDS:
+  - TPDS
+  IEEE Transactions on Parallel and Distributed Systems:
+  - IEEE TRANSACTIONS ON PARALLEL AND DISTRIBUTED SYSTEMS
+  - TPDS
+  TACO:
+  - TACO
+  ACM Transactions on Architecture and Code Optimization:
+  - ACM TRANSACTIONS ON ARCHITECTURE AND CODE OPTIMIZATION
+  TAAS:
+  - TAAS
+  ACM Transactions on Autonomous and Adaptive Systems:
+  - ACM TRANSACTIONS ON AUTONOMOUS AND ADAPTIVE SYSTEMS
+  TODAES:
+  - TODAES
+  ACM Transactions on Design Automation of Electronic Systems:
+  - ACM TRANSACTIONS ON DESIGN AUTOMATION OF ELECTRONIC SYSTEMS
+  TECS:
+  - TECS
+  ACM Transactions on Embedded Computing Systems:
+  - ACM TRANSACTIONS ON EMBEDDED COMPUTING SYSTEMS
+  TRETS:
+  - TRETS
+  ACM Transactions on Reconfigurable Technology and Systems:
+  - ACM TRANSACTIONS ON RECONFIGURABLE TECHNOLOGY AND SYSTEMS
+  TVLSI:
+  - TVLSI
+  IEEE Transactions on Very Large Scale Integration (VLSI) Systems:
+  - IEEE TRANSACTIONS ON VERY LARGE SCALE INTEGRATION (VLSI) SYSTEMS
+  JPDC:
+  - JPDC
+  Journal of Parallel and Distributed Computing:
+  - JOURNAL OF PARALLEL AND DISTRIBUTED COMPUTING
+  JSA:
+  - JSA
+  'Journal of Systems Architecture: Embedded Software Design':
+  - 'JOURNAL OF SYSTEMS ARCHITECTURE: EMBEDDED SOFTWARE DESIGN'
+  'Performance Evaluation: An International Journal':
+  - 'PERFORMANCE EVALUATION: AN INTERNATIONAL JOURNAL'
+  JETC:
+  - JETC
+  ACM Journal on Emerging Technologies in Computing Systems:
+  - ACM JOURNAL ON EMERGING TECHNOLOGIES IN COMPUTING SYSTEMS
+  DC:
+  - DC
+  FGCS:
+  - FGCS
+  Future Generation Computer Systems:
+  - FUTURE GENERATION COMPUTER SYSTEMS
+  TCC:
+  - TCC
+  IEEE Transactions on Cloud Computing:
+  - IEEE TRANSACTIONS ON CLOUD COMPUTING
+  Integration:
+  - INTEGRATION
+  Integration, the VLSI Journal:
+  - INTEGRATION, THE VLSI JOURNAL
+  JETTA:
+  - JETTA
+  Journal of Electronic Testing-Theory and Applications:
+  - JOURNAL OF ELECTRONIC TESTING-THEORY AND APPLICATIONS
+  JGC:
+  - JGC
+  Journal of Grid computing:
+  - JOURNAL OF GRID COMPUTING
+  MICPRO:
+  - MICPRO
+  RTS:
+  - RTS
+  Real-Time Systems:
+  - REAL-TIME SYSTEMS
+  TJSC:
+  - TJSC
+  The Journal of Supercomputing:
+  - THE JOURNAL OF SUPERCOMPUTING
+  TCASI:
+  - TCASI
+  'IEEE Transactions on Circuits and Systems I: Regular Papers':
+  - 'IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS I: REGULAR PAPERS'
+  CCF Transactions on High Performance Computing:
+  - CCF TRANSACTIONS ON HIGH PERFORMANCE COMPUTING
+  TSUSC:
+  - TSUSC
+  IEEE Transactions on Sustainable Computing:
+  - IEEE TRANSACTIONS ON SUSTAINABLE COMPUTING
+  PPoPP:
+  - PPOPP
+  FAST:
+  - FAST
+  USENIX Conference on File and Storage Technologies:
+  - USENIX CONFERENCE ON FILE AND STORAGE TECHNOLOGIES
+  DAC:
+  - DAC
+  Design Automation Conference:
+  - DESIGN AUTOMATION CONFERENCE
+  HPCA:
+  - HPCA
+  MICRO:
+  - MICRO
+  SC:
+  - SC
+  International Conference for High Performance Computing, Networking, Storage, and Analysis:
+  - INTERNATIONAL CONFERENCE FOR HIGH PERFORMANCE COMPUTING, NETWORKING, STORAGE,
+    AND ANALYSIS
+  ASPLOS:
+  - ASPLOS
+  International Conference on Architectural Support for Programming Languages and Operating Systems:
+  - INTERNATIONAL CONFERENCE ON ARCHITECTURAL SUPPORT FOR PROGRAMMING LANGUAGES AND
+    OPERATING SYSTEMS
+  ISCA:
+  - ISCA
+  USENIX Annual Technical Conference:
+  - USENIX ANNUAL TECHNICAL CONFERENCE
+  EuroSys:
+  - EUROSYS
+  European Conference on Computer Systems:
+  - EUROPEAN CONFERENCE ON COMPUTER SYSTEMS
+  SoCC:
+  - SOCC
+  SPAA:
+  - SPAA
+  PODC:
+  - PODC
+  FPGA:
+  - FPGA
+  CGO:
+  - CGO
+  DATE:
+  - DATE
+  CLUSTER:
+  - CLUSTER
+  IEEE International Conference on Cluster Computing:
+  - IEEE INTERNATIONAL CONFERENCE ON CLUSTER COMPUTING
+  ICCD:
+  - ICCD
+  International Conference on Computer Design:
+  - INTERNATIONAL CONFERENCE ON COMPUTER DESIGN
+  ICCAD:
+  - ICCAD
+  International Conference on Computer-Aided Design:
+  - INTERNATIONAL CONFERENCE ON COMPUTER-AIDED DESIGN
+  ICDCS:
+  - ICDCS
+  IEEE International Conference on Distributed Computing Systems:
+  - IEEE INTERNATIONAL CONFERENCE ON DISTRIBUTED COMPUTING SYSTEMS
+  International Conference on Hardware/Software Co-design and System Synthesis:
+  - INTERNATIONAL CONFERENCE ON HARDWARE/SOFTWARE CO-DESIGN AND SYSTEM SYNTHESIS
+  HiPEAC:
+  - HIPEAC
+  International Conference on High Performance and Embedded Architectures and Compilers:
+  - INTERNATIONAL CONFERENCE ON HIGH PERFORMANCE AND EMBEDDED ARCHITECTURES AND COMPILERS
+  SIGMETRICS:
+  - SIGMETRICS
+  International Conference on Measurement and Modeling of Computer Systems:
+  - INTERNATIONAL CONFERENCE ON MEASUREMENT AND MODELING OF COMPUTER SYSTEMS
+  PACT:
+  - PACT
+  International Conference on Parallel Architectures and Compilation Techniques:
+  - INTERNATIONAL CONFERENCE ON PARALLEL ARCHITECTURES AND COMPILATION TECHNIQUES
+  ICPP:
+  - ICPP
+  International Conference on Parallel Processing:
+  - INTERNATIONAL CONFERENCE ON PARALLEL PROCESSING
+  ICS:
+  - ICS
+  International Conference on Supercomputing:
+  - INTERNATIONAL CONFERENCE ON SUPERCOMPUTING
+  VEE:
+  - VEE
+  International Conference on Virtual Execution Environments:
+  - INTERNATIONAL CONFERENCE ON VIRTUAL EXECUTION ENVIRONMENTS
+  IPDPS:
+  - IPDPS
+  Performance:
+  - PERFORMANCE
+  HPDC:
+  - HPDC
+  ITC:
+  - ITC
+  International Test Conference:
+  - INTERNATIONAL TEST CONFERENCE
+  LISA:
+  - LISA
+  Large Installation System Administration Conference:
+  - LARGE INSTALLATION SYSTEM ADMINISTRATION CONFERENCE
+  MSST:
+  - MSST
+  Mass Storage Systems and Technologies:
+  - MASS STORAGE SYSTEMS AND TECHNOLOGIES
+  RTAS:
+  - RTAS
+  Euro-Par:
+  - EURO-PAR
+  European Conference on Parallel and Distributed Computing:
+  - EUROPEAN CONFERENCE ON PARALLEL AND DISTRIBUTED COMPUTING
+  CF:
+  - CF
+  ACM International Conference on Computing Frontiers:
+  - ACM INTERNATIONAL CONFERENCE ON COMPUTING FRONTIERS
+  SYSTOR:
+  - SYSTOR
+  ACM International Systems and Storage Conference:
+  - ACM INTERNATIONAL SYSTEMS AND STORAGE CONFERENCE
+  NOCS:
+  - NOCS
+  ASAP:
+  - ASAP
+  IEEE International Conference on Application-Specific Systems, Architectures, and Processors:
+  - IEEE INTERNATIONAL CONFERENCE ON APPLICATION-SPECIFIC SYSTEMS, ARCHITECTURES,
+    AND PROCESSORS
+  ASP-DAC:
+  - ASP-DAC
+  Asia and South Pacific Design Automation Conference:
+  - ASIA AND SOUTH PACIFIC DESIGN AUTOMATION CONFERENCE
+  ETS:
+  - ETS
+  FPL:
+  - FPL
+  International Conference on Field-Programmable Logic and Applications:
+  - INTERNATIONAL CONFERENCE ON FIELD-PROGRAMMABLE LOGIC AND APPLICATIONS
+  FCCM:
+  - FCCM
+  GLSVLSI:
+  - GLSVLSI
+  ATS:
+  - ATS
+  HPCC:
+  - HPCC
+  IEEE International Conference on High Performance Computing and Communications:
+  - IEEE INTERNATIONAL CONFERENCE ON HIGH PERFORMANCE COMPUTING AND COMMUNICATIONS
+  HiPC:
+  - HIPC
+  IEEE International Conference on High Performance Computing, Data and Analytics:
+  - IEEE INTERNATIONAL CONFERENCE ON HIGH PERFORMANCE COMPUTING, DATA AND ANALYTICS
+  MASCOTS:
+  - MASCOTS
+  International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems:
+  - INTERNATIONAL SYMPOSIUM ON MODELING, ANALYSIS, AND SIMULATION OF COMPUTER AND
+    TELECOMMUNICATION SYSTEMS
+  ISPA:
+  - ISPA
+  CCGRID:
+  - CCGRID
+  NPC:
+  - NPC
+  IFIP International Conference on Network and Parallel Computing:
+  - IFIP INTERNATIONAL CONFERENCE ON NETWORK AND PARALLEL COMPUTING
+  ICA3PP:
+  - ICA3PP
+  International Conference on Algorithms and Architectures for Parallel Processing:
+  - INTERNATIONAL CONFERENCE ON ALGORITHMS AND ARCHITECTURES FOR PARALLEL PROCESSING
+  CASES:
+  - CASES
+  International Conference on Compilers, Architectures, and Synthesis for Embedded Systems:
+  - INTERNATIONAL CONFERENCE ON COMPILERS, ARCHITECTURES, AND SYNTHESIS FOR EMBEDDED
+    SYSTEMS
+  FPT:
+  - FPT
+  International Conference on Field-Programmable Technology:
+  - INTERNATIONAL CONFERENCE ON FIELD-PROGRAMMABLE TECHNOLOGY
+  ICPADS:
+  - ICPADS
+  International Conference on Parallel and Distributed Systems:
+  - INTERNATIONAL CONFERENCE ON PARALLEL AND DISTRIBUTED SYSTEMS
+  ISCAS:
+  - ISCAS
+  IEEE International Symposium on Circuits and Systems:
+  - IEEE INTERNATIONAL SYMPOSIUM ON CIRCUITS AND SYSTEMS
+  ISLPED:
+  - ISLPED
+  ISPD:
+  - ISPD
+  HOTI:
+  - HOTI
+  VTS:
+  - VTS
+  ITC-Asia:
+  - ITC-ASIA
+  International Test Conference in Asia:
+  - INTERNATIONAL TEST CONFERENCE IN ASIA
+  JSAC:
+  - JSAC
+  IEEE Journal on Selected Areas in Communications:
+  - IEEE JOURNAL ON SELECTED AREAS IN COMMUNICATIONS
+  TMC:
+  - TMC
+  IEEE Transactions on Mobile Computing:
+  - IEEE TRANSACTIONS ON MOBILE COMPUTING
+  TON:
+  - TON
+  IEEE/ACM Transactions on Networking:
+  - IEEE/ACM TRANSACTIONS ON NETWORKING
+  TOIT:
+  - TOIT
+  ACM Transactions on Internet Technology:
+  - ACM TRANSACTIONS ON INTERNET TECHNOLOGY
+  TOMM:
+  - TOMM
+  ACM Transactions on Multimedia Computing, Communications and Applications:
+  - ACM TRANSACTIONS ON MULTIMEDIA COMPUTING, COMMUNICATIONS AND APPLICATIONS
+  TOSN:
+  - TOSN
+  ACM Transactions on Sensor Networks:
+  - ACM TRANSACTIONS ON SENSOR NETWORKS
+  CN:
+  - CN
+  TCOM:
+  - TCOM
+  IEEE Transactions on Communications:
+  - IEEE TRANSACTIONS ON COMMUNICATIONS
+  TWC:
+  - TWC
+  IEEE Transactions on Wireless Communications:
+  - IEEE TRANSACTIONS ON WIRELESS COMMUNICATIONS
+  CC:
+  - CC
+  TNSM:
+  - TNSM
+  IEEE Transactions on Network and Service Management:
+  - IEEE TRANSACTIONS ON NETWORK AND SERVICE MANAGEMENT
+  JNCA:
+  - JNCA
+  Journal of Network and Computer Applications:
+  - JOURNAL OF NETWORK AND COMPUTER APPLICATIONS
+  MONET:
+  - MONET
+  PPNA:
+  - PPNA
+  WCMC:
+  - WCMC
+  IOT:
+  - IOT
+  IEEE Internet of Things Journal:
+  - IEEE INTERNET OF THINGS JOURNAL
+  SIGCOMM:
+  - SIGCOMM
+  ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication:
+  - ACM INTERNATIONAL CONFERENCE ON APPLICATIONS, TECHNOLOGIES, ARCHITECTURES, AND
+    PROTOCOLS FOR COMPUTER COMMUNICATION
+  MobiCom:
+  - MOBICOM
+  ACM International Conference on Mobile Computing and Networking:
+  - ACM INTERNATIONAL CONFERENCE ON MOBILE COMPUTING AND NETWORKING
+  INFOCOM:
+  - INFOCOM
+  IEEE International Conference on Computer Communications:
+  - IEEE INTERNATIONAL CONFERENCE ON COMPUTER COMMUNICATIONS
+  NSDI:
+  - NSDI
+  SenSys:
+  - SENSYS
+  ACM Conference on Embedded Networked Sensor Systems:
+  - ACM CONFERENCE ON EMBEDDED NETWORKED SENSOR SYSTEMS
+  CoNEXT:
+  - CONEXT
+  ACM International Conference on Emerging Networking Experiments and Technologies:
+  - ACM INTERNATIONAL CONFERENCE ON EMERGING NETWORKING EXPERIMENTS AND TECHNOLOGIES
+  SECON:
+  - SECON
+  IEEE International Conference on Sensing, Communication, and Networking:
+  - IEEE INTERNATIONAL CONFERENCE ON SENSING, COMMUNICATION, AND NETWORKING
+  IPSN:
+  - IPSN
+  International Conference on Information Processing in Sensor Networks:
+  - INTERNATIONAL CONFERENCE ON INFORMATION PROCESSING IN SENSOR NETWORKS
+  MobiSys:
+  - MOBISYS
+  ACM International Conference on Mobile Systems, Applications, and Services:
+  - ACM INTERNATIONAL CONFERENCE ON MOBILE SYSTEMS, APPLICATIONS, AND SERVICES
+  ICNP:
+  - ICNP
+  IEEE International Conference on Network Protocols:
+  - IEEE INTERNATIONAL CONFERENCE ON NETWORK PROTOCOLS
+  MobiHoc:
+  - MOBIHOC
+  NOSSDAV:
+  - NOSSDAV
+  IWQoS:
+  - IWQOS
+  IMC:
+  - IMC
+  ACM Internet Measurement Conference:
+  - ACM INTERNET MEASUREMENT CONFERENCE
+  ANCS:
+  - ANCS
+  ACM/IEEE Symposium on Architectures for Networking and Communication Systems:
+  - ACM/IEEE SYMPOSIUM ON ARCHITECTURES FOR NETWORKING AND COMMUNICATION SYSTEMS
+  APNOMS:
+  - APNOMS
+  FORTE:
+  - FORTE
+  International Conference on Formal Techniques for Distributed Objects, Components, and Systems:
+  - INTERNATIONAL CONFERENCE ON FORMAL TECHNIQUES FOR DISTRIBUTED OBJECTS, COMPONENTS,
+    AND SYSTEMS
+  LCN:
+  - LCN
+  IEEE Conference on Local Computer Networks:
+  - IEEE CONFERENCE ON LOCAL COMPUTER NETWORKS
+  IEEE Global Communications Conference:
+  - IEEE GLOBAL COMMUNICATIONS CONFERENCE
+  ICC:
+  - ICC
+  IEEE International Conference on Communications:
+  - IEEE INTERNATIONAL CONFERENCE ON COMMUNICATIONS
+  ICCCN:
+  - ICCCN
+  IEEE International Conference on Computer Communications and Networks:
+  - IEEE INTERNATIONAL CONFERENCE ON COMPUTER COMMUNICATIONS AND NETWORKS
+  MASS:
+  - MASS
+  IEEE International Conference on Mobile Adhoc and Sensor Systems:
+  - IEEE INTERNATIONAL CONFERENCE ON MOBILE ADHOC AND SENSOR SYSTEMS
+  P2P:
+  - P2P
+  IEEE International Conference on Peer-to-Peer Computing:
+  - IEEE INTERNATIONAL CONFERENCE ON PEER-TO-PEER COMPUTING
+  IPCCC:
+  - IPCCC
+  IEEE International Performance Computing and Communications Conference:
+  - IEEE INTERNATIONAL PERFORMANCE COMPUTING AND COMMUNICATIONS CONFERENCE
+  WoWMoM:
+  - WOWMOM
+  ISCC:
+  - ISCC
+  WCNC:
+  - WCNC
+  IEEE Wireless Communications and Networking Conference:
+  - IEEE WIRELESS COMMUNICATIONS AND NETWORKING CONFERENCE
+  Networking:
+  - NETWORKING
+  IFIP International Conferences on Networking:
+  - IFIP INTERNATIONAL CONFERENCES ON NETWORKING
+  IM:
+  - IM
+  MSN:
+  - MSN
+  International Conference on Mobility, Sensing and Networking:
+  - INTERNATIONAL CONFERENCE ON MOBILITY, SENSING AND NETWORKING
+  MSWiM:
+  - MSWIM
+  International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems:
+  - INTERNATIONAL CONFERENCE ON MODELING, ANALYSIS AND SIMULATION OF WIRELESS AND
+    MOBILE SYSTEMS
+  The International Conference on Wireless Artificial Intelligent Computing Systems and Applications:
+  - THE INTERNATIONAL CONFERENCE ON WIRELESS ARTIFICIAL INTELLIGENT COMPUTING SYSTEMS
+    AND APPLICATIONS
+  HotNets:
+  - HOTNETS
+  APNet:
+  - APNET
+  TDSC:
+  - TDSC
+  IEEE Transactions on Dependable and Secure Computing:
+  - IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING
+  TIFS:
+  - TIFS
+  IEEE Transactions on Information Forensics and Security:
+  - IEEE TRANSACTIONS ON INFORMATION FORENSICS AND SECURITY
+  Journal of Cryptology:
+  - JOURNAL OF CRYPTOLOGY
+  TOPS:
+  - TOPS
+  ACM Transactions on Privacy and Security:
+  - ACM TRANSACTIONS ON PRIVACY AND SECURITY
+  JCS:
+  - JCS
+  Journal of Computer Security:
+  - JOURNAL OF COMPUTER SECURITY
+  CLSR:
+  - CLSR
+  EURASIP Journal on Information Security:
+  - EURASIP JOURNAL ON INFORMATION SECURITY
+  IMCS:
+  - IMCS
+  IJICS:
+  - IJICS
+  International Journal of Information and Computer Security:
+  - INTERNATIONAL JOURNAL OF INFORMATION AND COMPUTER SECURITY
+  IJISP:
+  - IJISP
+  International Journal of Information Security and Privacy:
+  - INTERNATIONAL JOURNAL OF INFORMATION SECURITY AND PRIVACY
+  JISA:
+  - JISA
+  Journal of Information Security and Applications:
+  - JOURNAL OF INFORMATION SECURITY AND APPLICATIONS
+  SCN:
+  - SCN
+  CCS:
+  - CCS
+  ACM Conference on Computer and Communications Security:
+  - ACM CONFERENCE ON COMPUTER AND COMMUNICATIONS SECURITY
+  EUROCRYPT:
+  - EUROCRYPT
+  International Conference on the Theory and Applications of Cryptographic Techniques:
+  - INTERNATIONAL CONFERENCE ON THE THEORY AND APPLICATIONS OF CRYPTOGRAPHIC TECHNIQUES
+  CRYPTO:
+  - CRYPTO
+  International Cryptology Conference:
+  - INTERNATIONAL CRYPTOLOGY CONFERENCE
+  NDSS:
+  - NDSS
+  ACSAC:
+  - ACSAC
+  Annual Computer Security Applications Conference:
+  - ANNUAL COMPUTER SECURITY APPLICATIONS CONFERENCE
+  ASIACRYPT:
+  - ASIACRYPT
+  Annual International Conference on the Theory and Application of Cryptology and Information Security:
+  - ANNUAL INTERNATIONAL CONFERENCE ON THE THEORY AND APPLICATION OF CRYPTOLOGY AND
+    INFORMATION SECURITY
+  ESORICS:
+  - ESORICS
+  FSE:
+  - FSE
+  CSFW:
+  - CSFW
+  SRDS:
+  - SRDS
+  IEEE International Symposium on Reliable Distributed Systems:
+  - IEEE INTERNATIONAL SYMPOSIUM ON RELIABLE DISTRIBUTED SYSTEMS
+  CHES:
+  - CHES
+  International Conference on Cryptographic Hardware and Embedded Systems:
+  - INTERNATIONAL CONFERENCE ON CRYPTOGRAPHIC HARDWARE AND EMBEDDED SYSTEMS
+  DSN:
+  - DSN
+  International Conference on Dependable Systems and Networks:
+  - INTERNATIONAL CONFERENCE ON DEPENDABLE SYSTEMS AND NETWORKS
+  RAID:
+  - RAID
+  PKC:
+  - PKC
+  Theory of Cryptography Conference:
+  - THEORY OF CRYPTOGRAPHY CONFERENCE
+  WiSec:
+  - WISEC
+  ACM Conference on Security and Privacy in Wireless and Mobile Networks:
+  - ACM CONFERENCE ON SECURITY AND PRIVACY IN WIRELESS AND MOBILE NETWORKS
+  SACMAT:
+  - SACMAT
+  DRM:
+  - DRM
+  ACNS:
+  - ACNS
+  International Conference on Applied Cryptography and Network Security:
+  - INTERNATIONAL CONFERENCE ON APPLIED CRYPTOGRAPHY AND NETWORK SECURITY
+  AsiaCCS:
+  - ASIACCS
+  ACM Asia Conference on Computer and Communications Security:
+  - ACM ASIA CONFERENCE ON COMPUTER AND COMMUNICATIONS SECURITY
+  ACISP:
+  - ACISP
+  Australasia Conference on Information Security and Privacy:
+  - AUSTRALASIA CONFERENCE ON INFORMATION SECURITY AND PRIVACY
+  CT-RSA:
+  - CT-RSA
+  The Cryptographer's Track at RSA Conference:
+  - THE CRYPTOGRAPHER'S TRACK AT RSA CONFERENCE
+  DIMVA:
+  - DIMVA
+  Conference on Detection of Intrusions and Malware & Vulnerability Assessment:
+  - CONFERENCE ON DETECTION OF INTRUSIONS AND MALWARE & VULNERABILITY ASSESSMENT
+  DFRWS:
+  - DFRWS
+  FC:
+  - FC
+  TrustCom:
+  - TRUSTCOM
+  IEEE International Conference on Trust, Security and Privacy in Computing and Communications:
+  - IEEE INTERNATIONAL CONFERENCE ON TRUST, SECURITY AND PRIVACY IN COMPUTING AND
+    COMMUNICATIONS
+  SEC:
+  - SEC
+  IFIP International Information Security Conference:
+  - IFIP INTERNATIONAL INFORMATION SECURITY CONFERENCE
+  IFIP Working Group 11.9 International Conference on Digital Forensics:
+  - IFIP WORKING GROUP 11.9 INTERNATIONAL CONFERENCE ON DIGITAL FORENSICS
+  ISC:
+  - ISC
+  Information Security Conference:
+  - INFORMATION SECURITY CONFERENCE
+  ICDF2C:
+  - ICDF2C
+  International Conference on Digital Forensics & Cyber Crime:
+  - INTERNATIONAL CONFERENCE ON DIGITAL FORENSICS & CYBER CRIME
+  ICICS:
+  - ICICS
+  International Conference on Information and Communications Security:
+  - INTERNATIONAL CONFERENCE ON INFORMATION AND COMMUNICATIONS SECURITY
+  SecureComm:
+  - SECURECOMM
+  International Conference on Security and Privacy in Communication Networks:
+  - INTERNATIONAL CONFERENCE ON SECURITY AND PRIVACY IN COMMUNICATION NETWORKS
+  NSPW:
+  - NSPW
+  PAM:
+  - PAM
+  Passive and Active Measurement Conference:
+  - PASSIVE AND ACTIVE MEASUREMENT CONFERENCE
+  PETS:
+  - PETS
+  SAC:
+  - SAC
+  SOUPS:
+  - SOUPS
+  HotSec:
+  - HOTSEC
+  Inscrypt:
+  - INSCRYPT
+  International Conference on Information Security and Cryptology:
+  - INTERNATIONAL CONFERENCE ON INFORMATION SECURITY AND CRYPTOLOGY
+  TOPLAS:
+  - TOPLAS
+  ACM Transactions on Programming Languages and Systems:
+  - ACM TRANSACTIONS ON PROGRAMMING LANGUAGES AND SYSTEMS
+  TOSEM:
+  - TOSEM
+  ACM Transactions on Software Engineering and Methodology:
+  - ACM TRANSACTIONS ON SOFTWARE ENGINEERING AND METHODOLOGY
+  TSE:
+  - TSE
+  IEEE Transactions on Software Engineering:
+  - IEEE TRANSACTIONS ON SOFTWARE ENGINEERING
+  TSC:
+  - TSC
+  IEEE Transactions on Services Computing:
+  - IEEE TRANSACTIONS ON SERVICES COMPUTING
+  ASE:
+  - ASE
+  ESE:
+  - ESE
+  IETS:
+  - IETS
+  IST:
+  - IST
+  JFP:
+  - JFP
+  Journal of Functional Programming:
+  - JOURNAL OF FUNCTIONAL PROGRAMMING
+  'Journal of Software: Evolution and Process':
+  - 'JOURNAL OF SOFTWARE: EVOLUTION AND PROCESS'
+  JSS:
+  - JSS
+  Journal of Systems and Software:
+  - JOURNAL OF SYSTEMS AND SOFTWARE
+  RE:
+  - RE
+  SCP:
+  - SCP
+  SoSyM:
+  - SOSYM
+  Software and Systems Modeling:
+  - SOFTWARE AND SYSTEMS MODELING
+  STVR:
+  - STVR
+  SPE:
+  - SPE
+  CL:
+  - CL
+  Computer Languages, Systems and Structures:
+  - COMPUTER LANGUAGES, SYSTEMS AND STRUCTURES
+  IJSEKE:
+  - IJSEKE
+  International Journal of Software Engineering and Knowledge Engineering:
+  - INTERNATIONAL JOURNAL OF SOFTWARE ENGINEERING AND KNOWLEDGE ENGINEERING
+  STTT:
+  - STTT
+  International Journal of Software Tools for Technology Transfer:
+  - INTERNATIONAL JOURNAL OF SOFTWARE TOOLS FOR TECHNOLOGY TRANSFER
+  JLAMP:
+  - JLAMP
+  Journal of Logical and Algebraic Methods in Programming:
+  - JOURNAL OF LOGICAL AND ALGEBRAIC METHODS IN PROGRAMMING
+  JWE:
+  - JWE
+  Journal of Web Engineering:
+  - JOURNAL OF WEB ENGINEERING
+  SOCA:
+  - SOCA
+  SQJ:
+  - SQJ
+  Software Quality Journal:
+  - SOFTWARE QUALITY JOURNAL
+  TPLP:
+  - TPLP
+  Proceedings of the ACM on Programming Languages:
+  - PROCEEDINGS OF THE ACM ON PROGRAMMING LANGUAGES
+  PLDI:
+  - PLDI
+  ACM SIGPLAN Conference on Programming Language Design and Implementation:
+  - ACM SIGPLAN CONFERENCE ON PROGRAMMING LANGUAGE DESIGN AND IMPLEMENTATION
+  POPL:
+  - POPL
+  ACM International Conference on the Foundations of Software Engineering:
+  - ACM INTERNATIONAL CONFERENCE ON THE FOUNDATIONS OF SOFTWARE ENGINEERING
+  SOSP:
+  - SOSP
+  ACM Symposium on Operating Systems Principles:
+  - ACM SYMPOSIUM ON OPERATING SYSTEMS PRINCIPLES
+  OOPSLA:
+  - OOPSLA
+  Conference on Object-Oriented Programming Systems, Languages, and Applications:
+  - CONFERENCE ON OBJECT-ORIENTED PROGRAMMING SYSTEMS, LANGUAGES, AND APPLICATIONS
+  International Conference on Automated Software Engineering:
+  - INTERNATIONAL CONFERENCE ON AUTOMATED SOFTWARE ENGINEERING
+  ICSE:
+  - ICSE
+  International Conference on Software Engineering:
+  - INTERNATIONAL CONFERENCE ON SOFTWARE ENGINEERING
+  ISSTA:
+  - ISSTA
+  OSDI:
+  - OSDI
+  USENIX Symposium on Operating Systems Design and Implementation:
+  - USENIX SYMPOSIUM ON OPERATING SYSTEMS DESIGN AND IMPLEMENTATION
+  FM:
+  - FM
+  ECOOP:
+  - ECOOP
+  European Conference on Object-Oriented Programming:
+  - EUROPEAN CONFERENCE ON OBJECT-ORIENTED PROGRAMMING
+  ETAPS:
+  - ETAPS
+  European Joint Conferences on Theory and Practice of Software:
+  - EUROPEAN JOINT CONFERENCES ON THEORY AND PRACTICE OF SOFTWARE
+  ICPC:
+  - ICPC
+  IEEE International Conference on Program Comprehension:
+  - IEEE INTERNATIONAL CONFERENCE ON PROGRAM COMPREHENSION
+  IEEE International Requirements Engineering Conference:
+  - IEEE INTERNATIONAL REQUIREMENTS ENGINEERING CONFERENCE
+  CAiSE:
+  - CAISE
+  International Conference on Advanced Information Systems Engineering:
+  - INTERNATIONAL CONFERENCE ON ADVANCED INFORMATION SYSTEMS ENGINEERING
+  ICFP:
+  - ICFP
+  ACM SIGPLAN International Conference on Function Programming:
+  - ACM SIGPLAN INTERNATIONAL CONFERENCE ON FUNCTION PROGRAMMING
+  LCTES:
+  - LCTES
+  ACM SIGPLAN/SIGBED International Conference on Languages, Compilers and Tools for Embedded Systems:
+  - ACM SIGPLAN/SIGBED INTERNATIONAL CONFERENCE ON LANGUAGES, COMPILERS AND TOOLS
+    FOR EMBEDDED SYSTEMS
+  MoDELS:
+  - MODELS
+  ACM/IEEE International Conference on Model Driven EngineeringLanguages and Systems:
+  - ACM/IEEE INTERNATIONAL CONFERENCE ON MODEL DRIVEN ENGINEERINGLANGUAGES AND SYSTEMS
+  CP:
+  - CP
+  International Conference on Principles and Practice of Constraint Programming:
+  - INTERNATIONAL CONFERENCE ON PRINCIPLES AND PRACTICE OF CONSTRAINT PROGRAMMING
+  ICSOC:
+  - ICSOC
+  International Conference on Service Oriented Computing:
+  - INTERNATIONAL CONFERENCE ON SERVICE ORIENTED COMPUTING
+  SANER:
+  - SANER
+  IEEE International Conference on Software Analysis, Evolution, and Reengineering:
+  - IEEE INTERNATIONAL CONFERENCE ON SOFTWARE ANALYSIS, EVOLUTION, AND REENGINEERING
+  ICSME:
+  - ICSME
+  International Conference on Software Maintenance and Evolution:
+  - INTERNATIONAL CONFERENCE ON SOFTWARE MAINTENANCE AND EVOLUTION
+  VMCAI:
+  - VMCAI
+  International Conference on Verification, Model Checking and Abstract Interpretation:
+  - INTERNATIONAL CONFERENCE ON VERIFICATION, MODEL CHECKING AND ABSTRACT INTERPRETATION
+  ICWS:
+  - ICWS
+  IEEE International Conference on Web Services:
+  - IEEE INTERNATIONAL CONFERENCE ON WEB SERVICES
+  Middleware:
+  - MIDDLEWARE
+  International Middleware Conference:
+  - INTERNATIONAL MIDDLEWARE CONFERENCE
+  SAS:
+  - SAS
+  ESEM:
+  - ESEM
+  ISSRE:
+  - ISSRE
+  HotOS:
+  - HOTOS
+  USENIX Workshop on Hot Topics in Operating Systems:
+  - USENIX WORKSHOP ON HOT TOPICS IN OPERATING SYSTEMS
+  PEPM:
+  - PEPM
+  PASTE:
+  - PASTE
+  APLAS:
+  - APLAS
+  Asian Symposium on Programming Languages and Systems:
+  - ASIAN SYMPOSIUM ON PROGRAMMING LANGUAGES AND SYSTEMS
+  APSEC:
+  - APSEC
+  Asia-Pacific Software Engineering Conference:
+  - ASIA-PACIFIC SOFTWARE ENGINEERING CONFERENCE
+  EASE:
+  - EASE
+  International Conference on Evaluation and Assessment in Software Engineering:
+  - INTERNATIONAL CONFERENCE ON EVALUATION AND ASSESSMENT IN SOFTWARE ENGINEERING
+  ICECCS:
+  - ICECCS
+  International Conference on Engineering of Complex Computer Systems:
+  - INTERNATIONAL CONFERENCE ON ENGINEERING OF COMPLEX COMPUTER SYSTEMS
+  ICST:
+  - ICST
+  IEEE International Conference on Software Testing, Verification and Validation:
+  - IEEE INTERNATIONAL CONFERENCE ON SOFTWARE TESTING, VERIFICATION AND VALIDATION
+  ISPASS:
+  - ISPASS
+  IEEE International Symposium on Performance Analysis of Systems and Software:
+  - IEEE INTERNATIONAL SYMPOSIUM ON PERFORMANCE ANALYSIS OF SYSTEMS AND SOFTWARE
+  SCAM:
+  - SCAM
+  IEEE International Working Conference on Source Code Analysis and Manipulation:
+  - IEEE INTERNATIONAL WORKING CONFERENCE ON SOURCE CODE ANALYSIS AND MANIPULATION
+  COMPSAC:
+  - COMPSAC
+  International Computer Software and Applications Conference:
+  - INTERNATIONAL COMPUTER SOFTWARE AND APPLICATIONS CONFERENCE
+  ICFEM:
+  - ICFEM
+  International Conference on Formal Engineering Methods:
+  - INTERNATIONAL CONFERENCE ON FORMAL ENGINEERING METHODS
+  TOOLS:
+  - TOOLS
+  International Conference on Objects, Models, Components, Patterns（2019年停办）:
+  - INTERNATIONAL CONFERENCE ON OBJECTS, MODELS, COMPONENTS, PATTERNS（2019年停办）
+  IEEE International Conference on Software Services Engineering:
+  - IEEE INTERNATIONAL CONFERENCE ON SOFTWARE SERVICES ENGINEERING
+  ICSSP:
+  - ICSSP
+  International Conference on Software and System Process:
+  - INTERNATIONAL CONFERENCE ON SOFTWARE AND SYSTEM PROCESS
+  SEKE:
+  - SEKE
+  International Conference on Software Engineering and Knowledge Engineering:
+  - INTERNATIONAL CONFERENCE ON SOFTWARE ENGINEERING AND KNOWLEDGE ENGINEERING
+  QRS:
+  - QRS
+  International Conference on Software Quality, Reliability and Security:
+  - INTERNATIONAL CONFERENCE ON SOFTWARE QUALITY, RELIABILITY AND SECURITY
+  ICSR:
+  - ICSR
+  International Conference on Software Reuse:
+  - INTERNATIONAL CONFERENCE ON SOFTWARE REUSE
+  ICWE:
+  - ICWE
+  International Conference on Web Engineering:
+  - INTERNATIONAL CONFERENCE ON WEB ENGINEERING
+  SPIN:
+  - SPIN
+  ATVA:
+  - ATVA
+  LOPSTR:
+  - LOPSTR
+  TASE:
+  - TASE
+  Theoretical Aspects of Software Engineering Conference:
+  - THEORETICAL ASPECTS OF SOFTWARE ENGINEERING CONFERENCE
+  MSR:
+  - MSR
+  REFSQ:
+  - REFSQ
+  WICSA:
+  - WICSA
+  Working IEEE/IFIP Conference on Software Architecture:
+  - WORKING IEEE/IFIP CONFERENCE ON SOFTWARE ARCHITECTURE
+  Internetware:
+  - INTERNETWARE
+  RV:
+  - RV
+  International Conference on Runtime Verification:
+  - INTERNATIONAL CONFERENCE ON RUNTIME VERIFICATION
+  TODS:
+  - TODS
+  ACM Transactions on Database Systems:
+  - ACM TRANSACTIONS ON DATABASE SYSTEMS
+  TOIS:
+  - TOIS
+  ACM Transactions on Information Systems:
+  - ACM TRANSACTIONS ON INFORMATION SYSTEMS
+  TKDE:
+  - TKDE
+  IEEE Transactions on Knowledge and Data Engineering:
+  - IEEE TRANSACTIONS ON KNOWLEDGE AND DATA ENGINEERING
+  VLDBJ:
+  - VLDBJ
+  The VLDB Journal:
+  - THE VLDB JOURNAL
+  TKDD:
+  - TKDD
+  ACM Transactions on Knowledge Discovery from Data:
+  - ACM TRANSACTIONS ON KNOWLEDGE DISCOVERY FROM DATA
+  TWEB:
+  - TWEB
+  ACM Transactions on the Web:
+  - ACM TRANSACTIONS ON THE WEB
+  AEI:
+  - AEI
+  DKE:
+  - DKE
+  DMKD:
+  - DMKD
+  EJIS:
+  - EJIS
+  European Journal of Information Systems:
+  - EUROPEAN JOURNAL OF INFORMATION SYSTEMS
+  IPM:
+  - IPM
+  IS:
+  - IS
+  Information Systems:
+  - INFORMATION SYSTEMS
+  JASIST:
+  - JASIST
+  Journal of the Association for Information Science and Technology:
+  - JOURNAL OF THE ASSOCIATION FOR INFORMATION SCIENCE AND TECHNOLOGY
+  JWS:
+  - JWS
+  Journal of Web Semantics:
+  - JOURNAL OF WEB SEMANTICS
+  KAIS:
+  - KAIS
+  Knowledge and Information Systems:
+  - KNOWLEDGE AND INFORMATION SYSTEMS
+  DPD:
+  - DPD
+  IPL:
+  - IPL
+  IR:
+  - IR
+  Information Retrieval Journal:
+  - INFORMATION RETRIEVAL JOURNAL
+  IJCIS:
+  - IJCIS
+  International Journal of Cooperative Information Systems:
+  - INTERNATIONAL JOURNAL OF COOPERATIVE INFORMATION SYSTEMS
+  IJGIS:
+  - IJGIS
+  International Journal of Geographical Information Science:
+  - INTERNATIONAL JOURNAL OF GEOGRAPHICAL INFORMATION SCIENCE
+  IJIS:
+  - IJIS
+  International Journal of Intelligent Systems:
+  - INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS
+  IJKM:
+  - IJKM
+  International Journal of Knowledge Management:
+  - INTERNATIONAL JOURNAL OF KNOWLEDGE MANAGEMENT
+  IJSWIS:
+  - IJSWIS
+  International Journal on Semantic Web and Information Systems:
+  - INTERNATIONAL JOURNAL ON SEMANTIC WEB AND INFORMATION SYSTEMS
+  JCIS:
+  - JCIS
+  Journal of Computer Information Systems:
+  - JOURNAL OF COMPUTER INFORMATION SYSTEMS
+  JDM:
+  - JDM
+  Journal of Database Management:
+  - JOURNAL OF DATABASE MANAGEMENT
+  JGITM:
+  - JGITM
+  Journal of Global Information Technology Management:
+  - JOURNAL OF GLOBAL INFORMATION TECHNOLOGY MANAGEMENT
+  JIIS:
+  - JIIS
+  Journal of Intelligent Information Systems:
+  - JOURNAL OF INTELLIGENT INFORMATION SYSTEMS
+  JSIS:
+  - JSIS
+  The Journal of Strategic Information Systems:
+  - THE JOURNAL OF STRATEGIC INFORMATION SYSTEMS
+  DSE:
+  - DSE
+  SIGMOD:
+  - SIGMOD
+  ACM SIGMOD Conference:
+  - ACM SIGMOD CONFERENCE
+  SIGKDD:
+  - SIGKDD
+  ACM SIGKDD Conference on Knowledge Discovery and Data Mining:
+  - ACM SIGKDD CONFERENCE ON KNOWLEDGE DISCOVERY AND DATA MINING
+  ICDE:
+  - ICDE
+  IEEE International Conference on Data Engineering:
+  - IEEE INTERNATIONAL CONFERENCE ON DATA ENGINEERING
+  SIGIR:
+  - SIGIR
+  International ACM SIGIR Conference on Research and Development in Information Retrieval:
+  - INTERNATIONAL ACM SIGIR CONFERENCE ON RESEARCH AND DEVELOPMENT IN INFORMATION
+    RETRIEVAL
+  VLDB:
+  - VLDB
+  International Conference on Very Large Data Bases:
+  - INTERNATIONAL CONFERENCE ON VERY LARGE DATA BASES
+  CIKM:
+  - CIKM
+  ACM International Conference on Information and Knowledge Management:
+  - ACM INTERNATIONAL CONFERENCE ON INFORMATION AND KNOWLEDGE MANAGEMENT
+  WSDM:
+  - WSDM
+  ACM International Conference on Web Search and Data Mining:
+  - ACM INTERNATIONAL CONFERENCE ON WEB SEARCH AND DATA MINING
+  PODS:
+  - PODS
+  ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of DatabaseSystems:
+  - ACM SIGMOD-SIGACT-SIGAI SYMPOSIUM ON PRINCIPLES OF DATABASESYSTEMS
+  DASFAA:
+  - DASFAA
+  International Conference on Database Systems for Advanced Applications:
+  - INTERNATIONAL CONFERENCE ON DATABASE SYSTEMS FOR ADVANCED APPLICATIONS
+  ECML-PKDD:
+  - ECML-PKDD
+  European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases:
+  - EUROPEAN CONFERENCE ON MACHINE LEARNING AND PRINCIPLES AND PRACTICE OF KNOWLEDGE
+    DISCOVERY IN DATABASES
+  ISWC:
+  - ISWC
+  IEEE International Semantic Web Conference:
+  - IEEE INTERNATIONAL SEMANTIC WEB CONFERENCE
+  ICDM:
+  - ICDM
+  IEEE International Conference on Data Mining:
+  - IEEE INTERNATIONAL CONFERENCE ON DATA MINING
+  ICDT:
+  - ICDT
+  International Conference on Database Theory:
+  - INTERNATIONAL CONFERENCE ON DATABASE THEORY
+  EDBT:
+  - EDBT
+  International Conference on Extending Database Technology:
+  - INTERNATIONAL CONFERENCE ON EXTENDING DATABASE TECHNOLOGY
+  CIDR:
+  - CIDR
+  Conference on Innovative Data Systems Research:
+  - CONFERENCE ON INNOVATIVE DATA SYSTEMS RESEARCH
+  SDM:
+  - SDM
+  SIAM International Conference on Data Mining:
+  - SIAM INTERNATIONAL CONFERENCE ON DATA MINING
+  RecSys:
+  - RECSYS
+  ACM Conference on Recommender Systems:
+  - ACM CONFERENCE ON RECOMMENDER SYSTEMS
+  APWeb:
+  - APWEB
+  Asia Pacific Web Conference:
+  - ASIA PACIFIC WEB CONFERENCE
+  DEXA:
+  - DEXA
+  International Conference on Database and Expert System Applications:
+  - INTERNATIONAL CONFERENCE ON DATABASE AND EXPERT SYSTEM APPLICATIONS
+  ECIR:
+  - ECIR
+  European Conference on Information Retrieval:
+  - EUROPEAN CONFERENCE ON INFORMATION RETRIEVAL
+  ESWC:
+  - ESWC
+  Extended Semantic Web Conference:
+  - EXTENDED SEMANTIC WEB CONFERENCE
+  WebDB:
+  - WEBDB
+  ER:
+  - ER
+  International Conference on Conceptual Modeling:
+  - INTERNATIONAL CONFERENCE ON CONCEPTUAL MODELING
+  MDM:
+  - MDM
+  International Conference on Mobile Data Management:
+  - INTERNATIONAL CONFERENCE ON MOBILE DATA MANAGEMENT
+  SSDBM:
+  - SSDBM
+  International Conference on Scientific and Statistical Database Management:
+  - INTERNATIONAL CONFERENCE ON SCIENTIFIC AND STATISTICAL DATABASE MANAGEMENT
+  WAIM:
+  - WAIM
+  International Conference on Web Age Information Management:
+  - INTERNATIONAL CONFERENCE ON WEB AGE INFORMATION MANAGEMENT
+  SSTD:
+  - SSTD
+  PAKDD:
+  - PAKDD
+  Pacific-Asia Conference on Knowledge Discovery and Data Mining:
+  - PACIFIC-ASIA CONFERENCE ON KNOWLEDGE DISCOVERY AND DATA MINING
+  WISE:
+  - WISE
+  Web Information Systems Engineering:
+  - WEB INFORMATION SYSTEMS ENGINEERING
+  ADMA:
+  - ADMA
+  International Conference on Advanced Data Mining and Applications:
+  - INTERNATIONAL CONFERENCE ON ADVANCED DATA MINING AND APPLICATIONS
+  TIT:
+  - TIT
+  IEEE Transactions on Information Theory:
+  - IEEE TRANSACTIONS ON INFORMATION THEORY
+  IANDC:
+  - IANDC
+  SICOMP:
+  - SICOMP
+  SIAM Journal on Computing:
+  - SIAM JOURNAL ON COMPUTING
+  TALG:
+  - TALG
+  ACM Transactions on Algorithms:
+  - ACM TRANSACTIONS ON ALGORITHMS
+  TOCL:
+  - TOCL
+  ACM Transactions on Computational Logic:
+  - ACM TRANSACTIONS ON COMPUTATIONAL LOGIC
+  TOMS:
+  - TOMS
+  ACM Transactions on Mathematical Software:
+  - ACM TRANSACTIONS ON MATHEMATICAL SOFTWARE
+  Algorithmica:
+  - ALGORITHMICA
+  FAC:
+  - FAC
+  FMSD:
+  - FMSD
+  INFORMS:
+  - INFORMS
+  INFORMS Journal on Computing:
+  - INFORMS JOURNAL ON COMPUTING
+  JCSS:
+  - JCSS
+  Journal of Computer and System Sciences:
+  - JOURNAL OF COMPUTER AND SYSTEM SCIENCES
+  JGO:
+  - JGO
+  Journal of Global Optimization:
+  - JOURNAL OF GLOBAL OPTIMIZATION
+  JSC:
+  - JSC
+  Journal of Symbolic Computation:
+  - JOURNAL OF SYMBOLIC COMPUTATION
+  MSCS:
+  - MSCS
+  TCS:
+  - TCS
+  ACTA:
+  - ACTA
+  APAL:
+  - APAL
+  DAM:
+  - DAM
+  FUIN:
+  - FUIN
+  LISP:
+  - LISP
+  JCOMPLEXITY:
+  - JCOMPLEXITY
+  Journal of Complexity:
+  - JOURNAL OF COMPLEXITY
+  LOGCOM:
+  - LOGCOM
+  Journal of Logic and Computation:
+  - JOURNAL OF LOGIC AND COMPUTATION
+  JSL:
+  - JSL
+  The Journal of Symbolic Logic:
+  - THE JOURNAL OF SYMBOLIC LOGIC
+  LMCS:
+  - LMCS
+  SIDMA:
+  - SIDMA
+  SIAM Journal on Discrete Mathematics:
+  - SIAM JOURNAL ON DISCRETE MATHEMATICS
+  Theory of Computing Systems:
+  - THEORY OF COMPUTING SYSTEMS
+  STOC:
+  - STOC
+  SODA:
+  - SODA
+  CAV:
+  - CAV
+  International Conference on Computer Aided Verification:
+  - INTERNATIONAL CONFERENCE ON COMPUTER AIDED VERIFICATION
+  FOCS:
+  - FOCS
+  LICS:
+  - LICS
+  SoCG:
+  - SOCG
+  ESA:
+  - ESA
+  CCC:
+  - CCC
+  Conference on Computational Complexity:
+  - CONFERENCE ON COMPUTATIONAL COMPLEXITY
+  ICALP:
+  - ICALP
+  International Conference on Automated Deduction/International Joint Conference on Automated Reasoning:
+  - INTERNATIONAL CONFERENCE ON AUTOMATED DEDUCTION/INTERNATIONAL JOINT CONFERENCE
+    ON AUTOMATED REASONING
+  CONCUR:
+  - CONCUR
+  International Conference on Concurrency Theory:
+  - INTERNATIONAL CONFERENCE ON CONCURRENCY THEORY
+  HSCC:
+  - HSCC
+  'International Conference on Hybrid Systems: Computation and Control':
+  - 'INTERNATIONAL CONFERENCE ON HYBRID SYSTEMS: COMPUTATION AND CONTROL'
+  SAT:
+  - SAT
+  International Conference on Theory and Applications of Satisfiability Testing:
+  - INTERNATIONAL CONFERENCE ON THEORY AND APPLICATIONS OF SATISFIABILITY TESTING
+  COCOON:
+  - COCOON
+  International Computing and Combinatorics Conference:
+  - INTERNATIONAL COMPUTING AND COMBINATORICS CONFERENCE
+  CSL:
+  - CSL
+  FMCAD:
+  - FMCAD
+  FSTTCS:
+  - FSTTCS
+  DSAA:
+  - DSAA
+  IEEE International Conference on Data Science and Advanced Analytics:
+  - IEEE INTERNATIONAL CONFERENCE ON DATA SCIENCE AND ADVANCED ANALYTICS
+  ICTAC:
+  - ICTAC
+  IPCO:
+  - IPCO
+  International Conference on Integer Programming and Combinatorial Optimization:
+  - INTERNATIONAL CONFERENCE ON INTEGER PROGRAMMING AND COMBINATORIAL OPTIMIZATION
+  RTA:
+  - RTA
+  International Conference on Rewriting Techniques and Applications:
+  - INTERNATIONAL CONFERENCE ON REWRITING TECHNIQUES AND APPLICATIONS
+  ISAAC:
+  - ISAAC
+  MFCS:
+  - MFCS
+  International Conference on Mathematical Foundations of Computer Science:
+  - INTERNATIONAL CONFERENCE ON MATHEMATICAL FOUNDATIONS OF COMPUTER SCIENCE
+  STACS:
+  - STACS
+  SETTA:
+  - SETTA
+  TOG:
+  - TOG
+  ACM Transactions on Graphics:
+  - ACM TRANSACTIONS ON GRAPHICS
+  TIP:
+  - TIP
+  IEEE Transactions on Image Processing:
+  - IEEE TRANSACTIONS ON IMAGE PROCESSING
+  TVCG:
+  - TVCG
+  IEEE Transactions on Visualization and Computer Graphics:
+  - IEEE TRANSACTIONS ON VISUALIZATION AND COMPUTER GRAPHICS
+  CAGD:
+  - CAGD
+  CGF:
+  - CGF
+  CAD:
+  - CAD
+  GM:
+  - GM
+  TCSVT:
+  - TCSVT
+  IEEE Transactions on Circuits and Systems for Video Technology:
+  - IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY
+  TMM:
+  - TMM
+  IEEE Transactions on Multimedia:
+  - IEEE TRANSACTIONS ON MULTIMEDIA
+  JASA:
+  - JASA
+  The Journal of the Acoustical Society of America:
+  - THE JOURNAL OF THE ACOUSTICAL SOCIETY OF AMERICA
+  SIIMS:
+  - SIIMS
+  SIAM Journal on Imaging Sciences:
+  - SIAM JOURNAL ON IMAGING SCIENCES
+  SPECOM:
+  - SPECOM
+  CGTA:
+  - CGTA
+  CAVW:
+  - CAVW
+  DCG:
+  - DCG
+  SPL:
+  - SPL
+  IET-IPR:
+  - IET-IPR
+  JVCIR:
+  - JVCIR
+  Journal of Visual Communication and Image Representation:
+  - JOURNAL OF VISUAL COMMUNICATION AND IMAGE REPRESENTATION
+  MS:
+  - MS
+  Multimedia Systems:
+  - MULTIMEDIA SYSTEMS
+  MTA:
+  - MTA
+  SIGPRO:
+  - SIGPRO
+  IMAGE:
+  - IMAGE
+  TVC:
+  - TVC
+  CVMJ:
+  - CVMJ
+  ACM International Conference on Multimedia:
+  - ACM INTERNATIONAL CONFERENCE ON MULTIMEDIA
+  SIGGRAPH:
+  - SIGGRAPH
+  VR:
+  - VR
+  IEEE Visualization Conference:
+  - IEEE VISUALIZATION CONFERENCE
+  ICMR:
+  - ICMR
+  ACM SIGMM International Conference on Multimedia Retrieval:
+  - ACM SIGMM INTERNATIONAL CONFERENCE ON MULTIMEDIA RETRIEVAL
+  I3D:
+  - I3D
+  SCA:
+  - SCA
+  DCC:
+  - DCC
+  Data Compression Conference:
+  - DATA COMPRESSION CONFERENCE
+  Annual Conference of the European Association for Computer Graphics:
+  - ANNUAL CONFERENCE OF THE EUROPEAN ASSOCIATION FOR COMPUTER GRAPHICS
+  EuroVis:
+  - EUROVIS
+  Eurographics Conference on Visualization:
+  - EUROGRAPHICS CONFERENCE ON VISUALIZATION
+  SGP:
+  - SGP
+  EGSR:
+  - EGSR
+  ICASSP:
+  - ICASSP
+  IEEE International Conference on Acoustics, Speech and Signal Processing:
+  - IEEE INTERNATIONAL CONFERENCE ON ACOUSTICS, SPEECH AND SIGNAL PROCESSING
+  ICME:
+  - ICME
+  IEEE International Conference on Multimedia & Expo:
+  - IEEE INTERNATIONAL CONFERENCE ON MULTIMEDIA & EXPO
+  ISMAR:
+  - ISMAR
+  PG:
+  - PG
+  Pacific Conference onComputer Graphics and Applications:
+  - PACIFIC CONFERENCE ONCOMPUTER GRAPHICS AND APPLICATIONS
+  SPM:
+  - SPM
+  VRST:
+  - VRST
+  CASA:
+  - CASA
+  International Conference on Computer Animation and Social Agents:
+  - INTERNATIONAL CONFERENCE ON COMPUTER ANIMATION AND SOCIAL AGENTS
+  CGI:
+  - CGI
+  INTERSPEECH:
+  - INTERSPEECH
+  Conference of the International Speech Communication Association:
+  - CONFERENCE OF THE INTERNATIONAL SPEECH COMMUNICATION ASSOCIATION
+  GMP:
+  - GMP
+  PacificVis:
+  - PACIFICVIS
+  3DV:
+  - 3DV
+  International Conference on 3D Vision:
+  - INTERNATIONAL CONFERENCE ON 3D VISION
+  International Conference on Computer-Aided Design and Computer Graphics:
+  - INTERNATIONAL CONFERENCE ON COMPUTER-AIDED DESIGN AND COMPUTER GRAPHICS
+  ICIP:
+  - ICIP
+  IEEE International Conference on Image Processing:
+  - IEEE INTERNATIONAL CONFERENCE ON IMAGE PROCESSING
+  MMM:
+  - MMM
+  International Conference on Multimedia Modeling:
+  - INTERNATIONAL CONFERENCE ON MULTIMEDIA MODELING
+  MMAsia:
+  - MMASIA
+  SMI:
+  - SMI
+  ICVRV:
+  - ICVRV
+  International Conference on Virtual Reality and Visualization:
+  - INTERNATIONAL CONFERENCE ON VIRTUAL REALITY AND VISUALIZATION
+  CVM:
+  - CVM
+  PRCV:
+  - PRCV
+  Chinese Conference on Pattern Recognition and Computer Vision (中国模式识别与计算机视觉大会):
+  - CHINESE CONFERENCE ON PATTERN RECOGNITION AND COMPUTER VISION (中国模式识别与计算机视觉大会)
+  AI:
+  - AI
+  TPAMI:
+  - TPAMI
+  IEEE Transactions on Pattern Analysis and MachineIntelligence:
+  - IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINEINTELLIGENCE
+  IJCV:
+  - IJCV
+  International Journal of Computer Vision:
+  - INTERNATIONAL JOURNAL OF COMPUTER VISION
+  JMLR:
+  - JMLR
+  Journal of Machine Learning Research:
+  - JOURNAL OF MACHINE LEARNING RESEARCH
+  TAP:
+  - TAP
+  ACM Transactions on Applied Perception:
+  - ACM TRANSACTIONS ON APPLIED PERCEPTION
+  TSLP:
+  - TSLP
+  ACM Transactions on Speech and Language (2013年已停刊):
+  - ACM TRANSACTIONS ON SPEECH AND LANGUAGE (2013年已停刊)
+  AAMAS:
+  - AAMAS
+  Autonomous Agents and Multi-Agent Systems:
+  - AUTONOMOUS AGENTS AND MULTI-AGENT SYSTEMS
+  CVIU:
+  - CVIU
+  TAC:
+  - TAC
+  IEEE Transactions on Affective Computing:
+  - IEEE TRANSACTIONS ON AFFECTIVE COMPUTING
+  TASLP:
+  - TASLP
+  IEEE/ACM Transactions on Audio, Speech and Language Processing:
+  - IEEE/ACM TRANSACTIONS ON AUDIO, SPEECH AND LANGUAGE PROCESSING
+  IEEE Transactions on Cybernetics:
+  - IEEE TRANSACTIONS ON CYBERNETICS
+  TEC:
+  - TEC
+  IEEE Transactions on Evolutionary Computation:
+  - IEEE TRANSACTIONS ON EVOLUTIONARY COMPUTATION
+  TFS:
+  - TFS
+  IEEE Transactions on Fuzzy Systems:
+  - IEEE TRANSACTIONS ON FUZZY SYSTEMS
+  TNNLS:
+  - TNNLS
+  IEEE Transactions on Neural Networks and learning systems:
+  - IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS
+  IJAR:
+  - IJAR
+  International Journal of Approximate Reasoning:
+  - INTERNATIONAL JOURNAL OF APPROXIMATE REASONING
+  JAIR:
+  - JAIR
+  Journal of Artificial Intelligence Research:
+  - JOURNAL OF ARTIFICIAL INTELLIGENCE RESEARCH
+  Journal of Automated Reasoning:
+  - JOURNAL OF AUTOMATED REASONING
+  JSLHR:
+  - JSLHR
+  Journal of Speech, Language, and Hearing Research:
+  - JOURNAL OF SPEECH, LANGUAGE, AND HEARING RESEARCH
+  PR:
+  - PR
+  TACL:
+  - TACL
+  Transactions of the Association for Computational Linguistics:
+  - TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+  TALLIP:
+  - TALLIP
+  ACM Transactions on Asian and Low- Resource Language Information Processing:
+  - ACM TRANSACTIONS ON ASIAN AND LOW- RESOURCE LANGUAGE INFORMATION PROCESSING
+  AIM:
+  - AIM
+  DSS:
+  - DSS
+  Decision Support Systems:
+  - DECISION SUPPORT SYSTEMS
+  EAAI:
+  - EAAI
+  Expert Systems:
+  - EXPERT SYSTEMS
+  ESWA:
+  - ESWA
+  Expert Systems with Applications:
+  - EXPERT SYSTEMS WITH APPLICATIONS
+  Fuzzy Sets and Systems:
+  - FUZZY SETS AND SYSTEMS
+  TG:
+  - TG
+  IEEE Transactions on Games:
+  - IEEE TRANSACTIONS ON GAMES
+  IET-CVI:
+  - IET-CVI
+  IVC:
+  - IVC
+  IDA:
+  - IDA
+  IJCIA:
+  - IJCIA
+  International Journal of Computational Intelligence and Applications:
+  - INTERNATIONAL JOURNAL OF COMPUTATIONAL INTELLIGENCE AND APPLICATIONS
+  IJNS:
+  - IJNS
+  International Journal of Neural Systems:
+  - INTERNATIONAL JOURNAL OF NEURAL SYSTEMS
+  IJPRAI:
+  - IJPRAI
+  International Journal of Pattern Recognition and Artificial Intelligence:
+  - INTERNATIONAL JOURNAL OF PATTERN RECOGNITION AND ARTIFICIAL INTELLIGENCE
+  IJUFKS:
+  - IJUFKS
+  International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems:
+  - INTERNATIONAL JOURNAL OF UNCERTAINTY, FUZZINESS AND KNOWLEDGE-BASED SYSTEMS
+  IJDAR:
+  - IJDAR
+  International Journal on Document Analysis and Recognition:
+  - INTERNATIONAL JOURNAL ON DOCUMENT ANALYSIS AND RECOGNITION
+  JETAI:
+  - JETAI
+  Journal of Experimental and Theoretical Artificial Intelligence:
+  - JOURNAL OF EXPERIMENTAL AND THEORETICAL ARTIFICIAL INTELLIGENCE
+  KBS:
+  - KBS
+  Knowledge-Based Systems:
+  - KNOWLEDGE-BASED SYSTEMS
+  NLE:
+  - NLE
+  NCA:
+  - NCA
+  NPL:
+  - NPL
+  PAA:
+  - PAA
+  PRL:
+  - PRL
+  WI:
+  - WI
+  TIIS:
+  - TIIS
+  ACM Transactions on Interactive Intelligent Systems:
+  - ACM TRANSACTIONS ON INTERACTIVE INTELLIGENT SYSTEMS
+  AAAI:
+  - AAAI
+  AAAI Conference on Artificial Intelligence:
+  - AAAI CONFERENCE ON ARTIFICIAL INTELLIGENCE
+  NeurIPS:
+  - NEURIPS
+  Conference on Neural Information Processing Systems:
+  - CONFERENCE ON NEURAL INFORMATION PROCESSING SYSTEMS
+  ACL:
+  - ACL
+  CVPR:
+  - CVPR
+  IEEE/CVF Computer Vision and Pattern Recognition Conference:
+  - IEEE/CVF COMPUTER VISION AND PATTERN RECOGNITION CONFERENCE
+  ICCV:
+  - ICCV
+  International Conference on Computer Vision:
+  - INTERNATIONAL CONFERENCE ON COMPUTER VISION
+  ICML:
+  - ICML
+  International Conference on Machine Learning:
+  - INTERNATIONAL CONFERENCE ON MACHINE LEARNING
+  IJCAI:
+  - IJCAI
+  International Joint Conference on Artificial Intelligence:
+  - INTERNATIONAL JOINT CONFERENCE ON ARTIFICIAL INTELLIGENCE
+  COLT:
+  - COLT
+  Annual Conference on Computational Learning Theory:
+  - ANNUAL CONFERENCE ON COMPUTATIONAL LEARNING THEORY
+  EMNLP:
+  - EMNLP
+  Conference on Empirical Methods in Natural Language Processing:
+  - CONFERENCE ON EMPIRICAL METHODS IN NATURAL LANGUAGE PROCESSING
+  ECAI:
+  - ECAI
+  European Conference on Artificial Intelligence:
+  - EUROPEAN CONFERENCE ON ARTIFICIAL INTELLIGENCE
+  ECCV:
+  - ECCV
+  European Conference on Computer Vision:
+  - EUROPEAN CONFERENCE ON COMPUTER VISION
+  ICRA:
+  - ICRA
+  IEEE International Conference on Robotics and Automation:
+  - IEEE INTERNATIONAL CONFERENCE ON ROBOTICS AND AUTOMATION
+  ICAPS:
+  - ICAPS
+  International Conference on Automated Planning and Scheduling:
+  - INTERNATIONAL CONFERENCE ON AUTOMATED PLANNING AND SCHEDULING
+  ICCBR:
+  - ICCBR
+  International Conference on Case-Based Reasoning:
+  - INTERNATIONAL CONFERENCE ON CASE-BASED REASONING
+  COLING:
+  - COLING
+  International Conference on Computational Linguistics:
+  - INTERNATIONAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  KR:
+  - KR
+  International Conference on Principles of Knowledge Representation and Reasoning:
+  - INTERNATIONAL CONFERENCE ON PRINCIPLES OF KNOWLEDGE REPRESENTATION AND REASONING
+  UAI:
+  - UAI
+  Conference onUncertainty in Artificial Intelligence:
+  - CONFERENCE ONUNCERTAINTY IN ARTIFICIAL INTELLIGENCE
+  International Joint Conference on Autonomous Agents and Multi- agent Systems:
+  - INTERNATIONAL JOINT CONFERENCE ON AUTONOMOUS AGENTS AND MULTI- AGENT SYSTEMS
+  PPSN:
+  - PPSN
+  NAACL:
+  - NAACL
+  AISTATS:
+  - AISTATS
+  International Conference on Artificial Intelligence and Statistics:
+  - INTERNATIONAL CONFERENCE ON ARTIFICIAL INTELLIGENCE AND STATISTICS
+  ACCV:
+  - ACCV
+  Asian Conference on Computer Vision:
+  - ASIAN CONFERENCE ON COMPUTER VISION
+  ACML:
+  - ACML
+  Asian Conference on Machine Learning:
+  - ASIAN CONFERENCE ON MACHINE LEARNING
+  BMVC:
+  - BMVC
+  British Machine Vision Conference:
+  - BRITISH MACHINE VISION CONFERENCE
+  NLPCC:
+  - NLPCC
+  CCF International Conference on Natural Language Processing and Chinese Computing:
+  - CCF INTERNATIONAL CONFERENCE ON NATURAL LANGUAGE PROCESSING AND CHINESE COMPUTING
+  CoNLL:
+  - CONLL
+  Conference on Computational Natural Language Learning:
+  - CONFERENCE ON COMPUTATIONAL NATURAL LANGUAGE LEARNING
+  GECCO:
+  - GECCO
+  Genetic and Evolutionary Computation Conference:
+  - GENETIC AND EVOLUTIONARY COMPUTATION CONFERENCE
+  ICTAI:
+  - ICTAI
+  IEEE International Conference on Tools with Artificial Intelligence:
+  - IEEE INTERNATIONAL CONFERENCE ON TOOLS WITH ARTIFICIAL INTELLIGENCE
+  IROS:
+  - IROS
+  IEEE\RSJ International Conference on Intelligent Robots and Systems:
+  - IEEE\RSJ INTERNATIONAL CONFERENCE ON INTELLIGENT ROBOTS AND SYSTEMS
+  ALT:
+  - ALT
+  International Conference on Algorithmic Learning Theory:
+  - INTERNATIONAL CONFERENCE ON ALGORITHMIC LEARNING THEORY
+  ICANN:
+  - ICANN
+  International Conference on Artificial Neural Networks:
+  - INTERNATIONAL CONFERENCE ON ARTIFICIAL NEURAL NETWORKS
+  FG:
+  - FG
+  IEEE International Conference on Automatic Face and Gesture Recognition:
+  - IEEE INTERNATIONAL CONFERENCE ON AUTOMATIC FACE AND GESTURE RECOGNITION
+  ICDAR:
+  - ICDAR
+  International Conference on Document Analysis and Recognition:
+  - INTERNATIONAL CONFERENCE ON DOCUMENT ANALYSIS AND RECOGNITION
+  ILP:
+  - ILP
+  International Conference on Inductive Logic Programming:
+  - INTERNATIONAL CONFERENCE ON INDUCTIVE LOGIC PROGRAMMING
+  KSEM:
+  - KSEM
+  ICONIP:
+  - ICONIP
+  International Conference on Neural Information Processing:
+  - INTERNATIONAL CONFERENCE ON NEURAL INFORMATION PROCESSING
+  ICPR:
+  - ICPR
+  International Conference on Pattern Recognition:
+  - INTERNATIONAL CONFERENCE ON PATTERN RECOGNITION
+  IJCB:
+  - IJCB
+  International Joint Conference on Biometrics:
+  - INTERNATIONAL JOINT CONFERENCE ON BIOMETRICS
+  IJCNN:
+  - IJCNN
+  International Joint Conference on Neural Networks:
+  - INTERNATIONAL JOINT CONFERENCE ON NEURAL NETWORKS
+  PRICAI:
+  - PRICAI
+  Pacific Rim International Conference on Artificial Intelligence:
+  - PACIFIC RIM INTERNATIONAL CONFERENCE ON ARTIFICIAL INTELLIGENCE
+  TOCHI:
+  - TOCHI
+  ACM Transactions on Computer-Human Interaction:
+  - ACM TRANSACTIONS ON COMPUTER-HUMAN INTERACTION
+  IJHCS:
+  - IJHCS
+  International Journal of Human-Computer Studies:
+  - INTERNATIONAL JOURNAL OF HUMAN-COMPUTER STUDIES
+  CSCW:
+  - CSCW
+  HCI:
+  - HCI
+  IEEE Transactions on Human-Machine Systems:
+  - IEEE TRANSACTIONS ON HUMAN-MACHINE SYSTEMS
+  IWC:
+  - IWC
+  IJHCI:
+  - IJHCI
+  International Journal of Human-Computer Interaction:
+  - INTERNATIONAL JOURNAL OF HUMAN-COMPUTER INTERACTION
+  UMUAI:
+  - UMUAI
+  TSMC:
+  - TSMC
+  'IEEE Transactions on Systems, Man, and Cybernetics: Systems':
+  - 'IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS: SYSTEMS'
+  BIT:
+  - BIT
+  PUC:
+  - PUC
+  PMC:
+  - PMC
+  PACMHCI:
+  - PACMHCI
+  Proceedings of the ACM on Human- Computer Interaction:
+  - PROCEEDINGS OF THE ACM ON HUMAN- COMPUTER INTERACTION
+  ACM Conference On Computer- SupportedCooperative Work And Social Computing:
+  - ACM CONFERENCE ON COMPUTER- SUPPORTEDCOOPERATIVE WORK AND SOCIAL COMPUTING
+  CHI:
+  - CHI
+  ACM Conference on Human Factors in Computing Systems:
+  - ACM CONFERENCE ON HUMAN FACTORS IN COMPUTING SYSTEMS
+  UbiComp:
+  - UBICOMP
+  UIST:
+  - UIST
+  GROUP:
+  - GROUP
+  ACM International Conference on Supporting Group Work:
+  - ACM INTERNATIONAL CONFERENCE ON SUPPORTING GROUP WORK
+  IUI:
+  - IUI
+  ACM International Conference on Intelligent User Interfaces:
+  - ACM INTERNATIONAL CONFERENCE ON INTELLIGENT USER INTERFACES
+  ACM International Conference on Interactive Surfaces and Spaces:
+  - ACM INTERNATIONAL CONFERENCE ON INTERACTIVE SURFACES AND SPACES
+  ECSCW:
+  - ECSCW
+  European Conference on Computer Supported Cooperative Work:
+  - EUROPEAN CONFERENCE ON COMPUTER SUPPORTED COOPERATIVE WORK
+  PERCOM:
+  - PERCOM
+  IEEE International Conference on Pervasive Computing and Communications:
+  - IEEE INTERNATIONAL CONFERENCE ON PERVASIVE COMPUTING AND COMMUNICATIONS
+  MobileHCI:
+  - MOBILEHCI
+  ACM International Conference on Mobile Human-ComputerInteraction:
+  - ACM INTERNATIONAL CONFERENCE ON MOBILE HUMAN-COMPUTERINTERACTION
+  ICWSM:
+  - ICWSM
+  The International AAAI Conference on Web and Social Media:
+  - THE INTERNATIONAL AAAI CONFERENCE ON WEB AND SOCIAL MEDIA
+  DIS:
+  - DIS
+  ACM SIGCHI Conference on Designing Interactive Systems:
+  - ACM SIGCHI CONFERENCE ON DESIGNING INTERACTIVE SYSTEMS
+  ICMI:
+  - ICMI
+  ACM International Conference on Multimodal Interaction:
+  - ACM INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION
+  ASSETS:
+  - ASSETS
+  International ACM SIGACCESS Conference on Computers and Accessibility:
+  - INTERNATIONAL ACM SIGACCESS CONFERENCE ON COMPUTERS AND ACCESSIBILITY
+  GI:
+  - GI
+  UIC:
+  - UIC
+  IEEE International Conference on Ubiquitous Intelligence and Computing:
+  - IEEE INTERNATIONAL CONFERENCE ON UBIQUITOUS INTELLIGENCE AND COMPUTING
+  IEEE World Haptics Conference:
+  - IEEE WORLD HAPTICS CONFERENCE
+  INTERACT:
+  - INTERACT
+  International Conference on Human- Computer Interaction of International Federation for Information Processing:
+  - INTERNATIONAL CONFERENCE ON HUMAN- COMPUTER INTERACTION OF INTERNATIONAL FEDERATION
+    FOR INFORMATION PROCESSING
+  IDC:
+  - IDC
+  CollaborateCom:
+  - COLLABORATECOM
+  'International Conference on Collaborative Computing: Networking, Applications and Worksharing':
+  - 'INTERNATIONAL CONFERENCE ON COLLABORATIVE COMPUTING: NETWORKING, APPLICATIONS
+    AND WORKSHARING'
+  CSCWD:
+  - CSCWD
+  International Conference on Computer Supported Cooperative Work in Design:
+  - INTERNATIONAL CONFERENCE ON COMPUTER SUPPORTED COOPERATIVE WORK IN DESIGN
+  CoopIS:
+  - COOPIS
+  International Conference on Cooperative Information Systems:
+  - INTERNATIONAL CONFERENCE ON COOPERATIVE INFORMATION SYSTEMS
+  MobiQuitous:
+  - MOBIQUITOUS
+  'International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services':
+  - 'INTERNATIONAL CONFERENCE ON MOBILE AND UBIQUITOUS SYSTEMS: COMPUTING, NETWORKING
+    AND SERVICES'
+  AVI:
+  - AVI
+  International Working Conference on Advanced Visual Interfaces:
+  - INTERNATIONAL WORKING CONFERENCE ON ADVANCED VISUAL INTERFACES
+  JACM:
+  - JACM
+  Journal of the ACM:
+  - JOURNAL OF THE ACM
+  Proceedings of the IEEE:
+  - PROCEEDINGS OF THE IEEE
+  SCIS:
+  - SCIS
+  Cognition:
+  - COGNITION
+  TASAE:
+  - TASAE
+  IEEE Transactions on Automation Science and Engineering:
+  - IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING
+  TGARS:
+  - TGARS
+  IEEE Transactions on Geoscience and Remote Sensing:
+  - IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING
+  TITS:
+  - TITS
+  IEEE Transactions on Intelligent Transportation Systems:
+  - IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+  TMI:
+  - TMI
+  IEEE Transactions on Medical Imaging:
+  - IEEE TRANSACTIONS ON MEDICAL IMAGING
+  TR:
+  - TR
+  IEEE Transactions on Robotics:
+  - IEEE TRANSACTIONS ON ROBOTICS
+  TCBB:
+  - TCBB
+  IEEE/ACM Transactions on Computational Biology and Bioinformatics:
+  - IEEE/ACM TRANSACTIONS ON COMPUTATIONAL BIOLOGY AND BIOINFORMATICS
+  JCST:
+  - JCST
+  Journal of Computer Science and Technology:
+  - JOURNAL OF COMPUTER SCIENCE AND TECHNOLOGY
+  JAMIA:
+  - JAMIA
+  Journal of the American Medical Informatics Association:
+  - JOURNAL OF THE AMERICAN MEDICAL INFORMATICS ASSOCIATION
+  The Computer Journal:
+  - THE COMPUTER JOURNAL
+  WWW:
+  - WWW
+  FCS:
+  - FCS
+  Cybernetics and Systems:
+  - CYBERNETICS AND SYSTEMS
+  JBHI:
+  - JBHI
+  IEEE Journal of Biomedical and Health Informatics:
+  - IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS
+  TBD:
+  - TBD
+  IEEE Transactions on Big Data:
+  - IEEE TRANSACTIONS ON BIG DATA
+  IET Intelligent Transport Systems:
+  - IET INTELLIGENT TRANSPORT SYSTEMS
+  JBI:
+  - JBI
+  Journal of Biomedical Informatics:
+  - JOURNAL OF BIOMEDICAL INFORMATICS
+  TII:
+  - TII
+  IEEE Transactions on Industrial Informatics:
+  - IEEE TRANSACTIONS ON INDUSTRIAL INFORMATICS
+  TCPS:
+  - TCPS
+  ACM Transactions on Cyber- Physical Systems:
+  - ACM TRANSACTIONS ON CYBER- PHYSICAL SYSTEMS
+  TOCE:
+  - TOCE
+  ACM Transactions on Computing Education:
+  - ACM TRANSACTIONS ON COMPUTING EDUCATION
+  FITEE:
+  - FITEE
+  TCSS:
+  - TCSS
+  IEEE Transactions on Computational Social Systems:
+  - IEEE TRANSACTIONS ON COMPUTATIONAL SOCIAL SYSTEMS
+  IEEE Transactions on Reliability:
+  - IEEE TRANSACTIONS ON RELIABILITY
+  International World Wide Web Conference:
+  - INTERNATIONAL WORLD WIDE WEB CONFERENCE
+  RTSS:
+  - RTSS
+  IEEE Real-Time Systems Symposium:
+  - IEEE REAL-TIME SYSTEMS SYMPOSIUM
+  WINE:
+  - WINE
+  Conference on Web and Internet Economics:
+  - CONFERENCE ON WEB AND INTERNET ECONOMICS
+  CogSci:
+  - COGSCI
+  BIBM:
+  - BIBM
+  IEEE International Conference on Bioinformatics and Biomedicine:
+  - IEEE INTERNATIONAL CONFERENCE ON BIOINFORMATICS AND BIOMEDICINE
+  EMSOFT:
+  - EMSOFT
+  International Conference on Embedded Software:
+  - INTERNATIONAL CONFERENCE ON EMBEDDED SOFTWARE
+  ISMB:
+  - ISMB
+  International conference on Intelligent Systems for Molecular Biology:
+  - INTERNATIONAL CONFERENCE ON INTELLIGENT SYSTEMS FOR MOLECULAR BIOLOGY
+  RECOMB:
+  - RECOMB
+  Annual International Conference on Research in Computational Molecular Biology:
+  - ANNUAL INTERNATIONAL CONFERENCE ON RESEARCH IN COMPUTATIONAL MOLECULAR BIOLOGY
+  MICCAI:
+  - MICCAI
+  International Conference on Medical Image Computing and Computer-Assisted Intervention:
+  - INTERNATIONAL CONFERENCE ON MEDICAL IMAGE COMPUTING AND COMPUTER-ASSISTED INTERVENTION
+  AMIA:
+  - AMIA
+  APBC:
+  - APBC
+  Asia Pacific Bioinformatics Conference:
+  - ASIA PACIFIC BIOINFORMATICS CONFERENCE
+  IEEE International Conference on Big Data:
+  - IEEE INTERNATIONAL CONFERENCE ON BIG DATA
+  IEEE International Conference on Cloud Computing:
+  - IEEE INTERNATIONAL CONFERENCE ON CLOUD COMPUTING
+  SMC:
+  - SMC
+  IEEE International Conference on Systems, Man, and Cybernetics:
+  - IEEE INTERNATIONAL CONFERENCE ON SYSTEMS, MAN, AND CYBERNETICS
+  COSIT:
+  - COSIT
+  International Conference on Spatial Information Theory:
+  - INTERNATIONAL CONFERENCE ON SPATIAL INFORMATION THEORY
+  ISBRA:
+  - ISBRA
+  SAGT:
+  - SAGT
+  ICIC:
+  - ICIC
+  International Conference on Intelligent Computing:
+  - INTERNATIONAL CONFERENCE ON INTELLIGENT COMPUTING
+venue_ratings:
+  TOCS: CCF-A
+  ACM Transactions on Computer Systems: CCF-A
+  TOS: CCF-A
+  ACM Transactions on Storage: CCF-A
+  TCAD: CCF-A
+  IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems: CCF-A
+  TC: CCF-A
+  IEEE Transactions on Computers: CCF-A
+  TPDS: CCF-A
+  IEEE Transactions on Parallel and Distributed Systems: CCF-A
+  TACO: CCF-A
+  ACM Transactions on Architecture and Code Optimization: CCF-A
+  TAAS: CCF-B
+  ACM Transactions on Autonomous and Adaptive Systems: CCF-B
+  TODAES: CCF-B
+  ACM Transactions on Design Automation of Electronic Systems: CCF-B
+  TECS: CCF-B
+  ACM Transactions on Embedded Computing Systems: CCF-B
+  TRETS: CCF-B
+  ACM Transactions on Reconfigurable Technology and Systems: CCF-B
+  TVLSI: CCF-B
+  IEEE Transactions on Very Large Scale Integration (VLSI) Systems: CCF-B
+  JPDC: CCF-B
+  Journal of Parallel and Distributed Computing: CCF-B
+  JSA: CCF-B
+  'Journal of Systems Architecture: Embedded Software Design': CCF-B
+  'Performance Evaluation: An International Journal': CCF-B
+  JETC: CCF-C
+  ACM Journal on Emerging Technologies in Computing Systems: CCF-C
+  DC: CCF-C
+  FGCS: CCF-C
+  Future Generation Computer Systems: CCF-C
+  TCC: CCF-B
+  IEEE Transactions on Cloud Computing: CCF-C
+  Integration: CCF-C
+  Integration, the VLSI Journal: CCF-C
+  JETTA: CCF-C
+  Journal of Electronic Testing-Theory and Applications: CCF-C
+  JGC: CCF-C
+  Journal of Grid computing: CCF-C
+  MICPRO: CCF-C
+  RTS: CCF-C
+  Real-Time Systems: CCF-C
+  TJSC: CCF-C
+  The Journal of Supercomputing: CCF-C
+  TCASI: CCF-C
+  'IEEE Transactions on Circuits and Systems I: Regular Papers': CCF-C
+  CCF Transactions on High Performance Computing: CCF-C
+  TSUSC: CCF-C
+  IEEE Transactions on Sustainable Computing: CCF-C
+  PPoPP: CCF-A
+  FAST: CCF-A
+  USENIX Conference on File and Storage Technologies: CCF-A
+  DAC: CCF-A
+  Design Automation Conference: CCF-A
+  HPCA: CCF-A
+  MICRO: CCF-A
+  SC: CCF-A
+  International Conference for High Performance Computing, Networking, Storage, and Analysis: CCF-A
+  ASPLOS: CCF-A
+  International Conference on Architectural Support for Programming Languages and Operating Systems: CCF-A
+  ISCA: CCF-A
+  USENIX Annual Technical Conference: CCF-A
+  EuroSys: CCF-A
+  European Conference on Computer Systems: CCF-A
+  SoCC: CCF-B
+  SPAA: CCF-B
+  PODC: CCF-B
+  FPGA: CCF-B
+  CGO: CCF-B
+  DATE: CCF-B
+  CLUSTER: CCF-B
+  IEEE International Conference on Cluster Computing: CCF-B
+  ICCD: CCF-B
+  International Conference on Computer Design: CCF-B
+  ICCAD: CCF-B
+  International Conference on Computer-Aided Design: CCF-B
+  ICDCS: CCF-B
+  IEEE International Conference on Distributed Computing Systems: CCF-B
+  International Conference on Hardware/Software Co-design and System Synthesis: CCF-B
+  HiPEAC: CCF-B
+  International Conference on High Performance and Embedded Architectures and Compilers: CCF-B
+  SIGMETRICS: CCF-B
+  International Conference on Measurement and Modeling of Computer Systems: CCF-B
+  PACT: CCF-B
+  International Conference on Parallel Architectures and Compilation Techniques: CCF-B
+  ICPP: CCF-B
+  International Conference on Parallel Processing: CCF-B
+  ICS: CCF-B
+  International Conference on Supercomputing: CCF-B
+  VEE: CCF-B
+  International Conference on Virtual Execution Environments: CCF-B
+  IPDPS: CCF-B
+  Performance: CCF-B
+  HPDC: CCF-B
+  ITC: CCF-B
+  International Test Conference: CCF-B
+  LISA: CCF-B
+  Large Installation System Administration Conference: CCF-B
+  MSST: CCF-B
+  Mass Storage Systems and Technologies: CCF-B
+  RTAS: CCF-B
+  Euro-Par: CCF-B
+  European Conference on Parallel and Distributed Computing: CCF-B
+  CF: CCF-C
+  ACM International Conference on Computing Frontiers: CCF-C
+  SYSTOR: CCF-C
+  ACM International Systems and Storage Conference: CCF-C
+  NOCS: CCF-C
+  ASAP: CCF-C
+  IEEE International Conference on Application-Specific Systems, Architectures, and Processors: CCF-C
+  ASP-DAC: CCF-C
+  Asia and South Pacific Design Automation Conference: CCF-C
+  ETS: CCF-C
+  FPL: CCF-C
+  International Conference on Field-Programmable Logic and Applications: CCF-C
+  FCCM: CCF-C
+  GLSVLSI: CCF-C
+  ATS: CCF-C
+  HPCC: CCF-C
+  IEEE International Conference on High Performance Computing and Communications: CCF-C
+  HiPC: CCF-C
+  IEEE International Conference on High Performance Computing, Data and Analytics: CCF-C
+  MASCOTS: CCF-C
+  International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems: CCF-C
+  ISPA: CCF-C
+  CCGRID: CCF-C
+  NPC: CCF-C
+  IFIP International Conference on Network and Parallel Computing: CCF-C
+  ICA3PP: CCF-C
+  International Conference on Algorithms and Architectures for Parallel Processing: CCF-C
+  CASES: CCF-C
+  International Conference on Compilers, Architectures, and Synthesis for Embedded Systems: CCF-C
+  FPT: CCF-C
+  International Conference on Field-Programmable Technology: CCF-C
+  ICPADS: CCF-C
+  International Conference on Parallel and Distributed Systems: CCF-C
+  ISCAS: CCF-C
+  IEEE International Symposium on Circuits and Systems: CCF-C
+  ISLPED: CCF-C
+  ISPD: CCF-C
+  HOTI: CCF-C
+  VTS: CCF-C
+  ITC-Asia: CCF-C
+  International Test Conference in Asia: CCF-C
+  JSAC: CCF-A
+  IEEE Journal on Selected Areas in Communications: CCF-A
+  TMC: CCF-A
+  IEEE Transactions on Mobile Computing: CCF-A
+  TON: CCF-A
+  IEEE/ACM Transactions on Networking: CCF-A
+  TOIT: CCF-B
+  ACM Transactions on Internet Technology: CCF-B
+  TOMM: CCF-B
+  ACM Transactions on Multimedia Computing, Communications and Applications: CCF-B
+  TOSN: CCF-B
+  ACM Transactions on Sensor Networks: CCF-B
+  CN: CCF-B
+  TCOM: CCF-B
+  IEEE Transactions on Communications: CCF-B
+  TWC: CCF-B
+  IEEE Transactions on Wireless Communications: CCF-B
+  CC: CCF-B
+  TNSM: CCF-C
+  IEEE Transactions on Network and Service Management: CCF-C
+  JNCA: CCF-C
+  Journal of Network and Computer Applications: CCF-C
+  MONET: CCF-C
+  PPNA: CCF-C
+  WCMC: CCF-C
+  IOT: CCF-C
+  IEEE Internet of Things Journal: CCF-C
+  SIGCOMM: CCF-A
+  ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication: CCF-A
+  MobiCom: CCF-A
+  ACM International Conference on Mobile Computing and Networking: CCF-A
+  INFOCOM: CCF-A
+  IEEE International Conference on Computer Communications: CCF-A
+  NSDI: CCF-A
+  SenSys: CCF-B
+  ACM Conference on Embedded Networked Sensor Systems: CCF-B
+  CoNEXT: CCF-B
+  ACM International Conference on Emerging Networking Experiments and Technologies: CCF-B
+  SECON: CCF-B
+  IEEE International Conference on Sensing, Communication, and Networking: CCF-B
+  IPSN: CCF-B
+  International Conference on Information Processing in Sensor Networks: CCF-B
+  MobiSys: CCF-B
+  ACM International Conference on Mobile Systems, Applications, and Services: CCF-B
+  ICNP: CCF-B
+  IEEE International Conference on Network Protocols: CCF-B
+  MobiHoc: CCF-B
+  NOSSDAV: CCF-B
+  IWQoS: CCF-B
+  IMC: CCF-B
+  ACM Internet Measurement Conference: CCF-B
+  ANCS: CCF-C
+  ACM/IEEE Symposium on Architectures for Networking and Communication Systems: CCF-C
+  APNOMS: CCF-C
+  FORTE: CCF-C
+  International Conference on Formal Techniques for Distributed Objects, Components, and Systems: CCF-C
+  LCN: CCF-C
+  IEEE Conference on Local Computer Networks: CCF-C
+  IEEE Global Communications Conference: CCF-C
+  ICC: CCF-C
+  IEEE International Conference on Communications: CCF-C
+  ICCCN: CCF-C
+  IEEE International Conference on Computer Communications and Networks: CCF-C
+  MASS: CCF-C
+  IEEE International Conference on Mobile Adhoc and Sensor Systems: CCF-C
+  P2P: CCF-C
+  IEEE International Conference on Peer-to-Peer Computing: CCF-C
+  IPCCC: CCF-C
+  IEEE International Performance Computing and Communications Conference: CCF-C
+  WoWMoM: CCF-C
+  ISCC: CCF-C
+  WCNC: CCF-C
+  IEEE Wireless Communications and Networking Conference: CCF-C
+  Networking: CCF-C
+  IFIP International Conferences on Networking: CCF-C
+  IM: CCF-C
+  MSN: CCF-C
+  International Conference on Mobility, Sensing and Networking: CCF-C
+  MSWiM: CCF-C
+  International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems: CCF-C
+  The International Conference on Wireless Artificial Intelligent Computing Systems and Applications: CCF-C
+  HotNets: CCF-C
+  APNet: CCF-C
+  TDSC: CCF-A
+  IEEE Transactions on Dependable and Secure Computing: CCF-A
+  TIFS: CCF-A
+  IEEE Transactions on Information Forensics and Security: CCF-A
+  Journal of Cryptology: CCF-A
+  TOPS: CCF-B
+  ACM Transactions on Privacy and Security: CCF-B
+  JCS: CCF-B
+  Journal of Computer Security: CCF-B
+  CLSR: CCF-C
+  EURASIP Journal on Information Security: CCF-C
+  IMCS: CCF-C
+  IJICS: CCF-C
+  International Journal of Information and Computer Security: CCF-C
+  IJISP: CCF-C
+  International Journal of Information Security and Privacy: CCF-C
+  JISA: CCF-C
+  Journal of Information Security and Applications: CCF-C
+  SCN: CCF-C
+  CCS: CCF-A
+  ACM Conference on Computer and Communications Security: CCF-A
+  EUROCRYPT: CCF-A
+  International Conference on the Theory and Applications of Cryptographic Techniques: CCF-A
+  CRYPTO: CCF-A
+  International Cryptology Conference: CCF-A
+  NDSS: CCF-A
+  ACSAC: CCF-B
+  Annual Computer Security Applications Conference: CCF-B
+  ASIACRYPT: CCF-B
+  Annual International Conference on the Theory and Application of Cryptology and Information Security: CCF-B
+  ESORICS: CCF-B
+  FSE: CCF-B
+  CSFW: CCF-B
+  SRDS: CCF-B
+  IEEE International Symposium on Reliable Distributed Systems: CCF-B
+  CHES: CCF-B
+  International Conference on Cryptographic Hardware and Embedded Systems: CCF-B
+  DSN: CCF-B
+  International Conference on Dependable Systems and Networks: CCF-B
+  RAID: CCF-B
+  PKC: CCF-B
+  Theory of Cryptography Conference: CCF-B
+  WiSec: CCF-C
+  ACM Conference on Security and Privacy in Wireless and Mobile Networks: CCF-C
+  SACMAT: CCF-C
+  DRM: CCF-C
+  ACNS: CCF-C
+  International Conference on Applied Cryptography and Network Security: CCF-C
+  AsiaCCS: CCF-C
+  ACM Asia Conference on Computer and Communications Security: CCF-C
+  ACISP: CCF-C
+  Australasia Conference on Information Security and Privacy: CCF-C
+  CT-RSA: CCF-C
+  The Cryptographer's Track at RSA Conference: CCF-C
+  DIMVA: CCF-C
+  Conference on Detection of Intrusions and Malware & Vulnerability Assessment: CCF-C
+  DFRWS: CCF-C
+  FC: CCF-C
+  TrustCom: CCF-C
+  IEEE International Conference on Trust, Security and Privacy in Computing and Communications: CCF-C
+  SEC: CCF-C
+  IFIP International Information Security Conference: CCF-C
+  IFIP Working Group 11.9 International Conference on Digital Forensics: CCF-C
+  ISC: CCF-C
+  Information Security Conference: CCF-C
+  ICDF2C: CCF-C
+  International Conference on Digital Forensics & Cyber Crime: CCF-C
+  ICICS: CCF-C
+  International Conference on Information and Communications Security: CCF-C
+  SecureComm: CCF-C
+  International Conference on Security and Privacy in Communication Networks: CCF-C
+  NSPW: CCF-C
+  PAM: CCF-C
+  Passive and Active Measurement Conference: CCF-C
+  PETS: CCF-C
+  SAC: CCF-C
+  SOUPS: CCF-C
+  HotSec: CCF-C
+  Inscrypt: CCF-C
+  International Conference on Information Security and Cryptology: CCF-C
+  TOPLAS: CCF-A
+  ACM Transactions on Programming Languages and Systems: CCF-A
+  TOSEM: CCF-A
+  ACM Transactions on Software Engineering and Methodology: CCF-A
+  TSE: CCF-A
+  IEEE Transactions on Software Engineering: CCF-A
+  TSC: CCF-A
+  IEEE Transactions on Services Computing: CCF-A
+  ASE: CCF-A
+  ESE: CCF-B
+  IETS: CCF-B
+  IST: CCF-B
+  JFP: CCF-B
+  Journal of Functional Programming: CCF-B
+  'Journal of Software: Evolution and Process': CCF-B
+  JSS: CCF-B
+  Journal of Systems and Software: CCF-B
+  RE: CCF-B
+  SCP: CCF-B
+  SoSyM: CCF-B
+  Software and Systems Modeling: CCF-B
+  STVR: CCF-B
+  SPE: CCF-B
+  CL: CCF-C
+  Computer Languages, Systems and Structures: CCF-C
+  IJSEKE: CCF-C
+  International Journal of Software Engineering and Knowledge Engineering: CCF-C
+  STTT: CCF-C
+  International Journal of Software Tools for Technology Transfer: CCF-C
+  JLAMP: CCF-C
+  Journal of Logical and Algebraic Methods in Programming: CCF-C
+  JWE: CCF-C
+  Journal of Web Engineering: CCF-C
+  SOCA: CCF-C
+  SQJ: CCF-C
+  Software Quality Journal: CCF-C
+  TPLP: CCF-C
+  Proceedings of the ACM on Programming Languages: CCF-C
+  PLDI: CCF-A
+  ACM SIGPLAN Conference on Programming Language Design and Implementation: CCF-A
+  POPL: CCF-A
+  ACM International Conference on the Foundations of Software Engineering: CCF-A
+  SOSP: CCF-A
+  ACM Symposium on Operating Systems Principles: CCF-A
+  OOPSLA: CCF-A
+  Conference on Object-Oriented Programming Systems, Languages, and Applications: CCF-A
+  International Conference on Automated Software Engineering: CCF-A
+  ICSE: CCF-A
+  International Conference on Software Engineering: CCF-A
+  ISSTA: CCF-A
+  OSDI: CCF-A
+  USENIX Symposium on Operating Systems Design and Implementation: CCF-A
+  FM: CCF-A
+  ECOOP: CCF-B
+  European Conference on Object-Oriented Programming: CCF-B
+  ETAPS: CCF-B
+  European Joint Conferences on Theory and Practice of Software: CCF-B
+  ICPC: CCF-B
+  IEEE International Conference on Program Comprehension: CCF-B
+  IEEE International Requirements Engineering Conference: CCF-B
+  CAiSE: CCF-B
+  International Conference on Advanced Information Systems Engineering: CCF-B
+  ICFP: CCF-B
+  ACM SIGPLAN International Conference on Function Programming: CCF-B
+  LCTES: CCF-B
+  ACM SIGPLAN/SIGBED International Conference on Languages, Compilers and Tools for Embedded Systems: CCF-B
+  MoDELS: CCF-B
+  ACM/IEEE International Conference on Model Driven EngineeringLanguages and Systems: CCF-B
+  CP: CCF-B
+  International Conference on Principles and Practice of Constraint Programming: CCF-B
+  ICSOC: CCF-B
+  International Conference on Service Oriented Computing: CCF-B
+  SANER: CCF-B
+  IEEE International Conference on Software Analysis, Evolution, and Reengineering: CCF-B
+  ICSME: CCF-B
+  International Conference on Software Maintenance and Evolution: CCF-B
+  VMCAI: CCF-B
+  International Conference on Verification, Model Checking and Abstract Interpretation: CCF-B
+  ICWS: CCF-B
+  IEEE International Conference on Web Services: CCF-B
+  Middleware: CCF-B
+  International Middleware Conference: CCF-B
+  SAS: CCF-B
+  ESEM: CCF-B
+  ISSRE: CCF-B
+  HotOS: CCF-B
+  USENIX Workshop on Hot Topics in Operating Systems: CCF-B
+  PEPM: CCF-C
+  PASTE: CCF-C
+  APLAS: CCF-C
+  Asian Symposium on Programming Languages and Systems: CCF-C
+  APSEC: CCF-C
+  Asia-Pacific Software Engineering Conference: CCF-C
+  EASE: CCF-C
+  International Conference on Evaluation and Assessment in Software Engineering: CCF-C
+  ICECCS: CCF-C
+  International Conference on Engineering of Complex Computer Systems: CCF-C
+  ICST: CCF-C
+  IEEE International Conference on Software Testing, Verification and Validation: CCF-C
+  ISPASS: CCF-C
+  IEEE International Symposium on Performance Analysis of Systems and Software: CCF-C
+  SCAM: CCF-C
+  IEEE International Working Conference on Source Code Analysis and Manipulation: CCF-C
+  COMPSAC: CCF-C
+  International Computer Software and Applications Conference: CCF-C
+  ICFEM: CCF-C
+  International Conference on Formal Engineering Methods: CCF-C
+  TOOLS: CCF-C
+  International Conference on Objects, Models, Components, Patterns（2019年停办）: CCF-C
+  IEEE International Conference on Software Services Engineering: CCF-C
+  ICSSP: CCF-C
+  International Conference on Software and System Process: CCF-C
+  SEKE: CCF-C
+  International Conference on Software Engineering and Knowledge Engineering: CCF-C
+  QRS: CCF-C
+  International Conference on Software Quality, Reliability and Security: CCF-C
+  ICSR: CCF-C
+  International Conference on Software Reuse: CCF-C
+  ICWE: CCF-C
+  International Conference on Web Engineering: CCF-C
+  SPIN: CCF-C
+  ATVA: CCF-C
+  LOPSTR: CCF-C
+  TASE: CCF-C
+  Theoretical Aspects of Software Engineering Conference: CCF-C
+  MSR: CCF-C
+  REFSQ: CCF-C
+  WICSA: CCF-C
+  Working IEEE/IFIP Conference on Software Architecture: CCF-C
+  Internetware: CCF-C
+  RV: CCF-C
+  International Conference on Runtime Verification: CCF-C
+  TODS: CCF-A
+  ACM Transactions on Database Systems: CCF-A
+  TOIS: CCF-A
+  ACM Transactions on Information Systems: CCF-A
+  TKDE: CCF-A
+  IEEE Transactions on Knowledge and Data Engineering: CCF-A
+  VLDBJ: CCF-A
+  The VLDB Journal: CCF-A
+  TKDD: CCF-B
+  ACM Transactions on Knowledge Discovery from Data: CCF-B
+  TWEB: CCF-B
+  ACM Transactions on the Web: CCF-B
+  AEI: CCF-B
+  DKE: CCF-B
+  DMKD: CCF-B
+  EJIS: CCF-B
+  European Journal of Information Systems: CCF-B
+  IPM: CCF-B
+  IS: CCF-B
+  Information Systems: CCF-B
+  JASIST: CCF-B
+  Journal of the Association for Information Science and Technology: CCF-B
+  JWS: CCF-B
+  Journal of Web Semantics: CCF-B
+  KAIS: CCF-B
+  Knowledge and Information Systems: CCF-B
+  DPD: CCF-C
+  IPL: CCF-C
+  IR: CCF-C
+  Information Retrieval Journal: CCF-C
+  IJCIS: CCF-C
+  International Journal of Cooperative Information Systems: CCF-C
+  IJGIS: CCF-C
+  International Journal of Geographical Information Science: CCF-C
+  IJIS: CCF-C
+  International Journal of Intelligent Systems: CCF-C
+  IJKM: CCF-C
+  International Journal of Knowledge Management: CCF-C
+  IJSWIS: CCF-C
+  International Journal on Semantic Web and Information Systems: CCF-C
+  JCIS: CCF-C
+  Journal of Computer Information Systems: CCF-C
+  JDM: CCF-C
+  Journal of Database Management: CCF-C
+  JGITM: CCF-C
+  Journal of Global Information Technology Management: CCF-C
+  JIIS: CCF-C
+  Journal of Intelligent Information Systems: CCF-C
+  JSIS: CCF-C
+  The Journal of Strategic Information Systems: CCF-C
+  DSE: CCF-C
+  SIGMOD: CCF-A
+  ACM SIGMOD Conference: CCF-A
+  SIGKDD: CCF-A
+  ACM SIGKDD Conference on Knowledge Discovery and Data Mining: CCF-A
+  ICDE: CCF-A
+  IEEE International Conference on Data Engineering: CCF-A
+  SIGIR: CCF-A
+  International ACM SIGIR Conference on Research and Development in Information Retrieval: CCF-A
+  VLDB: CCF-A
+  International Conference on Very Large Data Bases: CCF-A
+  CIKM: CCF-B
+  ACM International Conference on Information and Knowledge Management: CCF-B
+  WSDM: CCF-B
+  ACM International Conference on Web Search and Data Mining: CCF-B
+  PODS: CCF-B
+  ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of DatabaseSystems: CCF-B
+  DASFAA: CCF-B
+  International Conference on Database Systems for Advanced Applications: CCF-B
+  ECML-PKDD: CCF-B
+  European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases: CCF-B
+  ISWC: CCF-B
+  IEEE International Semantic Web Conference: CCF-B
+  ICDM: CCF-B
+  IEEE International Conference on Data Mining: CCF-B
+  ICDT: CCF-B
+  International Conference on Database Theory: CCF-B
+  EDBT: CCF-B
+  International Conference on Extending Database Technology: CCF-B
+  CIDR: CCF-B
+  Conference on Innovative Data Systems Research: CCF-B
+  SDM: CCF-B
+  SIAM International Conference on Data Mining: CCF-B
+  RecSys: CCF-B
+  ACM Conference on Recommender Systems: CCF-B
+  APWeb: CCF-C
+  Asia Pacific Web Conference: CCF-C
+  DEXA: CCF-C
+  International Conference on Database and Expert System Applications: CCF-C
+  ECIR: CCF-C
+  European Conference on Information Retrieval: CCF-C
+  ESWC: CCF-C
+  Extended Semantic Web Conference: CCF-C
+  WebDB: CCF-C
+  ER: CCF-C
+  International Conference on Conceptual Modeling: CCF-C
+  MDM: CCF-C
+  International Conference on Mobile Data Management: CCF-C
+  SSDBM: CCF-C
+  International Conference on Scientific and Statistical Database Management: CCF-C
+  WAIM: CCF-C
+  International Conference on Web Age Information Management: CCF-C
+  SSTD: CCF-C
+  PAKDD: CCF-C
+  Pacific-Asia Conference on Knowledge Discovery and Data Mining: CCF-C
+  WISE: CCF-C
+  Web Information Systems Engineering: CCF-C
+  ADMA: CCF-C
+  International Conference on Advanced Data Mining and Applications: CCF-C
+  TIT: CCF-A
+  IEEE Transactions on Information Theory: CCF-A
+  IANDC: CCF-A
+  SICOMP: CCF-A
+  SIAM Journal on Computing: CCF-A
+  TALG: CCF-B
+  ACM Transactions on Algorithms: CCF-B
+  TOCL: CCF-B
+  ACM Transactions on Computational Logic: CCF-B
+  TOMS: CCF-B
+  ACM Transactions on Mathematical Software: CCF-B
+  Algorithmica: CCF-B
+  FAC: CCF-B
+  FMSD: CCF-B
+  INFORMS: CCF-B
+  INFORMS Journal on Computing: CCF-B
+  JCSS: CCF-B
+  Journal of Computer and System Sciences: CCF-B
+  JGO: CCF-B
+  Journal of Global Optimization: CCF-B
+  JSC: CCF-B
+  Journal of Symbolic Computation: CCF-B
+  MSCS: CCF-B
+  TCS: CCF-B
+  ACTA: CCF-C
+  APAL: CCF-C
+  DAM: CCF-C
+  FUIN: CCF-C
+  LISP: CCF-C
+  JCOMPLEXITY: CCF-C
+  Journal of Complexity: CCF-C
+  LOGCOM: CCF-C
+  Journal of Logic and Computation: CCF-C
+  JSL: CCF-C
+  The Journal of Symbolic Logic: CCF-C
+  LMCS: CCF-C
+  SIDMA: CCF-C
+  SIAM Journal on Discrete Mathematics: CCF-C
+  Theory of Computing Systems: CCF-C
+  STOC: CCF-A
+  SODA: CCF-A
+  CAV: CCF-A
+  International Conference on Computer Aided Verification: CCF-A
+  FOCS: CCF-A
+  LICS: CCF-A
+  SoCG: CCF-B
+  ESA: CCF-B
+  CCC: CCF-B
+  Conference on Computational Complexity: CCF-B
+  ICALP: CCF-B
+  International Conference on Automated Deduction/International Joint Conference on Automated Reasoning: CCF-B
+  CONCUR: CCF-B
+  International Conference on Concurrency Theory: CCF-B
+  HSCC: CCF-B
+  'International Conference on Hybrid Systems: Computation and Control': CCF-B
+  SAT: CCF-B
+  International Conference on Theory and Applications of Satisfiability Testing: CCF-B
+  COCOON: CCF-B
+  International Computing and Combinatorics Conference: CCF-B
+  CSL: CCF-C
+  FMCAD: CCF-C
+  FSTTCS: CCF-C
+  DSAA: CCF-C
+  IEEE International Conference on Data Science and Advanced Analytics: CCF-C
+  ICTAC: CCF-C
+  IPCO: CCF-C
+  International Conference on Integer Programming and Combinatorial Optimization: CCF-C
+  RTA: CCF-C
+  International Conference on Rewriting Techniques and Applications: CCF-C
+  ISAAC: CCF-C
+  MFCS: CCF-C
+  International Conference on Mathematical Foundations of Computer Science: CCF-C
+  STACS: CCF-C
+  SETTA: CCF-C
+  TOG: CCF-A
+  ACM Transactions on Graphics: CCF-A
+  TIP: CCF-A
+  IEEE Transactions on Image Processing: CCF-A
+  TVCG: CCF-A
+  IEEE Transactions on Visualization and Computer Graphics: CCF-A
+  CAGD: CCF-B
+  CGF: CCF-B
+  CAD: CCF-B
+  GM: CCF-B
+  TCSVT: CCF-B
+  IEEE Transactions on Circuits and Systems for Video Technology: CCF-B
+  TMM: CCF-B
+  IEEE Transactions on Multimedia: CCF-B
+  JASA: CCF-B
+  The Journal of the Acoustical Society of America: CCF-B
+  SIIMS: CCF-B
+  SIAM Journal on Imaging Sciences: CCF-B
+  SPECOM: CCF-B
+  CGTA: CCF-C
+  CAVW: CCF-C
+  DCG: CCF-C
+  SPL: CCF-C
+  IET-IPR: CCF-C
+  JVCIR: CCF-C
+  Journal of Visual Communication and Image Representation: CCF-C
+  MS: CCF-C
+  Multimedia Systems: CCF-C
+  MTA: CCF-C
+  SIGPRO: CCF-C
+  IMAGE: CCF-C
+  TVC: CCF-C
+  CVMJ: CCF-C
+  ACM International Conference on Multimedia: CCF-A
+  SIGGRAPH: CCF-A
+  VR: CCF-A
+  IEEE Visualization Conference: CCF-A
+  ICMR: CCF-B
+  ACM SIGMM International Conference on Multimedia Retrieval: CCF-B
+  I3D: CCF-B
+  SCA: CCF-B
+  DCC: CCF-B
+  Data Compression Conference: CCF-B
+  Annual Conference of the European Association for Computer Graphics: CCF-B
+  EuroVis: CCF-B
+  Eurographics Conference on Visualization: CCF-B
+  SGP: CCF-B
+  EGSR: CCF-B
+  ICASSP: CCF-B
+  IEEE International Conference on Acoustics, Speech and Signal Processing: CCF-B
+  ICME: CCF-B
+  IEEE International Conference on Multimedia & Expo: CCF-B
+  ISMAR: CCF-B
+  PG: CCF-B
+  Pacific Conference onComputer Graphics and Applications: CCF-B
+  SPM: CCF-B
+  VRST: CCF-C
+  CASA: CCF-C
+  International Conference on Computer Animation and Social Agents: CCF-C
+  CGI: CCF-C
+  INTERSPEECH: CCF-C
+  Conference of the International Speech Communication Association: CCF-C
+  GMP: CCF-C
+  PacificVis: CCF-C
+  3DV: CCF-C
+  International Conference on 3D Vision: CCF-C
+  International Conference on Computer-Aided Design and Computer Graphics: CCF-C
+  ICIP: CCF-C
+  IEEE International Conference on Image Processing: CCF-C
+  MMM: CCF-C
+  International Conference on Multimedia Modeling: CCF-C
+  MMAsia: CCF-C
+  SMI: CCF-C
+  ICVRV: CCF-C
+  International Conference on Virtual Reality and Visualization: CCF-C
+  CVM: CCF-C
+  PRCV: CCF-C
+  Chinese Conference on Pattern Recognition and Computer Vision (中国模式识别与计算机视觉大会): CCF-C
+  AI: CCF-A
+  TPAMI: CCF-A
+  IEEE Transactions on Pattern Analysis and MachineIntelligence: CCF-A
+  IJCV: CCF-A
+  International Journal of Computer Vision: CCF-A
+  JMLR: CCF-A
+  Journal of Machine Learning Research: CCF-A
+  TAP: CCF-B
+  ACM Transactions on Applied Perception: CCF-B
+  TSLP: CCF-B
+  ACM Transactions on Speech and Language (2013年已停刊): CCF-B
+  AAMAS: CCF-B
+  Autonomous Agents and Multi-Agent Systems: CCF-B
+  CVIU: CCF-B
+  TAC: CCF-B
+  IEEE Transactions on Affective Computing: CCF-B
+  TASLP: CCF-B
+  IEEE/ACM Transactions on Audio, Speech and Language Processing: CCF-B
+  IEEE Transactions on Cybernetics: CCF-B
+  TEC: CCF-B
+  IEEE Transactions on Evolutionary Computation: CCF-B
+  TFS: CCF-B
+  IEEE Transactions on Fuzzy Systems: CCF-B
+  TNNLS: CCF-B
+  IEEE Transactions on Neural Networks and learning systems: CCF-B
+  IJAR: CCF-B
+  International Journal of Approximate Reasoning: CCF-B
+  JAIR: CCF-B
+  Journal of Artificial Intelligence Research: CCF-B
+  Journal of Automated Reasoning: CCF-B
+  JSLHR: CCF-B
+  Journal of Speech, Language, and Hearing Research: CCF-B
+  PR: CCF-B
+  TACL: CCF-B
+  Transactions of the Association for Computational Linguistics: CCF-B
+  TALLIP: CCF-C
+  ACM Transactions on Asian and Low- Resource Language Information Processing: CCF-C
+  AIM: CCF-C
+  DSS: CCF-C
+  Decision Support Systems: CCF-C
+  EAAI: CCF-C
+  Expert Systems: CCF-C
+  ESWA: CCF-C
+  Expert Systems with Applications: CCF-C
+  Fuzzy Sets and Systems: CCF-C
+  TG: CCF-C
+  IEEE Transactions on Games: CCF-C
+  IET-CVI: CCF-C
+  IVC: CCF-C
+  IDA: CCF-C
+  IJCIA: CCF-C
+  International Journal of Computational Intelligence and Applications: CCF-C
+  IJNS: CCF-C
+  International Journal of Neural Systems: CCF-C
+  IJPRAI: CCF-C
+  International Journal of Pattern Recognition and Artificial Intelligence: CCF-C
+  IJUFKS: CCF-C
+  International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems: CCF-C
+  IJDAR: CCF-C
+  International Journal on Document Analysis and Recognition: CCF-C
+  JETAI: CCF-C
+  Journal of Experimental and Theoretical Artificial Intelligence: CCF-C
+  KBS: CCF-C
+  Knowledge-Based Systems: CCF-C
+  NLE: CCF-C
+  NCA: CCF-C
+  NPL: CCF-C
+  PAA: CCF-C
+  PRL: CCF-C
+  WI: CCF-C
+  TIIS: CCF-C
+  ACM Transactions on Interactive Intelligent Systems: CCF-C
+  AAAI: CCF-A
+  AAAI Conference on Artificial Intelligence: CCF-A
+  NeurIPS: CCF-A
+  Conference on Neural Information Processing Systems: CCF-A
+  ACL: CCF-A
+  CVPR: CCF-A
+  IEEE/CVF Computer Vision and Pattern Recognition Conference: CCF-A
+  ICCV: CCF-A
+  International Conference on Computer Vision: CCF-A
+  ICML: CCF-A
+  International Conference on Machine Learning: CCF-A
+  IJCAI: CCF-A
+  International Joint Conference on Artificial Intelligence: CCF-A
+  COLT: CCF-B
+  Annual Conference on Computational Learning Theory: CCF-B
+  EMNLP: CCF-B
+  Conference on Empirical Methods in Natural Language Processing: CCF-B
+  ECAI: CCF-B
+  European Conference on Artificial Intelligence: CCF-B
+  ECCV: CCF-B
+  European Conference on Computer Vision: CCF-B
+  ICRA: CCF-B
+  IEEE International Conference on Robotics and Automation: CCF-B
+  ICAPS: CCF-B
+  International Conference on Automated Planning and Scheduling: CCF-B
+  ICCBR: CCF-B
+  International Conference on Case-Based Reasoning: CCF-B
+  COLING: CCF-B
+  International Conference on Computational Linguistics: CCF-B
+  KR: CCF-B
+  International Conference on Principles of Knowledge Representation and Reasoning: CCF-B
+  UAI: CCF-B
+  Conference onUncertainty in Artificial Intelligence: CCF-B
+  International Joint Conference on Autonomous Agents and Multi- agent Systems: CCF-B
+  PPSN: CCF-B
+  NAACL: CCF-B
+  AISTATS: CCF-C
+  International Conference on Artificial Intelligence and Statistics: CCF-C
+  ACCV: CCF-C
+  Asian Conference on Computer Vision: CCF-C
+  ACML: CCF-C
+  Asian Conference on Machine Learning: CCF-C
+  BMVC: CCF-C
+  British Machine Vision Conference: CCF-C
+  NLPCC: CCF-C
+  CCF International Conference on Natural Language Processing and Chinese Computing: CCF-C
+  CoNLL: CCF-C
+  Conference on Computational Natural Language Learning: CCF-C
+  GECCO: CCF-C
+  Genetic and Evolutionary Computation Conference: CCF-C
+  ICTAI: CCF-C
+  IEEE International Conference on Tools with Artificial Intelligence: CCF-C
+  IROS: CCF-C
+  IEEE\RSJ International Conference on Intelligent Robots and Systems: CCF-C
+  ALT: CCF-C
+  International Conference on Algorithmic Learning Theory: CCF-C
+  ICANN: CCF-C
+  International Conference on Artificial Neural Networks: CCF-C
+  FG: CCF-C
+  IEEE International Conference on Automatic Face and Gesture Recognition: CCF-C
+  ICDAR: CCF-C
+  International Conference on Document Analysis and Recognition: CCF-C
+  ILP: CCF-C
+  International Conference on Inductive Logic Programming: CCF-C
+  KSEM: CCF-C
+  ICONIP: CCF-C
+  International Conference on Neural Information Processing: CCF-C
+  ICPR: CCF-C
+  International Conference on Pattern Recognition: CCF-C
+  IJCB: CCF-C
+  International Joint Conference on Biometrics: CCF-C
+  IJCNN: CCF-C
+  International Joint Conference on Neural Networks: CCF-C
+  PRICAI: CCF-C
+  Pacific Rim International Conference on Artificial Intelligence: CCF-C
+  TOCHI: CCF-A
+  ACM Transactions on Computer-Human Interaction: CCF-A
+  IJHCS: CCF-A
+  International Journal of Human-Computer Studies: CCF-A
+  CSCW: CCF-A
+  HCI: CCF-B
+  IEEE Transactions on Human-Machine Systems: CCF-B
+  IWC: CCF-B
+  IJHCI: CCF-B
+  International Journal of Human-Computer Interaction: CCF-B
+  UMUAI: CCF-B
+  TSMC: CCF-B
+  'IEEE Transactions on Systems, Man, and Cybernetics: Systems': CCF-B
+  BIT: CCF-C
+  PUC: CCF-C
+  PMC: CCF-C
+  PACMHCI: CCF-C
+  Proceedings of the ACM on Human- Computer Interaction: CCF-C
+  ACM Conference On Computer- SupportedCooperative Work And Social Computing: CCF-A
+  CHI: CCF-A
+  ACM Conference on Human Factors in Computing Systems: CCF-A
+  UbiComp: CCF-A
+  UIST: CCF-A
+  GROUP: CCF-B
+  ACM International Conference on Supporting Group Work: CCF-B
+  IUI: CCF-B
+  ACM International Conference on Intelligent User Interfaces: CCF-B
+  ACM International Conference on Interactive Surfaces and Spaces: CCF-B
+  ECSCW: CCF-B
+  European Conference on Computer Supported Cooperative Work: CCF-B
+  PERCOM: CCF-B
+  IEEE International Conference on Pervasive Computing and Communications: CCF-B
+  MobileHCI: CCF-B
+  ACM International Conference on Mobile Human-ComputerInteraction: CCF-B
+  ICWSM: CCF-B
+  The International AAAI Conference on Web and Social Media: CCF-B
+  DIS: CCF-C
+  ACM SIGCHI Conference on Designing Interactive Systems: CCF-C
+  ICMI: CCF-C
+  ACM International Conference on Multimodal Interaction: CCF-C
+  ASSETS: CCF-C
+  International ACM SIGACCESS Conference on Computers and Accessibility: CCF-C
+  GI: CCF-C
+  UIC: CCF-C
+  IEEE International Conference on Ubiquitous Intelligence and Computing: CCF-C
+  IEEE World Haptics Conference: CCF-C
+  INTERACT: CCF-C
+  International Conference on Human- Computer Interaction of International Federation for Information Processing: CCF-C
+  IDC: CCF-C
+  CollaborateCom: CCF-C
+  'International Conference on Collaborative Computing: Networking, Applications and Worksharing': CCF-C
+  CSCWD: CCF-C
+  International Conference on Computer Supported Cooperative Work in Design: CCF-C
+  CoopIS: CCF-C
+  International Conference on Cooperative Information Systems: CCF-C
+  MobiQuitous: CCF-C
+  'International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services': CCF-C
+  AVI: CCF-C
+  International Working Conference on Advanced Visual Interfaces: CCF-C
+  JACM: CCF-A
+  Journal of the ACM: CCF-A
+  Proceedings of the IEEE: CCF-A
+  SCIS: CCF-A
+  Cognition: CCF-B
+  TASAE: CCF-B
+  IEEE Transactions on Automation Science and Engineering: CCF-B
+  TGARS: CCF-B
+  IEEE Transactions on Geoscience and Remote Sensing: CCF-B
+  TITS: CCF-B
+  IEEE Transactions on Intelligent Transportation Systems: CCF-B
+  TMI: CCF-B
+  IEEE Transactions on Medical Imaging: CCF-B
+  TR: CCF-B
+  IEEE Transactions on Robotics: CCF-B
+  TCBB: CCF-B
+  IEEE/ACM Transactions on Computational Biology and Bioinformatics: CCF-B
+  JCST: CCF-B
+  Journal of Computer Science and Technology: CCF-B
+  JAMIA: CCF-B
+  Journal of the American Medical Informatics Association: CCF-B
+  The Computer Journal: CCF-B
+  WWW: CCF-A
+  FCS: CCF-B
+  Cybernetics and Systems: CCF-C
+  JBHI: CCF-C
+  IEEE Journal of Biomedical and Health Informatics: CCF-C
+  TBD: CCF-C
+  IEEE Transactions on Big Data: CCF-C
+  IET Intelligent Transport Systems: CCF-C
+  JBI: CCF-C
+  Journal of Biomedical Informatics: CCF-C
+  TII: CCF-C
+  IEEE Transactions on Industrial Informatics: CCF-C
+  TCPS: CCF-C
+  ACM Transactions on Cyber- Physical Systems: CCF-C
+  TOCE: CCF-C
+  ACM Transactions on Computing Education: CCF-C
+  FITEE: CCF-C
+  TCSS: CCF-C
+  IEEE Transactions on Computational Social Systems: CCF-C
+  IEEE Transactions on Reliability: CCF-C
+  International World Wide Web Conference: CCF-A
+  RTSS: CCF-A
+  IEEE Real-Time Systems Symposium: CCF-A
+  WINE: CCF-A
+  Conference on Web and Internet Economics: CCF-A
+  CogSci: CCF-B
+  BIBM: CCF-B
+  IEEE International Conference on Bioinformatics and Biomedicine: CCF-B
+  EMSOFT: CCF-B
+  International Conference on Embedded Software: CCF-B
+  ISMB: CCF-B
+  International conference on Intelligent Systems for Molecular Biology: CCF-B
+  RECOMB: CCF-B
+  Annual International Conference on Research in Computational Molecular Biology: CCF-B
+  MICCAI: CCF-B
+  International Conference on Medical Image Computing and Computer-Assisted Intervention: CCF-B
+  AMIA: CCF-C
+  APBC: CCF-C
+  Asia Pacific Bioinformatics Conference: CCF-C
+  IEEE International Conference on Big Data: CCF-C
+  IEEE International Conference on Cloud Computing: CCF-C
+  SMC: CCF-C
+  IEEE International Conference on Systems, Man, and Cybernetics: CCF-C
+  COSIT: CCF-C
+  International Conference on Spatial Information Theory: CCF-C
+  ISBRA: CCF-C
+  SAGT: CCF-C
+  ICIC: CCF-C
+  International Conference on Intelligent Computing: CCF-C

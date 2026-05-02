@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ScholarGraph"
+version = "0.1.0"
+description = "追踪方法演进关系的论文研究系统，通过多 Agent 协作自动解析论文，构建知识拓扑图"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "PaperAgent Team"}
+]
+keywords = ["paper", "research", "rag", "agent", "academic"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+# Vector search
+faiss = ["faiss-cpu>=1.7.0"]
+chromadb = ["chromadb>=0.4.0"]
+
+# PDF processing
+grobid = ["lxml>=4.9.0"]
+pdfplumber = ["pdfplumber>=0.10.0"]
+
+# Embedding
+sentence-transformers = ["sentence-transformers>=2.2.0"]
+
+# LLM
+openai = ["openai>=1.0.0"]
+anthropic = ["anthropic>=0.7.0"]
+ollama = ["ollama>=0.1.0"]
+
+# CLI
+typer = ["typer>=0.9.0"]
+rich = ["rich>=13.0.0"]
+
+all = [
+    "faiss-cpu>=1.7.0",
+    "chromadb>=0.4.0",
+    "pdfplumber>=0.10.0",
+    "sentence-transformers>=2.2.0",
+    "openai>=1.0.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+]
+
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/wt6556/ScholarGraph"
+Repository = "https://github.com/wt6556/ScholarGraph"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
