@@ -1,4 +1,4 @@
-# PaperAgent
+# ScholarGraph
 
 本地优先的 AI 论文研究与分析方法系统，基于 Agent + RAG 架构，支持多论文理解、关系挖掘、知识拓扑构建。
 
@@ -23,7 +23,7 @@
 ### 1. 进入项目目录
 
 ```bash
-cd paper-agent
+cd ScholarGraph
 ```
 
 ### 2. 安装依赖
@@ -184,7 +184,7 @@ python -m ScholarGraph.cli topology --format json --output-path ./output/topolog
 - 关系网络、方法关系
 
 ```
-PaperAgent> 生成 LoRA 相关方法的拓扑图
+ScholarGraph> 生成 LoRA 相关方法的拓扑图
 [INFO] 正在生成拓扑图...
 [INFO] 拓扑图已保存到: ./output/topology.png
 [INFO] 拓扑数据已保存到: ./output/topology.json
@@ -285,7 +285,7 @@ if not critique.data["passed"]:
 ## 项目结构
 
 ```
-paper-agent/
+ScholarGraph/
 ├── src/ScholarGraph/
 │   ├── agents/           # Agent 实现 (3个)
 │   │   ├── base.py          # Agent 基类

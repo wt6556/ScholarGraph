@@ -1,4 +1,4 @@
-"""CLI 入口 - PaperAgent 命令行工具"""
+"""CLI 入口 - ScholarGraph 命令行工具"""
 
 import os
 import sys
@@ -26,7 +26,7 @@ from ScholarGraph.llm import get_llm_client
 from ScholarGraph.functions.classification import Classification
 from ScholarGraph.agents.controller import Controller
 
-app = typer.Typer(help="PaperAgent - 本地优先的 AI 论文研究与分析系统")
+app = typer.Typer(help="ScholarGraph - 本地优先的 AI 论文研究与分析系统")
 
 
 def get_env() -> SharedEnvironment:
@@ -368,7 +368,7 @@ def update_taxonomy(
 @app.command()
 def repl():
     """启动交互模式"""
-    typer.echo("PaperAgent 交互模式 (输入 'exit' 或 'quit' 退出)")
+    typer.echo("ScholarGraph 交互模式 (输入 'exit' 或 'quit' 退出)")
 
     env = get_env()
     typer.echo(f"[INFO] SharedEnvironment: {env}")
@@ -390,7 +390,7 @@ def repl():
 
     while True:
         try:
-            user_input = typer.prompt("\nPaperAgent> ")
+            user_input = typer.prompt("\nScholarGraph> ")
         except (KeyboardInterrupt, EOFError):
             break
 
@@ -467,7 +467,7 @@ def repl():
 @app.command()
 def init():
     """初始化数据目录和配置"""
-    typer.echo("初始化 PaperAgent...")
+    typer.echo("初始化 ScholarGraph...")
 
     # 创建数据目录
     os.makedirs("./data", exist_ok=True)
