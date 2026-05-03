@@ -287,73 +287,14 @@ if not critique.data["passed"]:
 ```
 ScholarGraph/
 ├── src/ScholarGraph/
-│   ├── agents/           # Agent 实现 (3个)
-│   │   ├── base.py          # Agent 基类
-│   │   ├── controller.py     # 摄取/查询编排
-│   │   ├── query_agent.py    # 查询分析
-│   │   └── critic_agent.py   # 答案评估
-│   ├── functions/        # Function 实现 (9个，无状态)
-│   │   ├── base.py          # Function 基类
-│   │   ├── pdf_parser.py    # PDF 解析
-│   │   ├── understanding.py  # 18+ 字段提取
-│   │   ├── enrichment.py    # 信息补全 (Web API)
-│   │   ├── classification.py # 论文分类
-│   │   ├── relation.py      # 关系提取 + 拓扑图
-│   │   ├── retrieval.py      # 混合检索
-│   │   ├── synthesis.py     # 答案合成
-│   │   ├── embedding.py     # 向量化
-│   │   └── ccf_parser.py   # CCF 解析
-│   ├── memory/           # Memory 模块
-│   │   ├── base.py          # BaseMemory 抽象基类
-│   │   ├── conversation_history.py  # QueryAgent 用
-│   │   └── pipeline_state.py       # Controller/CriticAgent 用
-│   ├── storage/          # 存储层
-│   │   ├── sqlite_base.py   # SQLite 基类
-│   │   ├── paper_store.py   # 论文存储
-│   │   ├── chunk_store.py    # Chunk 存储 + FAISS
-│   │   └── topology_store.py # 方法拓扑图
-│   ├── rag/              # RAG 检索算法
-│   │   ├── vector_search.py # 向量检索
-│   │   ├── bm25_search.py  # BM25 检索
-│   │   ├── reranker.py     # Cross-Encoder 重排
-│   │   └── fusion.py        # RRF 融合
-│   ├── parser/          # PDF 解析器
-│   │   ├── grobid_client.py    # GROBID API 客户端
-│   │   └── pdfplumber_parser.py # pdfplumber 备用解析
-│   ├── utils/           # 工具函数
-│   │   ├── json_utils.py   # JSON 解析/校验
-│   │   └── text_utils.py  # 文本处理
-│   ├── web/             # 外部 API
-│   │   ├── crossref_client.py  # CrossRef API
-│   │   └── paper_with_cv.py   # PaperWithCIT API
-│   ├── models/           # 数据模型
-│   │   ├── paper.py      # Paper, ParsedPaper, Chunk
-│   │   └── query.py      # QueryAnalysisResult, SynthesizedAnswer
-│   ├── llm/             # LLM 客户端
-│   │   ├── client.py     # MiniMax/OpenAI 客户端
-│   │   └── config.py     # 配置加载
-│   ├── config/          # 配置模块
-│   │   ├── config.py     # 主配置
-│   │   └── taxonomy.py   # 分类体系加载
-│   ├── exceptions.py     # 异常类型定义
-│   ├── shared_env.py    # 共享环境
-│   └── cli.py           # 命令行接口
-├── tests/               # 测试
-│   ├── test_agents.py
-│   ├── test_functions.py
-│   ├── test_llm.py
-│   ├── test_memory.py
-│   ├── test_models.py
-│   ├── test_storage.py
-│   ├── test_shared_env.py
-│   └── test_taxonomy.py
+├── tests/
 ├── config/
-│   ├── config.yaml      # 主配置
-│   └── taxonomy.yaml    # 分类体系
-├── data/                # 数据存储（自动创建）
-├── method.md            # 设计文档
+├── data/                # SQLite 数据库、FAISS 索引
+├── output/              # 生成的拓扑图
+├── models/              # 下载的 embedding 模型
 ├── README.md
-└── pyproject.toml
+├── pyproject.toml
+└── requirements.txt
 ```
 
 ## 测试
