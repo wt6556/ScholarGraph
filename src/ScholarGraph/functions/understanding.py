@@ -14,46 +14,46 @@ logger = logging.getLogger(__name__)
 
 
 # 字段提取提示词
-EXTRACTION_PROMPT = """你是一个学术论文分析助手。请从给定论文的文本中提取以下所有信息：
+EXTRACTION_PROMPT = """You are an academic paper analysis assistant. Extract the following information from the given paper text:
 
-## 基础信息
-1. title: 论文标题（从文本中识别，必须正确，不要有拼写错误）
-2. authors: 作者列表（从文本中识别，格式：["姓名1", "姓名2", ...]）
-3. year: 发表年份（如果能找到）
-4. abstract: 摘要（从文本中识别，完整的一段或多段摘要）
+## Basic Information
+1. title: Paper title (must be accurate, no spelling errors)
+2. authors: List of authors (format: ["Author1", "Author2", ...])
+3. year: Publication year
+4. abstract: Abstract (full paragraph(s) from the text)
 
-## 论文结构（请识别论文包含哪些章节，并提取每个章节的名称和内容概要）
-5. sections: 论文章节结构，格式如：
+## Paper Structure
+5. sections: Paper sections structure, format:
    - "sections": {
-       "Introduction": "介绍部分的主要内容...",
-       "Method": "方法部分的核心内容...",
-       "Experiment": "实验部分的设置和结果...",
+       "Introduction": "Main content of introduction...",
+       "Method": "Core content of method section...",
+       "Experiment": "Experiment setup and results...",
        ...
      }
 
-## 研究内容分析
-6. task: 研究任务/问题（一句话描述这篇论文在解决什么问题）
-7. assumption: 研究假设/前提
-8. motivation: 研究动机（为什么需要这项研究）
-9. method: 方法名称（请使用标准缩写，如LoRA、SoRA、AdaLoRA、S-LoRA、MoELoRA、LoRAMoE、MOLE等；如果是新方法则使用简短名称，不要使用括号内的完整描述如"Sparse Low-rank Adaptation (SoRA)"）
-10. method_category: 方法类别（如：architecture, training, optimization, etc.）
-11. core_idea: 核心思想（方法的关键创新点）
-12. baselines: 基线方法（论文对比的方法，列表形式，使用标准缩写）
-13. datasets: 使用的数据集（列表形式）
-14. improvements: 性能提升（对比基线的提升，用JSON数组格式，每项包含dataset、metric、delta）
+## Research Content Analysis
+6. task: Research task/problem (one sentence describing what problem this paper solves)
+7. assumption: Research assumption/premise
+8. motivation: Research motivation (why this research is needed)
+9. method: Method name (use standard abbreviations: LoRA, SoRA, AdaLoRA, S-LoRA, MoELoRA, LoRAMoE, MOLE, etc.; for new methods use short names, do not use descriptions in parentheses like "Sparse Low-rank Adaptation (SoRA)")
+10. method_category: Method category (e.g.: architecture, training, optimization, etc.)
+11. core_idea: Core idea (key innovation points of the method)
+12. baselines: Baseline methods (methods compared in the paper, use standard abbreviations)
+13. datasets: Datasets used (list format)
+14. improvements: Performance improvements (compared to baselines, JSON array format with dataset, metric, delta)
 
-## 贡献与局限
-15. contribution: 主要贡献点
-16. limitation: 局限性
+## Contributions and Limitations
+15. contribution: Main contributions
+16. limitation: Limitations
 
-## 分类信息
-17. field: 研究领域（如：Computer Vision, NLP, ML等）
-18. subfield: 研究子领域（如：Image Classification, Object Detection等）
-19. topic: 主题关键词（列表形式）
+## Classification Information
+17. field: Research field (e.g.: Computer Vision, NLP, ML, etc.)
+18. subfield: Research subfield (e.g.: Image Classification, Object Detection, etc.)
+19. topic: Topic keywords (list format)
 
-请以JSON格式返回所有字段。如果某字段无法从论文中确定，请使用null或空列表。
+Return all fields in JSON format. If a field cannot be determined from the paper, use null or empty list.
 
-论文文本: {body}
+Paper text: {body}
 """
 
 

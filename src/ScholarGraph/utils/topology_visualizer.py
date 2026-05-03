@@ -33,7 +33,6 @@ def generate_topology_graph(env, output_path="./output/topology.png"):
 
 
 def _generate_graphviz(env, output_path="./output/topology.png") -> bool:
-    """使用 Graphviz 生成拓扑图"""
     try:
         topology = env.topology_store.get_all_topology()
         nodes = topology.get("nodes", [])
@@ -41,18 +40,22 @@ def _generate_graphviz(env, output_path="./output/topology.png") -> bool:
 
         dot = Digraph(format="png")
 
-        # 全局布局优化
+        # ======================
+        # 全局布局（关键）
+        # ======================
         dot.attr(
-            rankdir="LR",
-            dpi="300",
+            rankdir="UD",
+            dpi="500",
             size="20,12",
             ratio="compress",
-            ranksep="1.2",
-            nodesep="0.6"
+            ranksep="1.5",   # ⭐ 拉开层
+            nodesep="0.8"    # ⭐ 拉开节点
         )
         dot.attr(fontname="Microsoft YaHei")
 
+        # ======================
         # 节点
+        # ======================
         for n in nodes:
             name = n["id"]
             is_root = n.get("is_root", False)
@@ -61,16 +64,18 @@ def _generate_graphviz(env, output_path="./output/topology.png") -> bool:
                 name,
                 label=f"<<B>{name}</B>>",
                 shape="box",
-                style="rounded,filled",
+                # style="rounded,filled",
                 fontname="Microsoft YaHei",
-                fontsize="12",
+                fontsize="20",
                 fillcolor="#FFCDD2" if is_root else "#E3F2FD",
                 color="#444444",
-                penwidth="1.5",
-                margin="0.2,0.1"
+                # penwidth="1.5",
+                # margin="0.2,0.1"
             )
 
-        # 语义颜色
+        # ======================
+        # 颜色
+        # ======================
         DIRECTION_COLOR = {
             "efficiency": "#1E88E5",
             "generalization": "#43A047",
@@ -82,7 +87,9 @@ def _generate_graphviz(env, output_path="./output/topology.png") -> bool:
         }
         DEFAULT_COLOR = "#616161"
 
-        # 边
+        # ======================
+        # 边（关键优化）
+        # ======================
         for e in edges:
             u = e["from"]
             v = e["to"]
@@ -92,46 +99,50 @@ def _generate_graphviz(env, output_path="./output/topology.png") -> bool:
             main_dir = direction.split("/")[0] if direction else ""
             color = DIRECTION_COLOR.get(main_dir, DEFAULT_COLOR)
 
-            wrapped_desc = "<BR ALIGN='LEFT'/>".join(
-                textwrap.wrap(desc, width=28)
-            )
+            wrapped_desc = "<BR/>".join(
+                textwrap.wrap(desc)
+            ) if desc else ""
 
             label = f"""<
-            <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
-                <TR>
-                    <TD BGCOLOR="{color}">
-                        <FONT COLOR="white" POINT-SIZE="11">
-                            <B>{direction}</B>
-                        </FONT>
-                    </TD>
-                </TR>
-                <TR>
-                    <TD BGCOLOR="#FAFAFA" ALIGN="LEFT">
-                        <FONT POINT-SIZE="10">{wrapped_desc}</FONT>
-                    </TD>
-                </TR>
-            </TABLE>
-            >"""
+<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="2">
+    <TR>
+        <TD BGCOLOR="{color}" ALIGN="CENTER" CELLSPACING="0">
+            <FONT COLOR="white" POINT-SIZE="20"><B>{direction}</B></FONT>
+        </TD>
+    </TR>
+    <TR>
+        <TD BGCOLOR="#F5F5F5" ALIGN="LEFT" CELLPADDING="4">
+            <FONT POINT-SIZE="20">{wrapped_desc}</FONT>
+        </TD>
+    </TR>
+</TABLE>
+>"""
 
             dot.edge(
                 u, v,
-                label=label,
+                label=label,              # ✅ 用 label
                 color=color,
-                penwidth="2.0",
-                fontname="Microsoft YaHei"
+                # penwidth="2.0",
+
+                # ⭐⭐ 核心控制
+                labelfloat="false",       # 不漂浮
+                labeldistance="1.5",      # 离边远一点
+                labelangle="0",           # 不偏角度
+                # minlen="2"                # 拉长边，防止压节点
             )
 
+        # ======================
         # 输出
+        # ======================
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         dot.render(output_path.replace(".png", ""), cleanup=True)
 
-        logger.info(f"Topology graph saved (Graphviz): {output_path}")
+        logger.info(f"Topology graph saved (Graphviz LABEL FIX): {output_path}")
         return True
 
     except Exception as e:
         logger.error(f"Graphviz failed: {e}")
         return _generate_matplotlib(env, output_path)
-
 
 def _generate_matplotlib(env, output_path="./output/topology.png") -> bool:
     """使用 matplotlib 生成拓扑图（fallback）"""

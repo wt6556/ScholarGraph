@@ -13,26 +13,26 @@ from ..config import load_taxonomy, TaxonomyNotFoundError
 
 logger = logging.getLogger(__name__)
 
-# 分类提示词模板（field/subfield 动态填充）
-CLASSIFICATION_PROMPT_TEMPLATE = """你是一个学术论文分类助手。请根据论文的标题、摘要和方法判断其所属的研究领域。
+# Classification prompt template (field/subfield dynamically filled)
+CLASSIFICATION_PROMPT_TEMPLATE = """You are an academic paper classification assistant. Determine the research field of the paper based on its title, abstract, and method.
 
-可选的研究领域(field)包括：
+Available research fields:
 {fields}
 
-可选的子领域(subfield)请从上述领域中选择。
+Subfields should be selected from the above fields.
 
-主题关键词(topic)包括领域内具体的技术或方法。
+Topic keywords should include specific techniques or methods within the field.
 
-请以JSON格式返回：
+Return in JSON format:
 {{
-    "field": "研究领域（必须从上述列表中选择）",
-    "subfield": "子领域",
-    "topic": ["关键词1", "关键词2", ...]
+    "field": "Research field (must be selected from the above list)",
+    "subfield": "Subfield",
+    "topic": ["Keyword 1", "Keyword 2", ...]
 }}
 
-论文标题: {title}
-摘要: {abstract}
-方法: {method}
+Paper Title: {title}
+Abstract: {abstract}
+Method: {method}
 """
 
 

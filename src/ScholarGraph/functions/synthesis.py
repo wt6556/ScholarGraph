@@ -16,116 +16,116 @@ logger = logging.getLogger(__name__)
 
 # 不同查询类型的合成提示词
 SYNTHESIS_PROMPTS = {
-    "factual_qa": """你是一个学术论文问答助手。请根据以下论文内容回答用户问题。
+    "factual_qa": """You are an academic paper Q&A assistant. Answer the user's question based on the following paper content.
 
-用户问题: {query}
+User Question: {query}
 
-相关论文:
+Related Papers:
 {papers_context}
 
-请以JSON格式返回答案：
+Return the answer in JSON format:
 {{
-    "conclusion": "最终答案/结论",
-    "summary": "简要总结",
+    "conclusion": "Final answer/conclusion",
+    "summary": "Brief summary",
     "evidence": [
-        {{"statement": "支持结论的陈述", "source": "论文ID"}},
+        {{"statement": "Statement supporting conclusion", "source": "paper_id"}},
         ...
     ],
     "method_groups": [
-        {{"method": "方法名称", "papers": ["论文ID列表"]}},
+        {{"method": "Method name", "papers": ["paper_id list"]}},
         ...
     ],
-    "limitations": ["局限性1", "局限性2"],
+    "limitations": ["Limitation 1", "Limitation 2"],
     "confidence": 0.85,
-    "papers_used": 数量
+    "papers_used": count
 }}
 """,
-    "comparison": """你是一个学术论文比较助手。请比较以下论文的方法、性能等方面。
+    "comparison": """You are an academic paper comparison assistant. Compare the methods, performance, and other aspects of the following papers.
 
-用户问题: {query}
+User Question: {query}
 
-相关论文:
+Related Papers:
 {papers_context}
 
-请以JSON格式返回比较结果：
+Return the comparison result in JSON format:
 {{
-    "conclusion": "比较结论",
-    "summary": "简要总结",
+    "conclusion": "Comparison conclusion",
+    "summary": "Brief summary",
     "comparison": [
-        {{"aspect": "比较维度", "paper1": "论文1的内容", "paper2": "论文2的内容"}},
+        {{"aspect": "Comparison dimension", "paper1": "Content from paper 1", "paper2": "Content from paper 2"}},
         ...
     ],
     "evidence": [
-        {{"statement": "支持结论的陈述", "source": "论文ID"}},
+        {{"statement": "Statement supporting conclusion", "source": "paper_id"}},
         ...
     ],
-    "limitations": ["局限性1"],
+    "limitations": ["Limitation 1"],
     "confidence": 0.85,
-    "papers_used": 数量
+    "papers_used": count
 }}
 """,
-    "method_topology": """你是一个学术论文拓扑分析助手。请分析以下论文中方法的演进关系。
+    "method_topology": """You are an academic paper topology analysis assistant. Analyze the method evolution relationships in the following papers.
 
-用户问题: {query}
+User Question: {query}
 
-相关论文:
+Related Papers:
 {papers_context}
 
-请以JSON格式返回方法拓扑：
+Return the method topology in JSON format:
 {{
-    "conclusion": "方法演进结论",
-    "summary": "简要总结",
+    "conclusion": "Method evolution conclusion",
+    "summary": "Brief summary",
     "method_groups": [
-        {{"method": "方法名称", "papers": ["论文ID"], "parent_methods": ["父方法名称"]}},
+        {{"method": "Method name", "papers": ["paper_id"], "parent_methods": ["Parent method names"]}},
         ...
     ],
     "evidence": [
-        {{"statement": "支持结论的陈述", "source": "论文ID"}},
+        {{"statement": "Statement supporting conclusion", "source": "paper_id"}},
         ...
     ],
-    "limitations": ["局限性1"],
+    "limitations": ["Limitation 1"],
     "confidence": 0.85,
-    "papers_used": 数量
+    "papers_used": count
 }}
 """,
-    "default": """你是一个学术论文分析助手。请根据以下论文回答用户问题。
+    "default": """You are an academic paper analysis assistant. Answer the user's question based on the following papers.
 
-用户问题: {query}
+User Question: {query}
 
-相关论文:
+Related Papers:
 {papers_context}
 
-请以JSON格式返回答案：
+Return the answer in JSON format:
 {{
-    "conclusion": "最终答案/结论",
-    "summary": "简要总结",
+    "conclusion": "Final answer/conclusion",
+    "summary": "Brief summary",
     "evidence": [
-        {{"statement": "支持结论的陈述", "source": "论文ID"}},
+        {{"statement": "Statement supporting conclusion", "source": "paper_id"}},
         ...
     ],
     "limitations": [],
     "confidence": 0.85,
-    "papers_used": 数量
+    "papers_used": count
 }}
 """
 }
 
 
 def _build_papers_context(papers: List[Paper]) -> str:
-    """构建论文上下文字符串"""
+    """Build paper context string"""
     context_parts = []
     for i, paper in enumerate(papers):
         context_parts.append(
-            f"论文 {i+1} (ID: {paper.id}):\n"
-            f"标题: {paper.title}\n"
-            f"作者: {', '.join(paper.authors) if paper.authors else 'N/A'}\n"
-            f"年份: {paper.year or 'N/A'}\n"
-            f"会议/期刊: {paper.venue or 'N/A'}\n"
-            f"方法: {paper.method or 'N/A'}\n"
-            f"任务: {paper.task or 'N/A'}\n"
-            f"核心思想: {paper.core_idea or 'N/A'}\n"
-            f"实验结果: {paper.improvements or 'N/A'}\n"
-            f"局限性: {paper.limitation or 'N/A'}\n"
+            f"Paper {i+1} (ID: {paper.id}):\n"
+            f"Title: {paper.title}\n"
+            f"Authors: {', '.join(paper.authors) if paper.authors else 'N/A'}\n"
+            f"Year: {paper.year or 'N/A'}\n"
+            f"Venue: {paper.venue or 'N/A'}\n"
+            f"Method: {paper.method or 'N/A'}\n"
+            f"Task: {paper.task or 'N/A'}\n"
+            f"Core Idea: {paper.core_idea or 'N/A'}\n"
+            f"Results: {paper.improvements or 'N/A'}\n"
+            f"Limitations: {paper.limitation or 'N/A'}\n"
             f"---"
         )
     return "\n".join(context_parts)
@@ -159,7 +159,7 @@ class Synthesis(BaseFunction):
         try:
             if not papers:
                 answer = SynthesizedAnswer(
-                    conclusion="没有找到相关论文",
+                    conclusion="No relevant papers found",
                     summary="",
                     evidence=[],
                     papers_used=0

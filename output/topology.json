@@ -4,7 +4,7 @@
       "id": "SoRA",
       "paper_id": "f502707b5d88b52a",
       "improvement_direction": "",
-      "key_innovation": "Introduces a gating unit optimized with proximal gradient method to dynamically adjust intrinsic rank during training by controlling sparsity, then prunes zeroed ranks in inference to convert back to efficient LoRA",
+      "key_innovation": "Introduce a gating module between down-projection and up-projection matrices in LoRA, optimized using proximal gradient method with L1 regularization to dynamically control rank sparsity during training. After training, zeroed ranks are pruned to obtain a compact rank-optimal LoRA module.",
       "is_root": true,
       "parent_methods": []
     },
@@ -12,41 +12,9 @@
       "id": "AdaLoRA",
       "paper_id": "42cd56fd5317be82",
       "improvement_direction": "",
-      "key_innovation": "将LoRA的增量矩阵Δ参数化为SVD形式Δ=PΛQ，通过基于敏感度和不确定性的重要性度量动态剪枝奇异值，实现自适应秩分配。使用正交正则化确保P和Q的正交性，并采用全局预算调度器从高预算逐步降低到目标预算。",
+      "key_innovation": "Parameterizes incremental updates as PΛQ (SVD form) and adaptively allocates parameter budget by pruning singular values based on importance scores that combine sensitivity and uncertainty, allowing critical weight matrices to have higher ranks",
       "is_root": false,
       "parent_methods": [
-        "LoRA"
-      ]
-    },
-    {
-      "id": "MoELoRA",
-      "paper_id": "ca971228dcbd17b2",
-      "improvement_direction": "",
-      "key_innovation": "Treats LoRA as Mixture of Experts by having multiple LoRA branches as experts, uses a gating network to dynamically select relevant experts for each input, and applies contrastive learning to encourage experts to learn distinct features while maintaining load balancing.",
-      "is_root": false,
-      "parent_methods": [
-        "LoRA"
-      ]
-    },
-    {
-      "id": "MOLE",
-      "paper_id": "f7205516634bbc03",
-      "improvement_direction": "",
-      "key_innovation": "将每个LoRA层视为独立的专家，通过在每层内部集成可学习的门控函数来实现层次化权重控制，学习针对特定领域目标的最优组合权重",
-      "is_root": false,
-      "parent_methods": [
-        "MoELoRA"
-      ]
-    },
-    {
-      "id": "LoRAMoE",
-      "paper_id": "2872bebe67381ea7",
-      "improvement_direction": "",
-      "key_innovation": "将MoE架构与LoRA结合作为插件，通过局部平衡约束将专家分成两组：一组专注于下游任务学习，另一组专注于对齐世界知识与人类指令，从而在保留知识的同时提升任务性能。",
-      "is_root": false,
-      "parent_methods": [
-        "MoELoRA",
-        "AdaLoRA",
         "SoRA"
       ]
     },
@@ -54,67 +22,108 @@
       "id": "S-LoRA",
       "paper_id": "ca50bc9b4c0df6fa",
       "improvement_direction": "",
-      "key_innovation": "将可批处理的基础模型计算与各个LoRA适配器的独立计算分离，使用统一内存池管理动态适配器权重和KV缓存，提出新型张量并行策略最小化LoRA计算的额外通信开销，并开发定制CUDA内核支持非连续内存上的异构批处理。",
-      "is_root": true,
+      "key_innovation": "S-LoRA separates batched base model computation from on-the-fly LoRA computation (xAB), uses Unified Paging with a unified memory pool to manage dynamic adapter weights and KV cache tensors, employs custom CUDA kernels for heterogeneous batching of LoRA computation with varying ranks and sequence lengths, and implements a novel tensor parallelism strategy that minimizes communication overhead for added LoRA computation by scheduling communications on small intermediate tensors and fusing them with base model communications.",
+      "is_root": false,
       "parent_methods": [
         "LoRA"
+      ]
+    },
+    {
+      "id": "MoELoRA",
+      "paper_id": "a5d0279c236e4e17",
+      "improvement_direction": "",
+      "key_innovation": "Treats LoRA modules as Mixture of Experts and uses a gating network with Top-k routing for dynamic combination. Introduces contrastive learning among experts to mitigate random routing, treating outputs of the same expert as positives and different experts as negatives.",
+      "is_root": false,
+      "parent_methods": [
+        "LoRA",
+        "SoRA",
+        "AdaLoRA",
+        "S-LoRA"
+      ]
+    },
+    {
+      "id": "MOLE",
+      "paper_id": "f7205516634bbc03",
+      "improvement_direction": "",
+      "key_innovation": "Treat each layer of trained LoRAs as a distinct expert and implement hierarchical weight control by integrating learnable gating functions within each layer to learn optimal composition weights, enhanced with a gating balancing loss to maintain uniform weight distribution",
+      "is_root": false,
+      "parent_methods": [
+        "MoELoRA"
+      ]
+    },
+    {
+      "id": "LoRAMoE",
+      "paper_id": "bb70039adea57c7c",
+      "improvement_direction": "",
+      "key_innovation": "Plugin-based MoE architecture combining multiple LoRA adapters as experts with a router mechanism, featuring localized balancing constraints that split experts into two groups - one for downstream task learning and another for aligning world knowledge with human instructions, enabling coordinated expert utilization without disrupting stored knowledge.",
+      "is_root": false,
+      "parent_methods": [
+        "MoELoRA",
+        "LoRA",
+        "MOLE"
       ]
     }
   ],
   "edges": [
     {
-      "from": "LoRA",
-      "to": "AdaLoRA",
-      "direction": "efficiency",
-      "description": "AdaLoRA继承自LoRA框架，在LoRA的增量矩阵Δ=PΛQ的SVD参数化基础上，通过敏感度和不确定性度量动态剪枝奇异值，实现自适应秩分配，提升参数效率"
-    },
-    {
       "from": "SoRA",
       "to": "AdaLoRA",
-      "direction": "efficiency/accuracy",
-      "description": "AdaLoRA与SoRA同为LoRA的改进方法，都致力于优化LoRA中的秩分配问题。SoRA通过门控机制进行稀疏化，而AdaLoRA采用SVD分解和重要性度量进行自适应秩分配，两者技术路线相似但实现方式不同"
+      "direction": "efficiency",
+      "description": "AdaLoRA builds upon SoRA's SVD-based low-rank adaptation approach (PΛQ parameterization) and improves efficiency by introducing adaptive budget allocation that prunes singular values based on importance scores combining sensitivity and uncertainty, rather than relying on regularization-based sparsity like SoRA."
+    },
+    {
+      "from": "LoRA",
+      "to": "S-LoRA",
+      "direction": "efficiency",
+      "description": "S-LoRA extends the LoRA paradigm by enabling efficient serving of thousands of concurrent LoRA adapters. While LoRA provides parameter-efficient fine-tuning, S-LoRA focuses on the systems-level challenge of serving multiple adapters simultaneously with optimized batching, memory management, and tensor parallelism."
     },
     {
       "from": "LoRA",
       "to": "MoELoRA",
       "direction": "efficiency/generalization",
-      "description": "MoELoRA继承LoRA的核心思想（低秩适配），将其扩展为Mixture of Experts架构，通过多个LoRA分支作为专家，门控网络动态路由，并引入对比学习促进专家学习不同特征，同时保持负载均衡。"
+      "description": "MoELoRA extends LoRA by treating LoRA modules as Mixture of Experts, introducing a gating network with Top-k routing for dynamic expert combination and contrastive learning to mitigate random routing issues."
+    },
+    {
+      "from": "SoRA",
+      "to": "MoELoRA",
+      "direction": "efficiency/generalization",
+      "description": "MoELoRA shares similar sparse gating concepts with SoRA but applies them to expert routing in a MoE framework. Both aim for efficient parameter utilization through dynamic selection mechanisms."
     },
     {
       "from": "AdaLoRA",
       "to": "MoELoRA",
       "direction": "efficiency/generalization",
-      "description": "两者都是LoRA的改进变体，AdaLoRA通过自动调整秩来优化参数分配，MoELoRA则通过MoE架构和对比学习来增强表达能力。技术路线不同，但都致力于改进LoRA在大型语言模型微调中的性能。"
+      "description": "Both methods use adaptive mechanisms - AdaLoRA for rank allocation and MoELoRA for expert routing. MoELoRA extends this adaptive concept to a mixture-of-experts architecture with contrastive learning guidance."
     },
     {
-      "from": "SoRA",
+      "from": "S-LoRA",
       "to": "MoELoRA",
-      "direction": "efficiency/generalization",
-      "description": "两者都是LoRA的改进方法，SoRA通过稀疏化剪枝来优化LoRA，MoELoRA通过Mixture of Experts架构来增强LoRA的表达能力。技术路线不同但目标相似。"
+      "direction": "efficiency",
+      "description": "Both methods deal with managing multiple LoRA adapters/experts. S-LoRA focuses on serving multiple adapters efficiently, while MoELoRA dynamically combines multiple LoRA experts through routing."
     },
     {
       "from": "MoELoRA",
       "to": "MOLE",
-      "direction": "efficiency/generalization",
-      "description": "MOLE继承自MoELoRA的混合专家( MoE )与LoRA结合的核心思想，但MOLE创新性地将门控函数深入到每个LoRA层内部，实现层次化的权重控制，而非像MoELoRA那样在模型层面进行专家混合。MOLE通过在每层内部集成可学习的门控函数，能够更细粒度地学习针对特定领域目标的最优组合权重。"
+      "direction": "efficiency",
+      "description": "MOLE inherits the Mixture of Experts paradigm from MoELoRA for LoRA adaptation but introduces hierarchical weight control with learnable gating functions within each layer. MOLE differs in its approach to expert composition, using layer-wise gating mechanisms and a balancing loss to maintain uniform weight distribution, potentially improving upon MoELoRA's expert selection strategy."
     },
     {
       "from": "MoELoRA",
       "to": "LoRAMoE",
-      "direction": "accuracy/generalization",
-      "description": "LoRAMoE继承了MoELoRA的MoE+LoRA结合思路，但创新性地引入局部平衡约束机制，将专家分为两组：一组专注下游任务学习，另一组专注世界知识对齐，从而在保留知识的同时提升任务性能。这是对MoELoRA架构的重要扩展和改进。"
+      "direction": "efficiency, generalization",
+      "description": "LoRAMoE extends MoELoRA by introducing localized balancing constraints and a dual-group expert architecture that separates downstream task learning from world knowledge alignment, enabling more coordinated expert utilization without disrupting stored knowledge."
     },
     {
-      "from": "AdaLoRA",
+      "from": "LoRA",
       "to": "LoRAMoE",
-      "direction": "accuracy/generalization",
-      "description": "两者都属于LoRA系列方法，AdaLoRA的自适应秩调整思想与LoRAMoE的专家分组机制都体现了对LoRA的深度扩展，LoRAMoE在AdaLoRA基础上引入了混合专家架构。"
+      "direction": "efficiency, generalization",
+      "description": "LoRAMoE builds upon LoRA by utilizing multiple LoRA adapters as experts within a Mixture of Experts framework, transforming single adapter adaptation into a scalable plugin-based architecture with intelligent routing."
     },
     {
-      "from": "SoRA",
+      "from": "MOLE",
       "to": "LoRAMoE",
-      "direction": "efficiency/accuracy",
-      "description": "两者都是LoRA的变种方法，SoRA的稀疏低秩适应与LoRAMoE的混合专家路由有相似的效率优化目标，LoRAMoE在此基础上引入了更复杂的专家分工机制。"
+      "direction": "efficiency",
+      "description": "LoRAMoE shares the conceptual foundation of MOLE (Mixture of LoRA Experts) by combining multiple LoRA adapters through an expert routing mechanism, but LoRAMoE enhances this with localized balancing constraints and specialized expert groups."
     }
   ]
 }

@@ -41,53 +41,53 @@ def normalize_method_name(name: str) -> str:
     return name_clean
 
 # 关系提取提示词
-RELATION_EXTRACTION_PROMPT = """你是一个学术论文关系分析助手。请分析以下论文与已有论文的关系。
+RELATION_EXTRACTION_PROMPT = """You are an academic paper relationship analysis assistant. Analyze the relationship between the new paper and existing papers.
 
-新论文信息:
-标题: {title}
-方法: {method}
-核心思想: {core_idea}
-研究领域: {field}
+New Paper Information:
+Title: {title}
+Method: {method}
+Core Idea: {core_idea}
+Research Field: {field}
 
-已有论文方法列表:
+Existing Methods:
 {existing_methods}
 
-请判断新论文与已有方法的关系：
-- 是否有改进/继承关系？
-- 是否有相似的技术路线？
-- 是否有相同的应用场景？
+Determine the relationship between the new paper and existing methods:
+- Is there an improvement/inheritance relationship?
+- Is there a similar technical approach?
+- Is there a shared application scenario?
 
-重要提示：
-- method_name（方法名称）必须使用标准缩写，如：LoRA、SoRA、AdaLoRA、S-LoRA、MoELoRA、LoRAMoE、MOLE
-- from_method 和 to_method 也必须使用标准缩写，不要使用完整名称如"Sparse Low-rank Adaptation (SoRA)"
-- parent_methods 数组中的方法名也必须使用标准缩写
+Important:
+- method_name must use standard abbreviations: LoRA, SoRA, AdaLoRA, S-LoRA, MoELoRA, LoRAMoE, MOLE
+- from_method and to_method must use standard abbreviations, do not use full names like "Sparse Low-rank Adaptation (SoRA)"
+- Method names in parent_methods array must also use standard abbreviations
 
-请以JSON格式返回关系：
+Return relationships in JSON format:
 {{
     "relations": [
         {{
-            "from_method": "已有方法(缩写)",
-            "to_method": "新论文方法(缩写)",
+            "from_method": "existing method (abbreviation)",
+            "to_method": "new paper method (abbreviation)",
             "improvement_direction": "accuracy/efficiency/generalization/...",
-            "description": "关系描述"
+            "description": "Relationship description"
         }}
     ],
-    "method_name": "新论文方法名称(缩写)",
+    "method_name": "New paper method name (abbreviation)",
     "is_root": true/false,
-    "parent_methods": ["继承自的方法(缩写)"]
+    "parent_methods": ["methods inherited from (abbreviation)"]
 }}
 
-如果没有找到明显关系，返回空的relations数组。
+If no clear relationship is found, return an empty relations array.
 """
 
-TOPOLOGY_QUERY_PROMPT = """你是一个学术论文拓扑分析助手。请根据用户查询确定要查询的方法领域。
+TOPOLOGY_QUERY_PROMPT = """You are an academic paper topology analysis assistant. Determine the method domain to query based on user input.
 
-用户查询: {query}
+User Query: {query}
 
-请以JSON格式返回：
+Return in JSON format:
 {{
-    "topic": "方法领域关键词",
-    "intent": "查询意图 (e.g., find_improvements, compare_methods, understand_evolution)"
+    "topic": "Method domain keywords",
+    "intent": "Query intent (e.g., find_improvements, compare_methods, understand_evolution)"
 }}
 """
 

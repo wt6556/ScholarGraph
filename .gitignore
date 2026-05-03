@@ -5,10 +5,11 @@ __pycache__/
 *.egg
 dist/
 build/
+config/
 
 # Data & outputs (local only)
-# data/
-# output/
+data/
+output/
 models/
 papers/
 method.md

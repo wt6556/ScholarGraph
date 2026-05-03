@@ -2,7 +2,7 @@
 
 本地优先的 AI 论文研究与分析方法系统，基于 Agent + RAG 架构，支持多论文理解、关系挖掘、知识拓扑构建。
 
-![方法拓扑图示例](output/topology.png)
+![方法拓扑图示例](figs/topology.png)
 
 > **图 1**: LoRA 相关方法的演进关系拓扑图。节点表示方法（红色为根方法，青/蓝/绿表示改进层级），边表示方法间的改进关系及改进方向（效率、准确率、泛化性等）。
 
@@ -209,6 +209,7 @@ python -m ScholarGraph.cli topology --format json --output-path ./output/topolog
 **REPL 中生成：**
 
 在交互模式下，输入包含以下关键词时会自动生成拓扑图：
+
 - 拓扑图、关系图、方法图
 - topology、graph
 - 关系网络、方法关系
@@ -240,6 +241,7 @@ export_topology_json(env, "./output/topology.json")
 ```
 
 生成的拓扑图中：
+
 - **红色节点**：根方法（无父方法）
 - **青色节点**：第一层改进
 - **蓝色节点**：第二层改进
