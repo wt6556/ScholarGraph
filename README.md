@@ -16,7 +16,7 @@
 
 ## 架构
 
-![架构图](figs\Architecture.png)
+![架构图](figs/Architecture.png)
 
 ## 安装
 
