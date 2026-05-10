@@ -35,26 +35,6 @@
 - **RAG 层**: VectorSearch、BM25Search、Reranker、Fusion
 - **Storage 层**: PaperStore（SQLite）、ChunkStore（FAISS）、TopologyStore
 
-### 架构图生成 Prompt
-
-如需重新生成架构图（`figs/Architecture.png`），使用以下文生图 prompt：
-
-```
-A clean architectural diagram for an academic paper research system called ScholarGraph, displayed as a hierarchical top-down flow with 5 layers:
-
-Layer 1 (top): Single rounded rectangle labeled "Controller / Orchestrator" with orange accent (#FF7043), subtitle "Workflow: parse → understand → enrich → classify → embed → relate".
-
-Layer 2: Two rounded boxes side by side: "QueryAgent" labeled "Query Analysis" and "CriticAgent" labeled "Answer Evaluation", with a bidirectional arrow between them labeled "context & feedback". Both have light blue fill (#E3F2FD) and dark blue border (#1565C0).
-
-Layer 3: A large rounded box labeled "Functions (9 stateless)" containing a 3x3 grid of smaller boxes: [PDFParser, Understanding, Enrichment] on row 1; [Classification, Embedding, Relation] on row 2; [Retrieval, Synthesis, CCFParser] on row 3. All with consistent styling.
-
-Layer 4: A rounded box labeled "RAG" containing 4 inline boxes in a row: "VectorSearch (FAISS)", "BM25Search", "Reranker", "Fusion". Arrow pointing down from Functions to RAG.
-
-Layer 5 (bottom): Three rounded boxes in a row: "PaperStore (SQLite)", "ChunkStore (FAISS)", "TopologyStore". Arrow pointing down from RAG to Storage.
-
-Use rounded rectangles, light blue fill (#E3F2FD), dark blue border (#1565C0) for most boxes, orange fill (#FF7043) for Orchestrator. Include small directional arrows between layers. Clean sans-serif font (like Inter or Roboto), professional technical documentation style, white background, subtle shadows.
-```
-
 ## 安装
 
 ### 1. 进入项目目录
