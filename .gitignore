@@ -21,7 +21,8 @@ output.log
 *.swo
 .DS_Store
 Thumbs.db
-
+apikey.txt
+CLAUDE.md
 # Config with secrets (keep template)
 # config/config.yaml  # 如果里面有 api_key，忽略这一行；如果没有，可以提交
 

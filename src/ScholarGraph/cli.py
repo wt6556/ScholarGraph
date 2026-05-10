@@ -28,6 +28,8 @@ from ScholarGraph.agents.controller import Controller
 
 app = typer.Typer(help="ScholarGraph - 本地优先的 AI 论文研究与分析系统")
 
+DEBUG_MODE = False
+
 
 def get_env() -> SharedEnvironment:
     """获取 SharedEnvironment 实例"""
@@ -156,27 +158,41 @@ def query(
         typer.echo(f"[ERROR] 查询分析失败: {analysis_result.error}", err=True)
         raise typer.Exit(1)
 
-    typer.echo(f"[INFO] 查询类型: {analysis_result.data.get('query_type')}")
+    typer.echo(f"[INFO] 查询类型: {analysis_result.data.query_type}")
+    typer.echo(f"[INFO] 扩展查询: {analysis_result.data.original_query}")
 
-    # 2. 检索相关论文
+    # 2. 检索相关 Chunk
     retrieval_func = Retrieval()
-    query_analysis = QueryAnalysisResult(**analysis_result.data)
-    papers_result = retrieval_func.execute(env, query_analysis)
+    query_analysis = analysis_result.data
+    retrieval_result = retrieval_func.execute(env, query_analysis)
 
-    if not papers_result.success:
-        typer.echo(f"[ERROR] 检索失败: {papers_result.error}", err=True)
+    if not retrieval_result.success:
+        typer.echo(f"[ERROR] 检索失败: {retrieval_result.error}", err=True)
         raise typer.Exit(1)
 
-    papers = papers_result.data
-    typer.echo(f"[INFO] 检索到 {len(papers)} 篇相关论文")
+    # 解包 RetrievalResult
+    if hasattr(retrieval_result.data, 'chunks') and hasattr(retrieval_result.data, 'scores'):
+        chunks = retrieval_result.data.chunks
+        scores = retrieval_result.data.scores
+        original_query = getattr(retrieval_result.data, 'original_query', query_analysis.original_query)
+        translated_query = getattr(retrieval_result.data, 'translated_query', query_analysis.original_query)
+    else:
+        chunks = []
+        scores = []
+        original_query = query_analysis.original_query
+        translated_query = query_analysis.original_query
 
-    if not papers:
-        typer.echo(f"[WARNING] 没有找到相关论文")
+    typer.echo(f"[INFO] 检索到 {len(chunks)} 个相关 Chunk（来自 {len(set(c.paper_id for c in chunks))} 篇论文）")
+
+    if not chunks:
+        typer.echo(f"[WARNING] 没有找到相关 Chunk")
         return
 
-    # 3. 合成答案
+    # 3. 合成答案（传递原始查询用于语言控制，传递扩展后查询用于检索）
     synthesis_func = Synthesis()
-    answer_result = synthesis_func.execute(env, papers, query_analysis)
+    answer_result = synthesis_func.execute(env, chunks, scores, query_analysis,
+                                           original_query=question,  # 用户原始输入，用于语言控制
+                                           translated_query=query_analysis.original_query)  # 扩展后查询用于检索
 
     if not answer_result.success:
         typer.echo(f"[ERROR] 答案合成失败: {answer_result.error}", err=True)
@@ -184,7 +200,20 @@ def query(
 
     answer = answer_result.data
     typer.echo(f"\n[答案] {answer.conclusion}")
-    typer.echo(f"[摘要] {answer.summary}")
+
+    # 显示证据/引用
+    if answer.evidence:
+        typer.echo("\n[引用]")
+        for i, ev in enumerate(answer.evidence, 1):
+            paper_id = ev.get("source", "unknown")
+            paper = env.get_paper(paper_id) if paper_id != "unknown" else None
+            title = paper.title if paper else paper_id
+            typer.echo(f"  {i}. [{paper_id[:8]}] {title}")
+            if ev.get("statement"):
+                typer.echo(f"     {ev['statement']}")
+
+    if answer.summary:
+        typer.echo(f"\n[摘要] {answer.summary}")
 
     # 4. 评估答案
     critic_agent = CriticAgent(PipelineState())
@@ -366,8 +395,12 @@ def update_taxonomy(
 
 
 @app.command()
-def repl():
+def repl(debug: bool = typer.Option(False, "--debug", help="打印调试信息")):
     """启动交互模式"""
+    import os
+    os.environ["SCHOLARGRAPH_DEBUG"] = "1" if debug else "0"
+    if debug:
+        typer.echo("[DEBUG] 调试模式已开启")
     typer.echo("ScholarGraph 交互模式 (输入 'exit' 或 'quit' 退出)")
 
     env = get_env()
@@ -432,26 +465,40 @@ def repl():
             typer.echo(f"[ERROR] 查询分析失败: {analysis_result.error}")
             continue
 
-        typer.echo(f"[INFO] 查询类型: {analysis_result.data.get('query_type')}")
+        typer.echo(f"[INFO] 扩展查询: {analysis_result.data.expanded_query}")
 
-        # 2. 检索相关论文
-        query_analysis = QueryAnalysisResult(**analysis_result.data)
-        papers_result = retrieval_func.execute(env, query_analysis)
+        # 2. 检索相关 Chunk
+        query_analysis = analysis_result.data
+        retrieval_result = retrieval_func.execute(env, query_analysis)
 
-        if not papers_result.success:
-            typer.echo(f"[ERROR] 检索失败: {papers_result.error}")
+        if not retrieval_result.success:
+            typer.echo(f"[ERROR] 检索失败: {retrieval_result.error}")
             continue
 
-        papers = papers_result.data
-        typer.echo(f"[INFO] 检索到 {len(papers)} 篇相关论文")
+        # 解包 RetrievalResult
+        if hasattr(retrieval_result.data, 'chunks') and hasattr(retrieval_result.data, 'scores'):
+            chunks = retrieval_result.data.chunks
+            scores = retrieval_result.data.scores
+            # original_query 用于检索语言控制，translated_query 是扩展后的查询
+            original_query = getattr(retrieval_result.data, 'original_query', user_input)
+            translated_query = getattr(retrieval_result.data, 'translated_query', user_input)
+        else:
+            chunks = []
+            scores = []
+            original_query = user_input
+            translated_query = user_input
 
-        if not papers:
-            typer.echo("[WARNING] 没有找到相关论文")
+        typer.echo(f"[INFO] 检索到 {len(chunks)} 个相关 Chunk")
+
+        if not chunks:
+            typer.echo("[WARNING] 没有找到相关 Chunk")
             continue
 
-        # 3. 合成答案
+        # 3. 合成答案（传递原始查询用于语言控制，传递扩展后查询用于检索）
         typer.echo("[INFO] 正在合成答案...")
-        answer_result = synthesis_func.execute(env, papers, query_analysis)
+        answer_result = synthesis_func.execute(env, chunks, scores, query_analysis,
+                                               original_query=user_input,  # 用户原始输入，用于语言控制
+                                               translated_query=query_analysis.original_query)  # 扩展后查询用于检索
 
         if not answer_result.success:
             typer.echo(f"[ERROR] 答案合成失败: {answer_result.error}")
@@ -459,7 +506,20 @@ def repl():
 
         answer = answer_result.data
         typer.echo(f"\n[答案] {answer.conclusion}")
-        typer.echo(f"[摘要] {answer.summary}")
+
+        # 显示证据/引用
+        if answer.evidence:
+            typer.echo("\n[引用]")
+            for i, ev in enumerate(answer.evidence, 1):
+                paper_id = ev.get("source", "unknown")
+                paper = env.get_paper(paper_id) if paper_id != "unknown" else None
+                title = paper.title if paper else paper_id
+                typer.echo(f"  {i}. [{paper_id[:8]}] {title}")
+                if ev.get("statement"):
+                    typer.echo(f"     {ev['statement']}")
+
+        if answer.summary:
+            typer.echo(f"\n[摘要] {answer.summary}")
 
     typer.echo("\n再见!")
 
@@ -532,40 +592,96 @@ def init():
 
 @app.command()
 def download_model(
-    model_name: str = typer.Option("sentence-transformers/all-MiniLM-L6-v2", help="模型名称"),
     output_dir: str = typer.Option("./models", help="本地模型保存路径")
 ):
     """
-    下载 embedding 模型到本地
+    下载 Embedding 模型和 Reranker 模型到本地
 
     示例：
         python -m ScholarGraph.cli download-model
-        python -m ScholarGraph.cli download-model --model-name sentence-transformers/all-MiniLM-L6-v2 --output-dir ./models
     """
-    typer.echo(f"正在下载 embedding 模型: {model_name}")
-
     try:
-        from transformers import AutoTokenizer, AutoModel
+        config = get_config()
 
         # 创建输出目录
         os.makedirs(output_dir, exist_ok=True)
 
-        # 下载模型
-        typer.echo(f"从 HuggingFace 下载模型到 {output_dir}...")
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
-        model = AutoModel.from_pretrained(model_name)
+        # ============================================================
+        # 1. 下载 Embedding 模型
+        # ============================================================
+        embedding_model_name = config.embedding.model
+        # 如果是本地路径，提取出模型名
+        # 本地路径格式: ./models/xxx, models/xxx, C:\path\xxx 等
+        # HuggingFace 格式: org/model-name 或 model-name
+        # 本地路径特征：包含路径分隔符或下划线（模型名通常不带路径分隔符）
+        is_local_path = (
+            "./" in embedding_model_name or
+            "../" in embedding_model_name or
+            "C:\\" in embedding_model_name or
+            embedding_model_name.startswith("/") or
+            (embedding_model_name.startswith("models") and ("_" in embedding_model_name or "/" in embedding_model_name)) or
+            (len(embedding_model_name.split("/")) == 2 and ("_" in embedding_model_name.split("/")[-1] or "-" in embedding_model_name.split("/")[-1]))
+        )
 
-        # 保存到本地
-        local_path = os.path.join(output_dir, model_name.replace("/", "_"))
-        model.save_pretrained(local_path)
-        tokenizer.save_pretrained(local_path)
+        if is_local_path:
+            # 本地路径格式: ./models/microsoft/harrier-oss-v1-0.6b 或 models/microsoft/harrier-oss-v1-0.6b
+            # 下载时需要转换为 HuggingFace 格式: microsoft/harrier-oss-v1-0.6b
 
-        typer.echo(f"[INFO] 模型已保存到: {local_path}")
-        typer.echo(f"[INFO] 请在 config.yaml 中设置 embedding.model 为本地路径: {local_path}")
+            # 处理 models/microsoft/harrier-oss-v1-0.6b 格式（os.path.basename 会丢失 microsoft/）
+            if embedding_model_name.startswith("models/"):
+                # 提取 models/ 后面的部分: microsoft/harrier-oss-v1-0.6b
+                path_after_models = embedding_model_name[len("models/"):]
+                hf_model_name = path_after_models  # 直接使用，因为已经是 org/model 格式
+            else:
+                basename = os.path.basename(embedding_model_name.rstrip("/"))
+                hf_model_name = basename
 
-    except ImportError:
-        typer.echo("[ERROR] transformers 未安装", err=True)
-        typer.echo("安装命令: pip install transformers torch", err=True)
+            # 如果 hf_model_name 包含下划线，需要转换为 org/model 格式
+            # 例如 microsoft_harrier-oss-v1-0.6b -> microsoft/harrier-oss-v1-0.6b
+            if "_" in hf_model_name and "/" not in hf_model_name:
+                known_orgs = ["microsoft", "bert", "roberta", "t5", "gpt", "llama", "bloom", "clip", "sbert"]
+                for org in known_orgs:
+                    if hf_model_name.startswith(f"{org}_"):
+                        hf_model_name = f"{org}/{hf_model_name[len(org)+1:]}"
+                        break
+        else:
+            hf_model_name = embedding_model_name
+        typer.echo(f"[1/2] 正在下载 Embedding 模型: {hf_model_name}")
+        typer.echo(f"[DEBUG] config.embedding.model = {config.embedding.model}")
+        typer.echo(f"[DEBUG] is_local_path = {is_local_path}")
+        from transformers import AutoTokenizer, AutoModel
+
+        embedding_local_path = os.path.join(output_dir, hf_model_name.replace("/", "_"))
+        tokenizer = AutoTokenizer.from_pretrained(hf_model_name)
+        embedding_model = AutoModel.from_pretrained(hf_model_name)
+        embedding_model.save_pretrained(embedding_local_path)
+        tokenizer.save_pretrained(embedding_local_path)
+        typer.echo(f"[INFO] Embedding 模型已保存到: {embedding_local_path}")
+
+        # ============================================================
+        # 2. 下载 Reranker 模型
+        # ============================================================
+        reranker_model = config.rag.reranker.model
+        # 处理本地路径格式
+        if reranker_model.startswith("models/"):
+            hf_reranker_model = reranker_model[len("models/"):]
+        else:
+            hf_reranker_model = reranker_model
+        reranker_name = hf_reranker_model.replace("/", "_")
+        typer.echo(f"[2/2] 正在下载 Reranker 模型: {hf_reranker_model}")
+        from sentence_transformers import CrossEncoder
+
+        reranker_local_path = os.path.join(output_dir, reranker_name)
+        reranker = CrossEncoder(hf_reranker_model)
+        reranker.save(reranker_local_path)
+        typer.echo(f"[INFO] Reranker 模型已保存到: {reranker_local_path}")
+
+        typer.echo(f"\n[SUCCESS] 两个模型均已下载完成")
+        typer.echo(f"请在 config.yaml 中设置 embedding.model 为: {embedding_local_path}")
+
+    except ImportError as e:
+        typer.echo(f"[ERROR] 缺少依赖: {e}", err=True)
+        typer.echo("安装命令: pip install transformers torch sentence-transformers", err=True)
         raise typer.Exit(1)
     except Exception as e:
         typer.echo(f"[ERROR] 下载失败: {e}", err=True)

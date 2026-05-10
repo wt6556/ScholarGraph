@@ -28,39 +28,18 @@ dependencies = [
     "requests>=2.31.0",
     "beautifulsoup4>=4.12.0",
     "numpy>=1.24.0",
-]
-
-[project.optional-dependencies]
-# Vector search
-faiss = ["faiss-cpu>=1.7.0"]
-chromadb = ["chromadb>=0.4.0"]
-
-# PDF processing
-grobid = ["lxml>=4.9.0"]
-pdfplumber = ["pdfplumber>=0.10.0"]
-
-# Embedding
-sentence-transformers = ["sentence-transformers>=2.2.0"]
-
-# LLM
-openai = ["openai>=1.0.0"]
-anthropic = ["anthropic>=0.7.0"]
-ollama = ["ollama>=0.1.0"]
-
-# CLI
-typer = ["typer>=0.9.0"]
-rich = ["rich>=13.0.0"]
-
-all = [
     "faiss-cpu>=1.7.0",
-    "chromadb>=0.4.0",
     "pdfplumber>=0.10.0",
     "sentence-transformers>=2.2.0",
     "openai>=1.0.0",
+    "anthropic>=0.7.0",
+    "ollama>=0.1.0",
     "typer>=0.9.0",
     "rich>=13.0.0",
+    "lxml>=4.9.0",
 ]
 
+[project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",

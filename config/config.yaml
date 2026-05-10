@@ -54,16 +54,21 @@ embedding:
   # Embedding 模型名称（本地路径或 HuggingFace 模型名）
   # 本地路径示例：./models/sentence-transformers_all-MiniLM-L6-v2
   # HuggingFace 模型名：sentence-transformers/all-MiniLM-L6-v2
-  model: "./models/sentence-transformers_all-MiniLM-L6-v2"
+  model: "models/microsoft_harrier-oss-v1-0.6b"
 
   # 向量维度，必须与 embedding 模型输出维度一致
   # all-MiniLM-L6-v2: 384
   # all-mpnet-base-v2: 768
-  dimension: 384
+  dimension: 1024
 
   # 计算设备：cpu | cuda
   # cuda 需要安装 CUDA 驱动和 torch，推荐使用 GPU 加速
   device: "cpu"
+
+  # Pooling 策略：mean | last_token
+  # - mean: 所有 token 向量求平均，适用于大多数模型
+  # - last_token: 取最后一个非 padding token 的向量，适用于 harrier-oss-v1 等 decoder-only 模型
+  pooling_strategy: "last_token"
 
 # ============================================================================
 # PDF 解析配置
@@ -200,7 +205,7 @@ rag:
   reranker:
     enabled: true
     # Cross-Encoder 模型，用于对初筛结果重排
-    model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    model: "models/cross-encoder/ms-marco-MiniLM-L-6-v2"
 
 # ============================================================================
 # 日志配置

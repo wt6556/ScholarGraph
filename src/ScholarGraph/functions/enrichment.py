@@ -25,7 +25,6 @@ class Enrichment(BaseFunction):
 
     def __init__(self):
         super().__init__("Enrichment")
-        self._crossref = CrossRefClient()
 
     def execute(self, env: SharedEnvironment, paper: Paper) -> FunctionResult:
         """
@@ -38,6 +37,8 @@ class Enrichment(BaseFunction):
         Returns:
             FunctionResult.data = EnrichmentResult
         """
+        crossref = CrossRefClient()  # 按需创建，符合无状态原则
+
         try:
             # 检查是否有缺失字段
             if not paper.has_missing_fields():
@@ -53,7 +54,7 @@ class Enrichment(BaseFunction):
             title = paper.title
             if title and len(title.strip()) > 5:
                 # 尝试通过 CrossRef API 补全（结合作者和年份精确查询）
-                results = self._crossref.query_by_title(
+                results = crossref.query_by_title(
                     title,
                     authors=paper.authors if paper.authors else None,
                     year=paper.year,
@@ -65,7 +66,7 @@ class Enrichment(BaseFunction):
 
             # 如果有 DOI，尝试直接查询
             if paper.doi:
-                result = self._crossref.query_by_doi(paper.doi)
+                result = crossref.query_by_doi(paper.doi)
                 if result:
                     self._apply_enrichment(paper, result, enriched_fields)
 

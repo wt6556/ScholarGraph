@@ -109,19 +109,19 @@ class Controller(BaseAgent):
         if current_paper:
             classification.execute(self.env, current_paper)
 
-        self.memory.update_phase(PipelinePhase.RELATE)
-
-        # 5. Relation
-        relation = Relation()
-        if current_paper:
-            relation.execute(self.env, paper=current_paper)
-
         self.memory.update_phase(PipelinePhase.EMBED)
 
-        # 6. Embedding
+        # 5. Embedding (chunks needed for Direction B in Relation)
         embedding = Embedding()
         if current_paper:
             embedding.execute(self.env, current_paper)
+
+        self.memory.update_phase(PipelinePhase.RELATE)
+
+        # 6. Relation (chunks now available for RAG retrieval)
+        relation = Relation()
+        if current_paper:
+            relation.execute(self.env, paper=current_paper)
 
         self.memory.update_phase(PipelinePhase.IDLE)
         logger.info(f"Ingestion completed: {pdf_path}")
@@ -157,16 +157,81 @@ class Controller(BaseAgent):
 
         if result.success:
             # 根据结果执行相应的 Function
-            target = result.data.get('target_function', 'retrieval')
+            query_analysis_result = result.data  # 现在是 QueryAnalysisResult 对象
+            target = query_analysis_result.target_function
+
             if target == 'relation':
                 relation = Relation()
                 relation.execute(self.env, query=query)
             elif target == 'retrieval':
-                from ..functions.retrieval import Retrieval
+                from ..functions.retrieval import Retrieval, RetrievalResult
                 from ..functions.synthesis import Synthesis
-                retrieval = Retrieval()
-                retrieval.execute(self.env, result.data)
-                synthesis = Synthesis()
-                synthesis.execute(self.env, [], result.data)
+                from .critic_agent import CriticAgent
+                from ..memory.pipeline_state import PipelineState
+
+                # 检索循环
+                max_retries = 3
+                retry_count = 0
+                final_answer = None
+
+                while retry_count < max_retries:
+                    retrieval = Retrieval()
+                    retrieval_result = retrieval.execute(self.env, query_analysis_result)
+
+                    if retrieval_result.success and retrieval_result.data:
+                        retrieval_data = retrieval_result.data
+                        if isinstance(retrieval_data, RetrievalResult):
+                            chunks = retrieval_data.chunks
+                            scores = retrieval_data.scores
+                            original_query = retrieval_data.original_query
+                            translated_query = retrieval_data.translated_query
+                        else:
+                            chunks = retrieval_result.data.get('chunks', [])
+                            scores = retrieval_result.data.get('scores', [])
+                            original_query = ""
+                            translated_query = ""
+
+                        query_analysis = query_analysis_result  # 已经是 QueryAnalysisResult 对象
+
+                        synthesis = Synthesis()
+                        synthesis_result = synthesis.execute(
+                            self.env, chunks, scores, query_analysis, original_query, translated_query
+                        )
+
+                        if synthesis_result.success and synthesis_result.data:
+                            answer = synthesis_result.data
+
+                            # 调用 CriticAgent 评估
+                            critic_memory = PipelineState()
+                            critic = CriticAgent(critic_memory)
+                            critique_result = critic.execute(self.env, answer, query)
+
+                            if critique_result.success and critique_result.data:
+                                critique_data = critique_result.data
+                                passed = critique_data.get('passed', False)
+                                needs_retrieval = critique_data.get('needs_retrieval', False)
+
+                                if passed:
+                                    final_answer = answer
+                                    break
+                                elif needs_retrieval and retry_count < max_retries - 1:
+                                    # 扩展检索并重试
+                                    retry_count += 1
+                                    logger.info(f"CriticAgent 评估未通过，扩展检索重试 ({retry_count}/{max_retries})")
+                                    continue
+
+                    break  # 如果检索失败，退出循环
+
+                # 设置最终答案到 env
+                if final_answer:
+                    self.env.set_query_result({
+                        "answer": final_answer,
+                        "critique_passed": True
+                    })
+                else:
+                    self.env.set_query_result({
+                        "answer": None,
+                        "critique_passed": False
+                    })
 
         return result

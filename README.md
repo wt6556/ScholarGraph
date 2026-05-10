@@ -29,32 +29,35 @@ cd ScholarGraph
 ### 2. 安装依赖
 
 ```bash
-# 安装所有依赖（包括可选依赖）
-pip install -r requirements.txt
+# 使用 conda 环境
+conda activate agent
 
 # 安装项目
 pip install -e .
 ```
 
-### 3. 下载 Embedding 模型
+### 3. 下载模型
 
-首次运行时会自动下载模型，也可预先下载到本地：
+系统需要两个模型，均从 `config/config.yaml` 读取：
 
 ```bash
-# 下载默认模型 (all-MiniLM-L6-v2) 到 ./models 目录
+# 下载 Embedding 模型 + Reranker 模型到 ./models 目录
 python -m ScholarGraph.cli download-model
 
-# 指定模型和路径
-python -m ScholarGraph.cli download-model --model-name all-MiniLM-L6-v2 --output-dir ./models
+# 指定本地模型保存路径
+python -m ScholarGraph.cli download-model --output-dir ./models
 ```
 
-下载后修改 `config/config.yaml` 使用本地模型：
+下载后修改 `config/config.yaml` 使用本地路径：
 
 ```yaml
 embedding:
-  provider: "sentence-transformers"
-  model: "./models/all-MiniLM-L6-v2"  # 本地路径
-  dimension: 384
+  provider: "transformers"
+  model: "./models/microsoft_harrier-oss-v1-0.6b"
+  dimension: 1024
+  pooling_strategy: "last_token"
+```
+  device: "cpu"
 ```
 
 ### 4. 安装 Graphviz（用于生成拓扑图）
@@ -89,9 +92,10 @@ llm:
 
 # Embedding 配置
 embedding:
-  provider: "sentence-transformers"
-  model: "all-MiniLM-L6-v2"
+  provider: "transformers"
+  model: "./models/sentence-transformers_all-MiniLM-L6-v2"  # 本地路径，或 HuggingFace 模型名
   dimension: 384
+  device: "cpu"
 
 # PDF 解析配置
 pdf_parser:

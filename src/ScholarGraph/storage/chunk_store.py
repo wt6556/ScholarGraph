@@ -211,7 +211,18 @@ class ChunkStore:
     def search(self, query_vector: List[float], top_k: int = 10,
                filters: Optional[Dict[str, Any]] = None) -> List[Chunk]:
         """
-        向量检索
+        向量检索（无分数版本，内部使用）
+
+        Returns:
+            相关的 Chunk 列表
+        """
+        results = self.search_with_scores(query_vector, top_k, filters)
+        return [chunk for chunk, _ in results]
+
+    def search_with_scores(self, query_vector: List[float], top_k: int = 10,
+                           filters: Optional[Dict[str, Any]] = None) -> List[tuple]:
+        """
+        向量检索（带分数）
 
         Args:
             query_vector: 查询向量
@@ -219,96 +230,75 @@ class ChunkStore:
             filters: 过滤条件
 
         Returns:
-            相关的 Chunk 列表
+            [(Chunk, score), ...] 按分数降序
         """
         if FAISS_AVAILABLE and self.index is not None and self.index.ntotal > 0:
-            return self._faiss_search(query_vector, top_k, filters)
+            return self._faiss_search_with_scores(query_vector, top_k, filters)
         else:
-            return self._numpy_search(query_vector, top_k, filters)
+            return self._numpy_search_with_scores(query_vector, top_k, filters)
 
-    def _faiss_search(self, query_vector: List[float], top_k: int,
-                       filters: Optional[Dict[str, Any]]) -> List[Chunk]:
-        """使用 FAISS 进行向量检索"""
+    def _faiss_search_with_scores(self, query_vector: List[float], top_k: int,
+                                  filters: Optional[Dict[str, Any]]) -> List[tuple]:
+        """使用 FAISS 进行向量检索（带分数）"""
         query = np.array([query_vector]).astype('float32')
         query = self._normalize_embeddings(query)
 
-        # 搜索
         scores, indices = self.index.search(query, top_k)
 
-        # 获取 chunk IDs
         sql = f"SELECT id FROM {self.CHUNKS_TABLE}"
         all_ids = self.db.fetch_column(sql)
 
-        # 构建 id 到索引的映射
-        id_to_idx = {id_val: idx for idx, id_val in enumerate(all_ids)}
-
-        # 获取结果 chunks
-        result_chunks = []
+        results = []
         for score, idx in zip(scores[0], indices[0]):
             if idx >= 0 and idx < len(all_ids):
                 chunk_id = all_ids[idx]
                 chunk = self.get(chunk_id)
                 if chunk:
-                    result_chunks.append(chunk)
+                    results.append((chunk, float(score)))
 
-        # 应用过滤器
         if filters:
-            result_chunks = self._apply_filters(result_chunks, filters)
+            results = [(c, s) for c, s in results if self._chunk_matches(c, filters)]
 
-        return result_chunks[:top_k]
+        return results[:top_k]
 
-    def _numpy_search(self, query_vector: List[float], top_k: int,
-                      filters: Optional[Dict[str, Any]]) -> List[Chunk]:
-        """使用 numpy 进行向量检索（fallback）"""
+    def _numpy_search_with_scores(self, query_vector: List[float], top_k: int,
+                                   filters: Optional[Dict[str, Any]]) -> List[tuple]:
+        """使用 numpy 进行向量检索（fallback，带分数）"""
         embeddings = self._get_embedding_matrix()
         if embeddings.size == 0:
             return []
 
-        # 获取所有 chunks
         sql = f"SELECT * FROM {self.CHUNKS_TABLE}"
         all_chunks = [Chunk.from_dict(dict(row)) for row in self.db.fetch_all(sql)]
 
         if not all_chunks:
             return []
 
-        # 计算余弦相似度
         query = np.array(query_vector).astype('float32')
         query = query / np.linalg.norm(query)
 
         similarities = np.dot(embeddings, query)
 
-        # 排序
-        top_indices = np.argsort(similarities)[::-1][:top_k]
+        results = [(all_chunks[i], float(similarities[i])) for i in range(len(all_chunks))]
 
-        result_chunks = [all_chunks[i] for i in top_indices]
-
-        # 应用过滤器
         if filters:
-            result_chunks = self._apply_filters(result_chunks, filters)
+            results = [(c, s) for c, s in results if self._chunk_matches(c, filters)]
 
-        return result_chunks[:top_k]
+        results.sort(key=lambda x: x[1], reverse=True)
+        return results[:top_k]
 
-    def _apply_filters(self, chunks: List[Chunk], filters: Dict[str, Any]) -> List[Chunk]:
-        """应用过滤器"""
-        result = []
-        for chunk in chunks:
-            match = True
-            for key, value in filters.items():
-                if key == "paper_id" and chunk.paper_id != value:
-                    match = False
-                    break
-                elif key == "chunk_type" and chunk.chunk_type != value:
-                    match = False
-                    break
-                elif key == "year" and chunk.metadata.get("year") != value:
-                    match = False
-                    break
-                elif key == "field" and chunk.metadata.get("field") != value:
-                    match = False
-                    break
-            if match:
-                result.append(chunk)
-        return result
+    def _chunk_matches(self, chunk: Chunk, filters: Dict[str, Any]) -> bool:
+        """检查 chunk 是否匹配过滤器"""
+        for key, value in filters.items():
+            if key == "paper_id" and chunk.paper_id != value:
+                return False
+            elif key == "chunk_type" and chunk.chunk_type != value:
+                return False
+            elif key == "year" and chunk.metadata.get("year") != value:
+                return False
+            elif key == "field" and chunk.metadata.get("field") != value:
+                return False
+        return True
 
     def delete(self, chunk_id: str) -> bool:
         """删除 chunk"""

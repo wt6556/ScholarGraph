@@ -21,37 +21,33 @@ class Embedding(BaseFunction):
 
     def __init__(self):
         super().__init__("Embedding")
-        self._model = None
-        self._config = None
 
-    def _get_model(self):
-        """获取 embedding 模型"""
-        if self._model is None:
-            self._config = get_config()
-            provider = self._config.embedding.provider
+    def _get_model_and_tokenizer(self):
+        """获取 embedding 模型和 tokenizer"""
+        config = get_config()
+        provider = config.embedding.provider
 
-            if provider == "transformers":
-                from transformers import AutoTokenizer, AutoModel
-                import torch
-                self._model = AutoModel.from_pretrained(self._config.embedding.model)
-                self._tokenizer = AutoTokenizer.from_pretrained(self._config.embedding.model)
-                self._device = self._config.embedding.device
-                logger.info(f"Loaded transformers model: {self._config.embedding.model}")
-            else:
-                raise ValueError(f"Unsupported embedding provider: {provider}")
-
-        return self._model
+        if provider == "transformers":
+            from transformers import AutoTokenizer, AutoModel
+            import torch
+            model = AutoModel.from_pretrained(config.embedding.model)
+            tokenizer = AutoTokenizer.from_pretrained(config.embedding.model)
+            device = config.embedding.device
+            pooling_strategy = getattr(config.embedding, 'pooling_strategy', 'mean')
+            logger.info(f"Loaded transformers model: {config.embedding.model}")
+            return model, tokenizer, device, pooling_strategy
+        else:
+            raise ValueError(f"Unsupported embedding provider: {provider}")
 
     def _get_embeddings(self, texts: List[str]) -> List[List[float]]:
         """使用 transformers 生成 embeddings"""
         import torch
         import torch.nn.functional as F
 
-        # 确保模型和 tokenizer 已加载
-        self._get_model()
+        model, tokenizer, device, pooling_strategy = self._get_model_and_tokenizer()
 
         # 编码文本
-        encoded = self._tokenizer(
+        encoded = tokenizer(
             texts,
             padding=True,
             truncation=True,
@@ -60,17 +56,32 @@ class Embedding(BaseFunction):
         )
 
         # 移动到设备
-        encoded = {k: v.to(self._device) for k, v in encoded.items()}
+        encoded = {k: v.to(device) for k, v in encoded.items()}
 
         # 前向传播
         with torch.no_grad():
-            outputs = self._model(**encoded)
+            outputs = model(**encoded)
 
-        # Mean pooling
-        attention_mask = encoded['attention_mask']
-        token_embeddings = outputs.last_hidden_state
-        input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
-        embeddings = torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
+        # Pooling
+        if pooling_strategy == 'last_token':
+            # Last-token pooling (用于 harrier-oss-v1 等 decoder-only 模型)
+            attention_mask = encoded['attention_mask']
+            left_padding = (attention_mask[:, -1].sum() == attention_mask.shape[0])
+            if left_padding:
+                embeddings = outputs.last_hidden_state[:, -1]
+            else:
+                sequence_lengths = attention_mask.sum(dim=1) - 1
+                batch_size = outputs.last_hidden_state.shape[0]
+                embeddings = outputs.last_hidden_state[
+                    torch.arange(batch_size, device=outputs.last_hidden_state.device),
+                    sequence_lengths
+                ]
+        else:
+            # Mean pooling (默认)
+            attention_mask = encoded['attention_mask']
+            token_embeddings = outputs.last_hidden_state
+            input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+            embeddings = torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
         # L2 normalize
         embeddings = F.normalize(embeddings, p=2, dim=1)
@@ -217,10 +228,3 @@ class Embedding(BaseFunction):
             content=content,
             embedding=[]  # 暂时留空，等生成
         )
-
-    def _generate_embeddings(self, texts: List[str]) -> List[List[float]]:
-        """生成文本嵌入"""
-        model = self._get_model()
-        embeddings = model.encode(texts, convert_to_numpy=True)
-        # 转换为 Python list
-        return embeddings.tolist()

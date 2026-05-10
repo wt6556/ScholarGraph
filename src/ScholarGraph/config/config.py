@@ -35,6 +35,29 @@ class StorageConfig:
 
 
 @dataclass
+class RerankerConfig:
+    """Reranker 配置"""
+    enabled: bool = True
+    model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+
+@dataclass
+class RAGRetrievalConfig:
+    """RAG 检索配置"""
+    top_k: int = 20           # 初步检索返回数量（粗排）
+    rerank_top_k: int = 5     # 重排后返回数量（精排）
+    vector_weight: float = 0.7  # 向量检索权重
+    bm25_weight: float = 0.3   # BM25 检索权重
+
+
+@dataclass
+class RAGConfig:
+    """RAG 配置"""
+    retrieval: RAGRetrievalConfig = field(default_factory=RAGRetrievalConfig)
+    reranker: RerankerConfig = field(default_factory=RerankerConfig)
+
+
+@dataclass
 class Config:
     """
     配置单例
@@ -53,6 +76,9 @@ class Config:
 
     # 存储
     storage: StorageConfig = field(default_factory=StorageConfig)
+
+    # RAG
+    rag: RAGConfig = field(default_factory=RAGConfig)
 
     # 应用
     app_name: str = "PaperAgent"
@@ -130,6 +156,31 @@ class Config:
         # 加载日志配置
         if 'logging' in data:
             instance.log_level = data['logging'].get('level', 'INFO')
+
+        # 加载 RAG 配置
+        if 'rag' in data:
+            rag_data = data['rag']
+
+            # 加载检索配置
+            retrieval_data = rag_data.get('retrieval', {})
+            retrieval_config = RAGRetrievalConfig(
+                top_k=retrieval_data.get('top_k', 20),
+                rerank_top_k=retrieval_data.get('rerank_top_k', 5),
+                vector_weight=retrieval_data.get('vector_weight', 0.7),
+                bm25_weight=retrieval_data.get('bm25_weight', 0.3)
+            )
+
+            # 加载重排配置
+            reranker_data = rag_data.get('reranker', {})
+            reranker_config = RerankerConfig(
+                enabled=reranker_data.get('enabled', True),
+                model=reranker_data.get('model', 'cross-encoder/ms-marco-MiniLM-L-6-v2')
+            )
+
+            instance.rag = RAGConfig(
+                retrieval=retrieval_config,
+                reranker=reranker_config
+            )
 
         return instance
 
