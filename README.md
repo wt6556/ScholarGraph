@@ -1,22 +1,59 @@
 # ScholarGraph
 
-本地优先的 AI 论文研究与分析方法系统，基于 Agent + RAG 架构，支持多论文理解、关系挖掘、知识拓扑构建。
+本地优先的 AI 论文研究与分析方法系统，基于 **Agent + RAG (Retrieval-Augmented Generation) 架构**，支持多论文理解、关系挖掘、知识拓扑构建。
 
 ![方法拓扑图示例](figs/topology.png)
 
 > **图 1**: LoRA 相关方法的演进关系拓扑图。节点表示方法，边表示方法间的改进关系及改进方向。
 
+## 核心优势
+
+| 优势 | 说明 |
+|------|------|
+| **本地优先** | 所有数据存储在本地，无云依赖，保障隐私安全 |
+| **方法演进追踪** | 独特的拓扑图功能，自动从论文中提取方法改进关系，构建知识演进图谱 |
+| **多论文联合理解** | 支持批量摄入论文，联合理解方法之间的关联与演化 |
+| **混合 RAG 检索** | 向量 + 关键词 + 重排三重检索，保证答案准确性 |
+| **开箱即用** | 一条命令完成论文解析、索引、查询全流程 |
+
 ## 特性
 
-- **多 Agent 协作**: Contoller、QueryAgent、CriticAgent 分工明确
-- **混合 RAG**: 向量检索 + 结构化检索
-- **方法拓扑图**: 追踪方法演进关系
+- **多 Agent 协作**: Orchestrator、QueryAgent、CriticAgent 分工明确
+- **混合 RAG**: FAISS 向量检索 + BM25 关键词检索 + Reranker 重排
+- **方法拓扑图**: 追踪方法演进关系，构建知识图谱
 - **CCF 评级映射**: 自动识别论文学术级别
-- **LLM 驱动**: 支持 MiniMax、OpenAI、Anthropic 等
+- **多 LLM 支持**: Anthropic Claude、MiniMax、OpenAI、Ollama 本地模型
 
 ## 架构
 
 ![架构图](figs/Architecture.png)
+
+**核心组件**:
+- **Orchestrator**: Controller（工作流编排，调度 Functions 执行论文摄取/查询流程）
+- **Agent 层**: QueryAgent（查询分析）、CriticAgent（答案评估）
+- **Function 层**: 9 个无状态 Function（PDFParser、Understanding、Enrichment、Classification、Relation、Retrieval、Synthesis、Embedding、CCFParser）
+- **RAG 层**: VectorSearch、BM25Search、Reranker、Fusion
+- **Storage 层**: PaperStore（SQLite）、ChunkStore（FAISS）、TopologyStore
+
+### 架构图生成 Prompt
+
+如需重新生成架构图（`figs/Architecture.png`），使用以下文生图 prompt：
+
+```
+A clean architectural diagram for an academic paper research system called ScholarGraph, displayed as a hierarchical top-down flow with 5 layers:
+
+Layer 1 (top): Single rounded rectangle labeled "Controller / Orchestrator" with orange accent (#FF7043), subtitle "Workflow: parse → understand → enrich → classify → embed → relate".
+
+Layer 2: Two rounded boxes side by side: "QueryAgent" labeled "Query Analysis" and "CriticAgent" labeled "Answer Evaluation", with a bidirectional arrow between them labeled "context & feedback". Both have light blue fill (#E3F2FD) and dark blue border (#1565C0).
+
+Layer 3: A large rounded box labeled "Functions (9 stateless)" containing a 3x3 grid of smaller boxes: [PDFParser, Understanding, Enrichment] on row 1; [Classification, Embedding, Relation] on row 2; [Retrieval, Synthesis, CCFParser] on row 3. All with consistent styling.
+
+Layer 4: A rounded box labeled "RAG" containing 4 inline boxes in a row: "VectorSearch (FAISS)", "BM25Search", "Reranker", "Fusion". Arrow pointing down from Functions to RAG.
+
+Layer 5 (bottom): Three rounded boxes in a row: "PaperStore (SQLite)", "ChunkStore (FAISS)", "TopologyStore". Arrow pointing down from RAG to Storage.
+
+Use rounded rectangles, light blue fill (#E3F2FD), dark blue border (#1565C0) for most boxes, orange fill (#FF7043) for Orchestrator. Include small directional arrows between layers. Clean sans-serif font (like Inter or Roboto), professional technical documentation style, white background, subtle shadows.
+```
 
 ## 安装
 
@@ -44,20 +81,6 @@ pip install -e .
 # 下载 Embedding 模型 + Reranker 模型到 ./models 目录
 python -m ScholarGraph.cli download-model
 
-# 指定本地模型保存路径
-python -m ScholarGraph.cli download-model --output-dir ./models
-```
-
-下载后修改 `config/config.yaml` 使用本地路径：
-
-```yaml
-embedding:
-  provider: "transformers"
-  model: "./models/microsoft_harrier-oss-v1-0.6b"
-  dimension: 1024
-  pooling_strategy: "last_token"
-```
-  device: "cpu"
 ```
 
 ### 4. 安装 Graphviz（用于生成拓扑图）
@@ -84,7 +107,7 @@ pip install graphviz
 ```yaml
 # LLM 配置（必需）
 llm:
-  provider: "anthropic"  # 或 "openai"
+  provider: "anthropic"  # 或 "openai" / "ollama"
   model: "MiniMax-M2.7-highspeed"
   api_key: "your_api_key_here"
   base_url: "https://api.minimaxi.com/anthropic"
@@ -115,14 +138,23 @@ pdf_parser:
 | journal | SCI 期刊分类                         | https://journals.clarivate.com/                                  |
 | custom  | 自定义 YAML 文件                     | 用户自行编写                                                     |
 
-也可以自行编写 YAML 文件格式的分类体系：
+当前分类体系包含 5 个领域、40+ 个子领域：
 
 ```yaml
 fields:
-  - name: "领域名称"
+  - name: Computer Science
     subfields:
-      - "子领域1"
-      - "子领域2"
+      - Artificial Intelligence
+      - Computer Vision
+      - Natural Language Processing
+      - Machine Learning
+      - Large Language Model Fine-tuning
+      - Parameter-Efficient Fine-Tuning
+      # ... 更多子领域
+  - name: Systems & Security
+  - name: Media & Interaction
+  - name: Theory & Algorithms
+  - name: Interdisciplinary
 ```
 
 ### CLI 命令
@@ -137,7 +169,7 @@ python -m ScholarGraph.cli download-model
 # 解析单篇论文
 python -m ScholarGraph.cli parse paper.pdf
 
-# 批量解析论文
+# 批量解析论文目录
 python -m ScholarGraph.cli ingest ./papers/
 
 # 查询论文
@@ -157,6 +189,9 @@ python -m ScholarGraph.cli update-taxonomy ccs --no-reclassify
 
 # 更新 CCF 评级映射
 python -m ScholarGraph.cli update-ccf ./CCF目录.pdf
+
+# 生成方法拓扑图
+python -m ScholarGraph.cli topology
 
 # 启动交互模式
 python -m ScholarGraph.cli repl
@@ -194,170 +229,17 @@ ScholarGraph> 生成 LoRA 相关方法的拓扑图
 [INFO] 拓扑数据已保存到: ./output/topology.json
 ```
 
-**Python API 生成：**
-
-```python
-from ScholarGraph import SharedEnvironment
-from ScholarGraph.utils.topology_visualizer import generate_topology_graph, export_topology_json
-
-env = SharedEnvironment(
-    db_path="./data/ScholarGraph.db",
-    vector_index_path="./data/chunks.faiss",
-    embedding_dimension=384
-)
-
-# 生成 PNG 图
-generate_topology_graph(env, "./output/topology.png")
-
-# 导出 JSON 数据
-export_topology_json(env, "./output/topology.json")
-```
-
-生成的拓扑图中：
-
-- **红色节点**：根方法（无父方法）
-- **青色节点**：第一层改进
-- **蓝色节点**：第二层改进
-- **绿色节点**：更深层改进
-- **边**：方法间的改进关系
-
-### Python API
-
-```python
-from ScholarGraph import SharedEnvironment
-from ScholarGraph.agents import Controller, QueryAgent, CriticAgent
-from ScholarGraph.memory import ConversationHistory, PipelineState
-from ScholarGraph.models import Paper
-from ScholarGraph.llm import LLMClient, Message
-
-# 1. 初始化环境
-env = SharedEnvironment(
-    db_path="./data/ScholarGraph.db",
-    vector_index_path="./data/chunks.faiss",
-    embedding_dimension=384
-)
-
-# 2. 初始化 Agent
-controller = Controller(env)
-query_agent = QueryAgent(ConversationHistory(session_id="user1"))
-critic_agent = CriticAgent(PipelineState())
-
-# 3. 执行论文摄取
-result = controller.run_ingestion(
-    pdf_path="./papers/lora.pdf",
-    metadata={"source": "arxiv"}
-)
-print(f"Ingestion result: {result}")
-
-# 4. 执行查询
-query_result = query_agent.execute(
-    env=env,
-    query="LoRA 和 Adapter 有什么区别？"
-)
-print(f"Query analysis: {query_result.data}")
-
-# 5. 获取答案并评估
-# ... (Retrieval -> Synthesis -> Critic)
-```
-
-### 完整查询流程
-
-```python
-from ScholarGraph.functions import Retrieval, Synthesis
-from ScholarGraph.models import QueryAnalysisResult
-
-# 1. 查询分析
-query_analysis = query_agent.execute(env, "比较 LoRA 和 AdaLoRA")
-
-# 2. 检索相关论文
-retrieval_func = Retrieval()
-papers = retrieval_func.execute(env, query_analysis.data)
-
-# 3. 合成答案
-synthesis_func = Synthesis()
-answer = synthesis_func.execute(env, papers, query_analysis.data)
-
-# 4. 评估答案
-critique = critic_agent.execute(env, answer, query_analysis.data["original_query"])
-
-# 5. 如需重试
-if not critique.data["passed"]:
-    print(f"Failed checks: {critique.data['failed_checks']}")
-    # 重新检索或修改查询
-```
-
 ## 项目结构
 
 ```
 ScholarGraph/
-├── src/ScholarGraph/
-├── tests/
-├── config/
-├── data/                # SQLite 数据库、FAISS 索引
-├── output/              # 生成的拓扑图
-├── models/              # 下载的 embedding 模型
-├── README.md
-├── pyproject.toml
-└── requirements.txt
+├── config/          # 配置文件（LLM、分类体系、CCF评级）
+├── data/           # SQLite 数据库、FAISS 索引
+├── papers/         # PDF 论文
+├── output/         # 生成的拓扑图
+├── models/         # 下载的 embedding 和 reranker 模型
+├── tests/          # pytest 测试
+└── README.md, pyproject.toml, requirements.txt
 ```
 
-## 测试
-
-```bash
-# 运行所有测试
-pytest tests/ -v
-
-# 运行特定测试
-pytest tests/test_agents.py -v
-
-# 带覆盖率
-pytest tests/ --cov=src/ScholarGraph --cov-report=html
-```
-
-## 常见问题
-
-### Q: FAISS 未安装？
-
-```
-WARNING: FAISS not available, using numpy fallback
-```
-
-安装 faiss-cpu：`pip install faiss-cpu`
-
-### Q: LLM API 调用失败？
-
-1. 检查 `api_key` 是否正确
-2. 检查 `base_url` 是否匹配（Anthropic vs OpenAI 格式）
-3. 确认网络连接
-
-### Q: PDF 解析失败？
-
-- 使用 pdfplumber：`pip install pdfplumber`
-- 或使用 Grobid 服务：`pip install lxml` 并启动 Grobid 服务
-
-### Q: 如何添加新的论文领域？
-
-1. 编辑 `config/taxonomy.yaml` 添加新的 field/subfield 分类
-2. 使用 CLI 更新分类体系并重新分类已有论文：
-
-```bash
-python -m ScholarGraph.cli update-taxonomy ./config/taxonomy.yaml
-```
-
-### Q: 分类体系文件不存在？
-
-运行 `python -m ScholarGraph.cli init` 初始化项目，会自动创建默认分类体系。
-
-### Q: TaxonomyNotFoundError 异常？
-
-分类体系文件缺失或无效。解决方案：
-
-1. 运行 `python -m ScholarGraph.cli init` 创建默认分类体系
-2. 或使用 `update-taxonomy` 命令更新分类体系
-
-### Q: Graphviz 生成失败？
-
-1. 确认已安装 Graphviz 软件：从 https://graphviz.org/download/ 下载
-2. 确认已将 Graphviz bin 目录添加到 PATH 环境变量
-3. 运行 `dot -V` 验证安装
-4. 如果无法使用 Graphviz，系统会自动回退到 matplotlib 生成图
+核心代码位于 `src/ScholarGraph/`，按功能分为 agents、functions、storage、rag、llm、config 等模块。
