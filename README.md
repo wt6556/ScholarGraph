@@ -114,8 +114,6 @@ pdf_parser:
 | 来源    | 说明                                 | 来源链接                                                         |
 | ------- | ------------------------------------ | ---------------------------------------------------------------- |
 | ccs     | ACM Computing Classification System  | https://www.acm.org/publications/computing-classification-system |
-| ccf     | 中国计算机学会推荐学术会议与期刊列表 | https://ccf-cccr.ccf.org.cn/                                     |
-| journal | SCI 期刊分类                         | https://journals.clarivate.com/                                  |
 | custom  | 自定义 YAML 文件                     | 用户自行编写                                                     |
 
 当前分类体系包含 5 个领域、40+ 个子领域：
@@ -157,9 +155,6 @@ python -m ScholarGraph.cli query "LoRA 方法的改进有哪些？"
 
 # 更新分类体系（从 ACM CCS 来源获取，会自动重新分类已有论文）
 python -m ScholarGraph.cli update-taxonomy ccs
-
-# 更新分类体系（从 CCF 来源获取）
-python -m ScholarGraph.cli update-taxonomy ccf
 
 # 更新分类体系（使用自定义 YAML 文件）
 python -m ScholarGraph.cli update-taxonomy custom --file ./my_taxonomy.yaml
