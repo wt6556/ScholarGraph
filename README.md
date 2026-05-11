@@ -26,7 +26,7 @@
 
 ## 架构
 
-![架构图](figs/Architecture.png = 300x)
+![架构图](figs/Architecture.png =300x)
 
 **核心组件**:
 - **Orchestrator**: Controller（工作流编排，调度 Functions 执行论文摄取/查询流程）
